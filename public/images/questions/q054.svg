@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="460" height="120">
+  <!-- q054: Count the A's in "LA VACA PACA SALTA LA TAPIA Y LA CAPA" -->
+  <rect width="460" height="120" fill="#12121a"/>
+  <text font-family="Georgia, serif" font-size="22" fill="#e5e5e5" font-weight="bold" text-anchor="middle">
+    <tspan x="230" dy="50">LA VACA PACA SALTA</tspan>
+    <tspan x="230" dy="32">LA TAPIA Y LA CAPA</tspan>
+  </text>
+  <text x="230" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántas A's hay en total?
+  </text>
+</svg>

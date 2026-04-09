@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- q072: Young woman / Old woman ambiguous figure (simplified) -->
+  <rect width="300" height="260" fill="#12121a"/>
+
+  <!-- Simplified ambiguous silhouette -->
+  <!-- Young woman looking away (necklace = old woman mouth, chin = nose) -->
+  <path d="
+    M 150,30
+    C 175,30 195,50 195,75
+    C 195,95 185,110 175,120
+    C 190,125 210,140 220,165
+    C 230,185 225,210 215,220
+    C 200,235 170,240 150,240
+    C 130,240 100,235 85,220
+    C 75,210 70,185 80,165
+    C 90,140 110,125 125,120
+    C 115,110 105,95 105,75
+    C 105,50 125,30 150,30
+    Z
+  " fill="none" stroke="#e5e5e5" stroke-width="2.5"/>
+
+  <!-- Ear -->
+  <path d="M 195,75 C 205,75 210,85 205,95 C 200,105 193,105 190,100" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+
+  <!-- Hat / hair suggestion -->
+  <path d="M 110,55 C 115,35 140,25 155,28 C 175,32 195,48 195,75" fill="none" stroke="#e5e5e5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Necklace / chin line -->
+  <path d="M 115,165 C 130,178 170,178 185,165" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+
+  <text x="150" y="256" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Qué ves: una mujer joven o una anciana?
+  </text>
+</svg>

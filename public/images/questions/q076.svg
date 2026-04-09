@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180">
+  <!-- q076: Müller-Lyer illusion — two equal lines look different -->
+  <rect width="320" height="180" fill="#12121a"/>
+
+  <!-- Line A: arrows pointing outward (looks longer) -->
+  <line x1="60" y1="70" x2="260" y2="70" stroke="#e5e5e5" stroke-width="3"/>
+  <!-- Left arrow out -->
+  <line x1="60" y1="70" x2="40" y2="50" stroke="#e5e5e5" stroke-width="2.5"/>
+  <line x1="60" y1="70" x2="40" y2="90" stroke="#e5e5e5" stroke-width="2.5"/>
+  <!-- Right arrow out -->
+  <line x1="260" y1="70" x2="280" y2="50" stroke="#e5e5e5" stroke-width="2.5"/>
+  <line x1="260" y1="70" x2="280" y2="90" stroke="#e5e5e5" stroke-width="2.5"/>
+
+  <!-- Line B: arrows pointing inward (looks shorter) -->
+  <line x1="60" y1="130" x2="260" y2="130" stroke="#e5e5e5" stroke-width="3"/>
+  <!-- Left arrow in -->
+  <line x1="60" y1="130" x2="80" y2="110" stroke="#e5e5e5" stroke-width="2.5"/>
+  <line x1="60" y1="130" x2="80" y2="150" stroke="#e5e5e5" stroke-width="2.5"/>
+  <!-- Right arrow in -->
+  <line x1="260" y1="130" x2="240" y2="110" stroke="#e5e5e5" stroke-width="2.5"/>
+  <line x1="260" y1="130" x2="240" y2="150" stroke="#e5e5e5" stroke-width="2.5"/>
+
+  <!-- Labels -->
+  <text x="25" y="74" font-family="sans-serif" font-size="12" fill="#fbbf24" font-weight="bold">A</text>
+  <text x="25" y="134" font-family="sans-serif" font-size="12" fill="#fbbf24" font-weight="bold">B</text>
+
+  <text x="160" y="170" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuál línea es más larga, A o B?
+  </text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- q053: Sequence □ ⬠ ⬡ ? (3, 4, 5, 6 sides) -->
+  <rect width="400" height="120" fill="#12121a"/>
+
+  <!-- Square (4 sides) — label says "□ cuadrado" but series is: triangle, square, pentagon, ? -->
+  <!-- Actually series: 3,4,5,? = hexagon -->
+
+  <!-- Triangle -->
+  <polygon points="50,90 30,90 40,65" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+  <text x="40" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b6b8a">3 lados</text>
+
+  <!-- Square -->
+  <rect x="120" y="65" width="30" height="30" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+  <text x="135" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b6b8a">4 lados</text>
+
+  <!-- Pentagon -->
+  <polygon points="230,65 245,76 239,93 221,93 215,76" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+  <text x="230" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b6b8a">5 lados</text>
+
+  <!-- ? -->
+  <text x="330" y="90" text-anchor="middle" font-family="Impact,Arial Narrow,sans-serif" font-size="48" fill="#fff">?</text>
+  <text x="330" y="108" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b6b8a">? lados</text>
+
+  <!-- Arrows -->
+  <text x="92" y="82" font-size="18" fill="#6b6b8a">→</text>
+  <text x="185" y="82" font-size="18" fill="#6b6b8a">→</text>
+  <text x="278" y="82" font-size="18" fill="#6b6b8a">→</text>
+</svg>

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ─────────────────────────────────────────────── */
+
+:root {
+  --color-bg:        #0a0a0f;
+  --color-surface:   #12121a;
+  --color-surface2:  #1a1a26;
+  --color-border:    #2a2a3d;
+  --color-gold:      #fbbf24;   /* yellow-400 */
+  --color-gold-dim:  #92400e;
+  --color-text:      #f0f0f8;
+  --color-muted:     #6b6b8a;
+
+  --font-display:    'Impact', 'Arial Narrow', Arial, sans-serif;
+  --font-body:       'Inter', system-ui, sans-serif;
+}
+
+/* ─── Reset & base ───────────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Timer bar animation ────────────────────────────────────────────────── */
+
+@keyframes timer-drain {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+/* ─── Elimination animation ─────────────────────────────────────────────── */
+
+@keyframes fade-eliminate {
+  0%   { opacity: 1; transform: scale(1); filter: grayscale(0); }
+  40%  { opacity: 0.6; transform: scale(1.05); filter: grayscale(0.5); }
+  100% { opacity: 0.25; transform: scale(0.92); filter: grayscale(1); }
+}
+
+.player-eliminated {
+  animation: fade-eliminate 0.8s ease-out forwards;
+}
+
+/* ─── Countdown pulse ────────────────────────────────────────────────────── */
+
+@keyframes countdown-pulse {
+  0%   { transform: scale(0.7); opacity: 0; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+.countdown-number {
+  animation: countdown-pulse 0.6s ease-out forwards;
+}
+
+/* ─── Answer button flash ────────────────────────────────────────────────── */
+
+@keyframes correct-flash {
+  0%, 100% { background-color: inherit; }
+  50%       { background-color: #16a34a; }
+}
+
+@keyframes wrong-flash {
+  0%, 100% { background-color: inherit; }
+  50%       { background-color: #dc2626; }
+}

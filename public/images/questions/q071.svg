@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- q071: 4x4 grid with squares of different sizes to count (answer: 17+? total) -->
+  <!-- Subdivided grid to create a counting exercise -->
+  <rect width="240" height="240" fill="#12121a"/>
+
+  <!-- Grid lines: 4x4 base = 5 horizontal + 5 vertical lines -->
+  <!-- Cell size: 48px -->
+  <g stroke="#e5e5e5" stroke-width="2" fill="none">
+    <!-- Outer border -->
+    <rect x="20" y="20" width="200" height="200" stroke-width="2.5"/>
+
+    <!-- Horizontal internal -->
+    <line x1="20" y1="70" x2="220" y2="70"/>
+    <line x1="20" y1="120" x2="220" y2="120"/>
+    <line x1="20" y1="170" x2="220" y2="170"/>
+
+    <!-- Vertical internal -->
+    <line x1="70" y1="20" x2="70" y2="220"/>
+    <line x1="120" y1="20" x2="120" y2="220"/>
+    <line x1="170" y1="20" x2="170" y2="220"/>
+
+    <!-- Extra internal dividers to create nested squares -->
+    <!-- Top-left 2x2 merge (counts as 1 bigger square) -->
+    <!-- Already implied by grid — just label at bottom -->
+  </g>
+
+  <text x="120" y="236" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos cuadrados hay en total?
+  </text>
+</svg>

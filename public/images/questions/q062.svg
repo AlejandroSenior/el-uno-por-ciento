@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="300" height="240">
+  <!-- q062: Rubin's vase — vase or two faces? -->
+  <rect width="300" height="240" fill="#12121a"/>
+
+  <!-- White vase / black faces figure -->
+  <!-- The vase shape is defined as the space between two facing profiles -->
+
+  <!-- Left face (dark silhouette) -->
+  <path d="
+    M 0,20
+    L 100,20
+    C 90,40 80,60 85,85
+    C 88,100 92,110 88,130
+    C 84,150 75,165 80,185
+    C 85,205 95,215 100,230
+    L 0,230
+    Z
+  " fill="#1e1e2e"/>
+
+  <!-- Right face (dark silhouette) -->
+  <path d="
+    M 300,20
+    L 200,20
+    C 210,40 220,60 215,85
+    C 212,100 208,110 212,130
+    C 216,150 225,165 220,185
+    C 215,205 205,215 200,230
+    L 300,230
+    Z
+  " fill="#1e1e2e"/>
+
+  <!-- White vase in the middle -->
+  <path d="
+    M 100,20
+    C 130,20 170,20 200,20
+    C 210,40 220,60 215,85
+    C 212,100 208,110 212,130
+    C 216,150 225,165 220,185
+    C 215,205 205,215 200,230
+    C 170,230 130,230 100,230
+    C 95,215 85,205 80,185
+    C 75,165 84,150 88,130
+    C 92,110 88,100 85,85
+    C 80,60 90,40 100,20
+    Z
+  " fill="#e8e8e8"/>
+
+  <!-- Top/bottom black borders to close the image -->
+  <rect x="0" y="0" width="300" height="20" fill="#1e1e2e"/>
+  <rect x="0" y="230" width="300" height="10" fill="#1e1e2e"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="300" height="280">
+  <!-- q096: Skull / woman ambiguous figure -->
+  <rect width="300" height="280" fill="#12121a"/>
+
+  <!-- Two women seated at table (also reads as a skull) -->
+  <!-- Skull outer shape -->
+  <ellipse cx="150" cy="110" rx="90" ry="85" fill="none" stroke="#e5e5e5" stroke-width="2.5"/>
+
+  <!-- Jaw / table -->
+  <rect x="80" y="185" width="140" height="20" rx="4" fill="none" stroke="#e5e5e5" stroke-width="2.5"/>
+
+  <!-- Eye sockets / women silhouettes -->
+  <!-- Left eye / left woman -->
+  <ellipse cx="108" cy="105" rx="28" ry="35" fill="#12121a" stroke="#e5e5e5" stroke-width="1.5"/>
+  <!-- Right eye / right woman -->
+  <ellipse cx="192" cy="105" rx="28" ry="35" fill="#12121a" stroke="#e5e5e5" stroke-width="1.5"/>
+
+  <!-- Nose bridge / space between women -->
+  <rect x="133" y="80" width="34" height="10" rx="2" fill="#12121a"/>
+
+  <!-- Teeth / table legs -->
+  <line x1="100" y1="205" x2="100" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+  <line x1="120" y1="205" x2="120" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+  <line x1="140" y1="205" x2="140" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+  <line x1="160" y1="205" x2="160" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+  <line x1="180" y1="205" x2="180" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+  <line x1="200" y1="205" x2="200" y2="240" stroke="#e5e5e5" stroke-width="2"/>
+
+  <text x="150" y="262" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Qué ves: dos mujeres o una calavera?
+  </text>
+</svg>

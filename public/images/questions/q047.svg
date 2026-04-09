@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 200" width="460" height="200">
+  <!-- q047: Count the F's in a paragraph — text rendered as image to prevent Ctrl+F -->
+  <rect width="460" height="200" fill="#12121a"/>
+  <text font-family="Georgia, serif" font-size="14" fill="#e5e5e5" letter-spacing="0.3">
+    <tspan x="20" dy="30">FINISHED FILES ARE THE RESULT OF YEARS OF</tspan>
+    <tspan x="20" dy="22">SCIENTIFIC STUDY COMBINED WITH THE EXPERIENCE</tspan>
+    <tspan x="20" dy="22">OF YEARS.</tspan>
+  </text>
+  <text x="20" y="160" font-family="Georgia, serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántas veces aparece la letra F?
+  </text>
+</svg>
