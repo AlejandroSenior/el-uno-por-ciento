@@ -38,6 +38,20 @@ const revealReadyCount = computed(() => {
 
 const isMeReady = computed(() => state.value?.playersReady.includes(playerId.value) ?? false);
 
+const isHost = computed(() => state.value?.hostId === playerId.value);
+
+const isMeQuestionReady = computed(() => state.value?.playersReadyForQuestion.includes(playerId.value) ?? false);
+
+const questionReadyCount = computed(() => {
+  if (!state.value) return 0;
+  const activeIds = new Set(
+    Object.values(state.value.players)
+      .filter((p) => !p.isEliminated)
+      .map((p) => p.id)
+  );
+  return state.value.playersReadyForQuestion.filter((id) => activeIds.has(id)).length;
+});
+
 // ── Lifecycle ──────────────────────────────────────────────────────────────
 
 onMounted(() => {
@@ -108,6 +122,14 @@ const sendAnswer = (questionId: string, answerIndex: number) => {
 const sendReady = () => {
   send({ type: 'NEXT_ROUND' });
 };
+
+const sendQuestionReady = () => {
+  send({ type: 'READY' });
+};
+
+const sendRestartGame = () => {
+  send({ type: 'RESTART_GAME' });
+};
 </script>
 
 <template>
@@ -150,14 +172,17 @@ const sendReady = () => {
           :isReady="isMeReady"
           :readyCount="revealReadyCount"
           :totalActivePlayers="totalActivePlayers"
+          :isQuestionReady="isMeQuestionReady"
+          :questionReadyCount="questionReadyCount"
           @answer="sendAnswer"
           @ready="sendReady"
+          @questionReady="sendQuestionReady"
         />
         <PlayerList :players="state.players" :hostId="state.hostId" :playerId="playerId" />
       </div>
     </template>
 
     <!-- GAME_OVER -->
-    <Results v-else-if="state.phase === 'GAME_OVER'" :state="state" :playerId="playerId" />
+    <Results v-else-if="state.phase === 'GAME_OVER'" :state="state" :playerId="playerId" :isHost="isHost" @restart="sendRestartGame" />
   </div>
 </template>

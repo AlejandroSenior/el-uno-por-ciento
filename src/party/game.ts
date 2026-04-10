@@ -33,7 +33,8 @@ const initialState = (): GameState => ({
   countdown: null,
   winner: null,
   revealCountdown: null,
-  playersReady: []
+  playersReady: [],
+  playersReadyForQuestion: []
 });
 
 // ─── GameServer ───────────────────────────────────────────────────────────────
@@ -85,6 +86,16 @@ export default class GameServer implements Party.Server {
       }
     }
 
+    // A disconnect during QUESTION might make everyone else already "ready"
+    if (this.state.phase === 'QUESTION') {
+      const active = this.activePlayers();
+      if (active.length > 0 && active.every((p) => this.state.playersReadyForQuestion.includes(p.id))) {
+        this.clearTimer();
+        this.endQuestion();
+        return;
+      }
+    }
+
     this.broadcast();
   };
 
@@ -103,8 +114,12 @@ export default class GameServer implements Party.Server {
         return this.handleStartGame(sender);
       case 'ANSWER':
         return this.handleAnswer(sender, msg.questionId, msg.answerIndex);
+      case 'READY':
+        return this.handleReady(sender);
       case 'NEXT_ROUND':
         return this.handleNextRound(sender);
+      case 'RESTART_GAME':
+        return this.handleRestartGame(sender);
     }
   };
 
@@ -175,6 +190,25 @@ export default class GameServer implements Party.Server {
     this.broadcast();
   };
 
+  private handleReady = (conn: Party.Connection) => {
+    const player = this.state.players[conn.id];
+    if (!player || player.isEliminated) return;
+    if (this.state.phase !== 'QUESTION') return;
+
+    if (!this.state.playersReadyForQuestion.includes(conn.id)) {
+      this.state.playersReadyForQuestion.push(conn.id);
+    }
+
+    const active = this.activePlayers();
+    const allReady = active.every((p) => this.state.playersReadyForQuestion.includes(p.id));
+    if (allReady) {
+      this.clearTimer();
+      this.endQuestion();
+    } else {
+      this.broadcast();
+    }
+  };
+
   private handleNextRound = (conn: Party.Connection) => {
     if (this.state.phase !== 'REVEAL') return;
 
@@ -192,6 +226,31 @@ export default class GameServer implements Party.Server {
     } else {
       this.broadcast();
     }
+  };
+
+  private handleRestartGame = (conn: Party.Connection) => {
+    if (this.state.hostId !== conn.id) return;
+    if (this.state.phase !== 'GAME_OVER') return;
+
+    // Keep all connected players, reset everything else to LOBBY state
+    const currentPlayers = this.state.players;
+    const hostId = this.state.hostId;
+
+    this.clearTimer();
+    this.clearRevealTimer();
+    this.state = initialState();
+    this.state.players = currentPlayers;
+    this.state.hostId = hostId;
+
+    // Reset per-player state
+    for (const p of Object.values(this.state.players)) {
+      p.isEliminated = false;
+      p.hasAnswered = false;
+      p.lastAnswerIndex = null;
+      p.isCorrect = null;
+    }
+
+    this.broadcast();
   };
 
   // ── Game flow ──────────────────────────────────────────────────────────────
@@ -241,6 +300,7 @@ export default class GameServer implements Party.Server {
     this.state.timeRemaining = q.timeLimit;
     this.state.revealCountdown = null;
     this.state.playersReady = [];
+    this.state.playersReadyForQuestion = [];
 
     for (const p of Object.values(this.state.players)) {
       p.hasAnswered = false;

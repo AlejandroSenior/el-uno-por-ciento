@@ -5,6 +5,11 @@ import type { GameState } from '@/types/game';
 const props = defineProps<{
   state: GameState;
   playerId: string;
+  isHost: boolean;
+}>();
+
+const emit = defineEmits<{
+  (e: 'restart'): void;
 }>();
 
 const winner = computed(() => {
@@ -88,11 +93,26 @@ const rankClass = (index: number): string => {
 
     <!-- Actions -->
     <div class="flex flex-col gap-3 w-full max-w-sm">
-      <a
-        href="/"
+      <!-- Host: restart button -->
+      <button
+        v-if="isHost"
         class="w-full rounded-xl py-4 text-center font-black text-lg tracking-widest font-display bg-gold text-bg transition-all duration-150 active:scale-95"
+        @click="$emit('restart')"
       >
         JUGAR DE NUEVO
+      </button>
+
+      <!-- Non-host: waiting message -->
+      <div v-else class="w-full rounded-xl py-4 text-center bg-surface border border-border">
+        <p class="text-muted text-sm font-semibold">Esperando al host para comenzar de nuevo...</p>
+      </div>
+
+      <!-- Everyone: go home -->
+      <a
+        href="/"
+        class="w-full rounded-xl py-3 text-center font-semibold text-sm text-muted border border-border bg-surface transition-all duration-150 active:scale-95"
+      >
+        Salir a inicio
       </a>
     </div>
   </div>

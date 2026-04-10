@@ -58,6 +58,7 @@ export interface GameState {
   winner: string | null;          // player id del ganador
   revealCountdown: number | null; // 30s countdown during REVEAL phase
   playersReady: string[];         // player ids who clicked "siguiente"
+  playersReadyForQuestion: string[]; // player ids who clicked "listo" during QUESTION
 }
 
 // ─── Mensajes Cliente → Servidor ───────────────────────────────────────────
@@ -66,7 +67,9 @@ export type ClientMessage =
   | { type: 'JOIN'; name: string }
   | { type: 'START_GAME' }
   | { type: 'ANSWER'; questionId: string; answerIndex: number }
-  | { type: 'NEXT_ROUND' };       // cualquier jugador (siguiente pregunta)
+  | { type: 'READY' }             // jugador listo durante QUESTION
+  | { type: 'NEXT_ROUND' }        // cualquier jugador (siguiente pregunta)
+  | { type: 'RESTART_GAME' };     // host reinicia la partida desde GAME_OVER
 
 // ─── Mensajes Servidor → Cliente ───────────────────────────────────────────
 

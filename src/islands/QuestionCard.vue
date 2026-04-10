@@ -13,11 +13,14 @@ const props = defineProps<{
   isReady: boolean;
   readyCount: number;
   totalActivePlayers: number;
+  isQuestionReady: boolean;
+  questionReadyCount: number;
 }>();
 
 const emit = defineEmits<{
   (e: 'answer', questionId: string, answerIndex: number): void;
   (e: 'ready'): void;
+  (e: 'questionReady'): void;
 }>();
 
 const labels = ['A', 'B', 'C', 'D'];
@@ -250,6 +253,22 @@ const submitTextAnswer = () => {
     <p v-if="phase === 'QUESTION' && hasAnswered && !isTextQuestion" class="text-center text-xs text-muted mb-2 opacity-70">
       Puedes cambiar tu respuesta
     </p>
+
+    <!-- Listo button (QUESTION phase, only when answered) -->
+    <div v-if="phase === 'QUESTION' && hasAnswered" class="flex flex-col gap-2 mt-auto pt-3">
+      <div class="flex items-center justify-between text-xs text-muted px-0.5">
+        <span>{{ questionReadyCount }}/{{ totalActivePlayers }} listos</span>
+        <span v-if="isQuestionReady" class="text-gold font-semibold">Esperando a los demás...</span>
+      </div>
+      <button
+        :disabled="isQuestionReady"
+        class="w-full rounded-xl py-3.5 font-black text-lg tracking-widest transition-all duration-150 active:scale-95 disabled:active:scale-100 font-display disabled:cursor-not-allowed"
+        :class="isQuestionReady ? 'bg-surface2 text-muted opacity-60' : 'bg-gold text-bg'"
+        @click="$emit('questionReady')"
+      >
+        {{ isQuestionReady ? 'LISTO ✓' : 'LISTO' }}
+      </button>
+    </div>
 
     <!-- Explanation (revealed) -->
     <div v-if="isRevealed && question.explanation" class="rounded-xl px-4 py-3.5 text-sm bg-surface2 border border-border text-muted mb-4">
