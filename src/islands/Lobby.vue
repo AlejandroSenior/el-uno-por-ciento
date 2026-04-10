@@ -61,14 +61,9 @@ const copyCode = async () => {
 
       <ul class="flex flex-col gap-3">
         <li v-for="player in playerList" :key="player.id" class="flex items-center gap-3">
-          <span class="w-3 h-3 rounded-full flex-shrink-0" :style="{ background: player.color }"></span>
+          <span class="w-3 h-3 rounded-full shrink-0" :style="{ background: player.color }"></span>
           <span class="text-white font-semibold flex-1">{{ player.name }}</span>
-          <span
-            v-if="player.id === hostId"
-            class="text-xs font-bold px-2 py-0.5 rounded-full bg-gold-dim text-gold"
-          >
-            HOST
-          </span>
+          <span v-if="player.id === hostId" class="text-xs font-bold px-2 py-0.5 rounded-full bg-gold-dim text-gold">HOST</span>
           <span v-if="player.id === playerId" class="text-xs text-muted">(tú)</span>
         </li>
       </ul>
@@ -76,7 +71,7 @@ const copyCode = async () => {
       <!-- Empty slots -->
       <ul class="flex flex-col gap-3 mt-3" v-if="playerCount < 6">
         <li v-for="i in emptySlots" :key="'empty-' + i" class="flex items-center gap-3 opacity-25">
-          <span class="w-3 h-3 rounded-full flex-shrink-0 bg-border"></span>
+          <span class="w-3 h-3 rounded-full shrink-0 bg-border"></span>
           <span class="text-muted text-sm">Esperando jugador...</span>
         </li>
       </ul>
@@ -95,10 +90,7 @@ const copyCode = async () => {
         <p v-if="playerCount < 2" class="text-muted text-xs text-center mt-2">Se necesitan al menos 2 jugadores</p>
       </template>
 
-      <div
-        v-else
-        class="w-full rounded-xl py-4 text-center font-bold tracking-wide opacity-60 bg-surface border border-border text-muted"
-      >
+      <div v-else class="w-full rounded-xl py-4 text-center font-bold tracking-wide opacity-60 bg-surface border border-border text-muted">
         Esperando al host...
       </div>
     </div>

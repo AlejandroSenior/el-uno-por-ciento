@@ -44,9 +44,7 @@ const rankClass = (index: number): string => {
         <p class="text-4xl font-black mb-1 font-display" :style="{ color: winner.color }">
           {{ winner.name }}
         </p>
-        <p v-if="isWinner" class="text-yellow-400 font-black text-xl tracking-wide mt-2 font-display">
-          ¡ERES DEL 1%!
-        </p>
+        <p v-if="isWinner" class="text-yellow-400 font-black text-xl tracking-wide mt-2 font-display">¡ERES DEL 1%!</p>
       </template>
       <template v-else>
         <p class="text-5xl mb-3">🤯</p>
@@ -62,24 +60,19 @@ const rankClass = (index: number): string => {
       <ol class="flex flex-col gap-3">
         <li v-for="(player, index) in ranking" :key="player.id" class="flex items-center gap-3">
           <!-- Rank number -->
-          <span class="w-7 h-7 flex items-center justify-center rounded-full text-xs font-black flex-shrink-0" :class="rankClass(index)">
+          <span class="w-7 h-7 flex items-center justify-center rounded-full text-xs font-black shrink-0" :class="rankClass(index)">
             {{ index + 1 }}
           </span>
 
           <!-- Color dot -->
-          <span class="w-3 h-3 rounded-full flex-shrink-0" :style="{ background: player.color }"></span>
+          <span class="w-3 h-3 rounded-full shrink-0" :style="{ background: player.color }"></span>
 
           <span class="flex-1 font-semibold" :style="{ color: player.isEliminated ? 'var(--color-muted)' : player.color }">
             {{ player.name }}
           </span>
 
           <!-- Winner badge -->
-          <span
-            v-if="player.id === state.winner"
-            class="text-xs font-bold px-2 py-0.5 rounded-full bg-gold/20 text-gold"
-          >
-            1%
-          </span>
+          <span v-if="player.id === state.winner" class="text-xs font-bold px-2 py-0.5 rounded-full bg-gold/20 text-gold">1%</span>
 
           <!-- You badge -->
           <span v-if="player.id === playerId" class="text-xs text-muted">(tú)</span>
@@ -89,10 +82,7 @@ const rankClass = (index: number): string => {
 
     <!-- Actions -->
     <div class="flex flex-col gap-3 w-full max-w-sm">
-      <a
-        href="/"
-        class="w-full rounded-xl py-4 text-center font-black text-lg tracking-wide font-display bg-gold text-bg"
-      >
+      <a href="/" class="w-full rounded-xl py-4 text-center font-black text-lg tracking-wide font-display bg-gold text-bg">
         JUGAR DE NUEVO
       </a>
     </div>

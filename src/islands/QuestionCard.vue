@@ -105,9 +105,9 @@ const submitAnswer = (index: number) => {
     <!-- Image (if present) -->
     <div
       v-if="question.image"
-      class="rounded-xl overflow-hidden mb-5 flex items-center justify-center bg-surface border border-border min-h-40 max-h-[260px]"
+      class="rounded-xl overflow-hidden mb-5 flex items-center justify-center bg-surface border border-border min-h-40 max-h-65"
     >
-      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-[260px] object-contain" loading="eager" />
+      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-65 object-contain" loading="eager" />
     </div>
 
     <!-- Question text -->
@@ -125,7 +125,7 @@ const submitAnswer = (index: number) => {
         :class="buttonClass(i)"
         @click="submitAnswer(i)"
       >
-        <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black flex-shrink-0" :class="labelClass(i)">
+        <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0" :class="labelClass(i)">
           {{ labels[i] }}
         </span>
         <span>{{ option }}</span>
@@ -136,19 +136,13 @@ const submitAnswer = (index: number) => {
     </div>
 
     <!-- Explanation (revealed) -->
-    <div
-      v-if="isRevealed && question.explanation"
-      class="rounded-xl px-5 py-4 text-sm bg-surface2 border border-border text-muted"
-    >
+    <div v-if="isRevealed && question.explanation" class="rounded-xl px-5 py-4 text-sm bg-surface2 border border-border text-muted">
       <span class="text-yellow-400 font-bold mr-2">Explicación:</span>
       {{ question.explanation }}
     </div>
 
     <!-- Eliminated overlay -->
-    <div
-      v-if="isEliminated"
-      class="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-50 bg-bg/85"
-    >
+    <div v-if="isEliminated" class="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-50 bg-bg/85">
       <p class="text-6xl mb-3">💀</p>
       <p class="text-white font-black text-2xl font-display">ELIMINADO</p>
       <p class="text-muted text-sm mt-2">Espera a que termine la ronda...</p>

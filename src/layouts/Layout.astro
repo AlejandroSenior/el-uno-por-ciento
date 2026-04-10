@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import '@/styles/global.css';
 
 interface Props {
   title?: string;
@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'El 1% — El juego de los más listos',
-  description = 'Juego de preguntas de lógica y deducción en tiempo real. ¿Estás en el 1%?',
+  description = 'Juego de preguntas de lógica y deducción en tiempo real. ¿Estás en el 1%?'
 } = Astro.props;
 ---
 
@@ -34,5 +34,3 @@ const {
     <slot />
   </body>
 </html>
-
-

@@ -40,10 +40,7 @@ const joinRoom = () => {
     <!-- Logo / title -->
     <div class="text-center mb-12">
       <p class="text-yellow-400 text-sm font-bold tracking-[0.3em] uppercase mb-2">¿Eres del</p>
-      <h1
-        class="text-8xl font-black text-white leading-none font-display"
-        style="text-shadow: 0 0 40px rgba(251, 191, 36, 0.4)"
-      >
+      <h1 class="text-8xl font-black text-white leading-none font-display" style="text-shadow: 0 0 40px rgba(251, 191, 36, 0.4)">
         1
         <span class="text-yellow-400">%</span>
       </h1>
