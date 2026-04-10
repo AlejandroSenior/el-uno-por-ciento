@@ -1,15 +1,7 @@
 import type * as Party from 'partykit/server';
-import type {
-  GameState,
-  GamePhase,
-  Player,
-  Question,
-  Difficulty,
-  ClientMessage,
-  ServerMessage,
-} from '../types/game';
-import { DIFFICULTIES, PLAYER_COLORS, TIME_LIMITS } from '../types/game';
-import rawQuestions from '../data/questions.json';
+import type { GameState, Player, Question, Difficulty, ClientMessage, ServerMessage } from '@/types/game';
+import { DIFFICULTIES, PLAYER_COLORS } from '@/types/game';
+import rawQuestions from '@/data/questions.json';
 
 const questions = rawQuestions as Question[];
 
@@ -23,28 +15,24 @@ const ELIMINATION_DURATION = 3_000;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-function pickQuestion(difficulty: Difficulty, usedIds: string[]): Question | null {
-  const pool = questions.filter(
-    (q) => q.difficulty === difficulty && !usedIds.includes(q.id),
-  );
+const pickQuestion = (difficulty: Difficulty, usedIds: string[]): Question | null => {
+  const pool = questions.filter((q) => q.difficulty === difficulty && !usedIds.includes(q.id));
   if (pool.length === 0) return null;
   return pool[Math.floor(Math.random() * pool.length)];
-}
+};
 
-function initialState(): GameState {
-  return {
-    phase: 'LOBBY',
-    players: {},
-    currentRound: 0,
-    currentDifficulty: 90,
-    currentQuestion: null,
-    timeRemaining: 0,
-    usedQuestionIds: [],
-    hostId: '',
-    countdown: null,
-    winner: null,
-  };
-}
+const initialState = (): GameState => ({
+  phase: 'LOBBY',
+  players: {},
+  currentRound: 0,
+  currentDifficulty: 90,
+  currentQuestion: null,
+  timeRemaining: 0,
+  usedQuestionIds: [],
+  hostId: '',
+  countdown: null,
+  winner: null
+});
 
 // ─── GameServer ───────────────────────────────────────────────────────────────
 
@@ -58,12 +46,12 @@ export default class GameServer implements Party.Server {
 
   // ── Lifecycle ──────────────────────────────────────────────────────────────
 
-  onConnect(conn: Party.Connection) {
+  onConnect = (conn: Party.Connection) => {
     // Send current state immediately so the joining client can render
     this.sendTo(conn, { type: 'STATE_UPDATE', state: this.state });
-  }
+  };
 
-  onClose(conn: Party.Connection) {
+  onClose = (conn: Party.Connection) => {
     const player = this.state.players[conn.id];
     if (!player) return;
 
@@ -83,9 +71,9 @@ export default class GameServer implements Party.Server {
     }
 
     this.broadcast();
-  }
+  };
 
-  onMessage(message: string, sender: Party.Connection) {
+  onMessage = (message: string, sender: Party.Connection) => {
     let msg: ClientMessage;
     try {
       msg = JSON.parse(message) as ClientMessage;
@@ -94,15 +82,18 @@ export default class GameServer implements Party.Server {
     }
 
     switch (msg.type) {
-      case 'JOIN':        return this.handleJoin(sender, msg.name);
-      case 'START_GAME':  return this.handleStartGame(sender);
-      case 'ANSWER':      return this.handleAnswer(sender, msg.questionId, msg.answerIndex);
+      case 'JOIN':
+        return this.handleJoin(sender, msg.name);
+      case 'START_GAME':
+        return this.handleStartGame(sender);
+      case 'ANSWER':
+        return this.handleAnswer(sender, msg.questionId, msg.answerIndex);
     }
-  }
+  };
 
   // ── Message handlers ───────────────────────────────────────────────────────
 
-  private handleJoin(conn: Party.Connection, name: string) {
+  private handleJoin = (conn: Party.Connection, name: string) => {
     if (this.state.phase !== 'LOBBY') {
       this.sendTo(conn, { type: 'ERROR', message: 'La partida ya ha comenzado.' });
       return;
@@ -125,7 +116,7 @@ export default class GameServer implements Party.Server {
       isEliminated: false,
       hasAnswered: false,
       lastAnswerIndex: null,
-      isCorrect: null,
+      isCorrect: null
     };
 
     this.state.players[conn.id] = player;
@@ -135,9 +126,9 @@ export default class GameServer implements Party.Server {
     }
 
     this.broadcast();
-  }
+  };
 
-  private handleStartGame(conn: Party.Connection) {
+  private handleStartGame = (conn: Party.Connection) => {
     if (this.state.hostId !== conn.id) return;
     if (this.state.phase !== 'LOBBY') return;
 
@@ -145,15 +136,15 @@ export default class GameServer implements Party.Server {
     if (playerCount < MIN_PLAYERS_TO_START) {
       this.sendTo(conn, {
         type: 'ERROR',
-        message: `Se necesitan al menos ${MIN_PLAYERS_TO_START} jugadores para empezar.`,
+        message: `Se necesitan al menos ${MIN_PLAYERS_TO_START} jugadores para empezar.`
       });
       return;
     }
 
     this.startCountdown();
-  }
+  };
 
-  private handleAnswer(conn: Party.Connection, questionId: string, answerIndex: number) {
+  private handleAnswer = (conn: Party.Connection, questionId: string, answerIndex: number) => {
     const player = this.state.players[conn.id];
     if (!player || player.isEliminated) return;
     if (this.state.phase !== 'QUESTION') return;
@@ -173,11 +164,11 @@ export default class GameServer implements Party.Server {
     } else {
       this.broadcast();
     }
-  }
+  };
 
   // ── Game flow ──────────────────────────────────────────────────────────────
 
-  private startCountdown() {
+  private startCountdown = () => {
     this.state.phase = 'COUNTDOWN';
     this.state.currentRound = 1;
     this.state.currentDifficulty = DIFFICULTIES[0]; // 90
@@ -207,9 +198,9 @@ export default class GameServer implements Party.Server {
     };
 
     setTimeout(tick, 1_000);
-  }
+  };
 
-  private startQuestion() {
+  private startQuestion = () => {
     const q = pickQuestion(this.state.currentDifficulty, this.state.usedQuestionIds);
     if (!q) {
       // No questions left for this level — advance anyway
@@ -232,9 +223,9 @@ export default class GameServer implements Party.Server {
 
     this.broadcast();
     this.startTimer();
-  }
+  };
 
-  private startTimer() {
+  private startTimer = () => {
     this.clearTimer();
     this.timerInterval = setInterval(() => {
       this.state.timeRemaining -= 1;
@@ -244,9 +235,9 @@ export default class GameServer implements Party.Server {
         this.broadcast();
       }
     }, 1_000);
-  }
+  };
 
-  private endQuestion() {
+  private endQuestion = () => {
     this.clearTimer();
     this.state.phase = 'REVEAL';
     this.broadcast();
@@ -254,9 +245,9 @@ export default class GameServer implements Party.Server {
     setTimeout(() => {
       this.runElimination();
     }, REVEAL_DURATION);
-  }
+  };
 
-  private runElimination() {
+  private runElimination = () => {
     this.state.phase = 'ELIMINATION';
 
     // Mark incorrect (or non-answering) active players as eliminated
@@ -271,9 +262,9 @@ export default class GameServer implements Party.Server {
     setTimeout(() => {
       this.afterElimination();
     }, ELIMINATION_DURATION);
-  }
+  };
 
-  private afterElimination() {
+  private afterElimination = () => {
     const survivors = this.activePlayers(); // re-check after elimination
 
     if (survivors.length === 0) {
@@ -303,9 +294,9 @@ export default class GameServer implements Party.Server {
 
     // Advance to next round
     this.advanceRound();
-  }
+  };
 
-  private advanceRound() {
+  private advanceRound = () => {
     const roundIndex = this.state.currentRound; // next index (currentRound is 1-based)
     if (roundIndex >= DIFFICULTIES.length) {
       // Shouldn't happen but safeguard
@@ -319,28 +310,28 @@ export default class GameServer implements Party.Server {
     this.state.currentQuestion = null;
 
     this.startQuestion();
-  }
+  };
 
   // ── Utilities ──────────────────────────────────────────────────────────────
 
   /** Players who are not eliminated */
-  private activePlayers(): Player[] {
+  private activePlayers = (): Player[] => {
     return Object.values(this.state.players).filter((p) => !p.isEliminated);
-  }
+  };
 
-  private broadcast() {
+  private broadcast = () => {
     const msg = JSON.stringify({ type: 'STATE_UPDATE', state: this.state } satisfies ServerMessage);
     this.room.broadcast(msg);
-  }
+  };
 
-  private sendTo(conn: Party.Connection, msg: ServerMessage) {
+  private sendTo = (conn: Party.Connection, msg: ServerMessage) => {
     conn.send(JSON.stringify(msg));
-  }
+  };
 
-  private clearTimer() {
+  private clearTimer = () => {
     if (this.timerInterval !== null) {
       clearInterval(this.timerInterval);
       this.timerInterval = null;
     }
-  }
+  };
 }

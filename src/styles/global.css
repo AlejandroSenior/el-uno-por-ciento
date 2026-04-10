@@ -1,35 +1,33 @@
 @import "tailwindcss";
 
-/* ─── CSS Custom Properties ─────────────────────────────────────────────── */
+/* ─── Theme tokens (generates bg-*, text-*, border-*, font-* utilities) ────── */
 
-:root {
-  --color-bg:        #0a0a0f;
-  --color-surface:   #12121a;
-  --color-surface2:  #1a1a26;
-  --color-border:    #2a2a3d;
-  --color-gold:      #fbbf24;   /* yellow-400 */
-  --color-gold-dim:  #92400e;
-  --color-text:      #f0f0f8;
-  --color-muted:     #6b6b8a;
+@theme {
+  --color-bg:       #0a0a0f;
+  --color-surface:  #12121a;
+  --color-surface2: #1a1a26;
+  --color-border:   #2a2a3d;
+  --color-gold:     #fbbf24;   /* yellow-400 */
+  --color-gold-dim: #92400e;
+  --color-text:     #f0f0f8;
+  --color-muted:    #6b6b8a;
+  --color-silver:   #c0c0c0;
+  --color-bronze:   #cd7f32;
 
-  --font-display:    'Impact', 'Arial Narrow', Arial, sans-serif;
-  --font-body:       'Inter', system-ui, sans-serif;
+  --font-display: 'Impact', 'Arial Narrow', Arial, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
 }
 
-/* ─── Reset & base ───────────────────────────────────────────────────────── */
+/* ─── Base ───────────────────────────────────────────────────────────────────── */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  min-height: 100dvh;
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  html, body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 /* ─── Timer bar animation ────────────────────────────────────────────────── */
