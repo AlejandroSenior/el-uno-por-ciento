@@ -110,5 +110,10 @@ const joinRoom = () => {
     </div>
 
     <p class="mt-6 text-muted/60 text-xs text-center">2–6 jugadores · 10 rondas · Solo los mejores llegan al 1%</p>
+
+    <!-- Link to questions bank -->
+    <a href="/questions" class="mt-4 text-xs text-muted/50 hover:text-gold transition-colors underline underline-offset-2">
+      Ver banco de preguntas (132 preguntas)
+    </a>
   </div>
 </template>

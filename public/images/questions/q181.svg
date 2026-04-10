@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="300" height="240">
+  <!-- q181: Cuadrícula 2×3 (2 filas, 3 columnas). ¿Cuántos rectángulos hay? = 18.
+       C(3,2)×C(4,2) = 3×6 = 18 -->
+  <rect width="300" height="240" fill="#12121a"/>
+  
+  <g transform="translate(50,30)">
+    <!-- Grid 3 columnas × 2 filas, cada celda 60×70 -->
+    <!-- Líneas horizontales -->
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="0" y1="70" x2="180" y2="70" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="0" y1="140" x2="180" y2="140" stroke="#4ECDC4" stroke-width="2"/>
+    
+    <!-- Líneas verticales -->
+    <line x1="0" y1="0" x2="0" y2="140" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="60" y1="0" x2="60" y2="140" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="120" y1="0" x2="120" y2="140" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="180" y1="0" x2="180" y2="140" stroke="#4ECDC4" stroke-width="2"/>
+    
+    <!-- Ejemplo: resaltar un rectángulo 2×1 -->
+    <rect x="1" y="1" width="118" height="68" fill="#FFD93D" opacity="0.1" stroke="#FFD93D" stroke-width="1.5" stroke-dasharray="6,3"/>
+    
+    <!-- Ejemplo 2: resaltar otro rectángulo diferente (1×2) -->
+    <rect x="121" y="1" width="58" height="138" fill="#FF6B6B" opacity="0.1" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="6,3"/>
+    
+    <!-- Signos de interrogación en celdas vacías -->
+    <text x="30" y="112" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#6b6b8a" opacity="0.4">?</text>
+    <text x="90" y="112" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#6b6b8a" opacity="0.4">?</text>
+  </g>
+  
+  <text x="150" y="205" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos rectángulos de cualquier tamaño puedes contar?
+  </text>
+  <text x="150" y="222" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a" opacity="0.7">
+    (Se muestran 2 ejemplos con línea discontinua)
+  </text>
+</svg>

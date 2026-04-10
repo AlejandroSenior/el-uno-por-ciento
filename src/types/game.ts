@@ -12,6 +12,8 @@ export type GamePhase =
 
 // ─── Pregunta ───────────────────────────────────────────────────────────────
 
+export type AnswerType = 'multiple-choice' | 'text';
+
 export interface QuestionImage {
   src: string;   // e.g. '/images/questions/q041.svg'
   alt: string;   // texto alternativo sin revelar la respuesta
@@ -26,6 +28,7 @@ export interface Question {
   timeLimit: number;       // segundos (ya incluye el extra por imagen)
   explanation: string;
   image?: QuestionImage;
+  answerType?: AnswerType;  // 'multiple-choice' (default) o 'text'
 }
 
 // ─── Jugador ────────────────────────────────────────────────────────────────

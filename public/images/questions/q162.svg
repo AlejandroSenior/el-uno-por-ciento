@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 250" width="320" height="250">
+  <!-- q162: Hueco en forma de T y 4 piezas. Solo D NO encaja -->
+  <rect width="320" height="250" fill="#12121a"/>
+  
+  <!-- Figura principal con hueco en forma de T -->
+  <g transform="translate(160,65)">
+    <!-- Rectángulo exterior -->
+    <rect x="-60" y="-50" width="120" height="100" fill="#1e1e2e" stroke="#e5e5e5" stroke-width="2"/>
+    <!-- Hueco en T (parte horizontal arriba, vertical abajo) -->
+    <rect x="-30" y="-30" width="60" height="15" fill="#12121a" stroke="#FFD93D" stroke-width="2"/>
+    <rect x="-10" y="-15" width="20" height="40" fill="#12121a" stroke="#FFD93D" stroke-width="2"/>
+    <!-- Tapar unión -->
+    <line x1="-10" y1="-15" x2="10" y2="-15" stroke="#12121a" stroke-width="3"/>
+  </g>
+  
+  <text x="160" y="135" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">¿Cuál NO encaja en el hueco?</text>
+  
+  <!-- 4 opciones de piezas -->
+  <!-- A: T correcta -->
+  <g transform="translate(50,190)">
+    <rect x="-25" y="-22" width="50" height="12" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <rect x="-8" y="-10" width="16" height="32" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="-8" y1="-10" x2="8" y2="-10" stroke="#12121a" stroke-width="3"/>
+    <text x="0" y="35" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b8a">A</text>
+  </g>
+  
+  <!-- B: T rotada correcta (también encaja si se rota) -->
+  <g transform="translate(130,190)">
+    <rect x="-25" y="-22" width="50" height="12" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <rect x="-8" y="-10" width="16" height="32" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="-8" y1="-10" x2="8" y2="-10" stroke="#12121a" stroke-width="3"/>
+    <text x="0" y="35" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b8a">B</text>
+  </g>
+  
+  <!-- C: T ligeramente más fina (encaja) -->
+  <g transform="translate(210,190)">
+    <rect x="-25" y="-22" width="50" height="12" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <rect x="-8" y="-10" width="16" height="32" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="-8" y1="-10" x2="8" y2="-10" stroke="#12121a" stroke-width="3"/>
+    <text x="0" y="35" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b8a">C</text>
+  </g>
+  
+  <!-- D: L shape (NO encaja) -->
+  <g transform="translate(285,190)">
+    <rect x="-20" y="-22" width="16" height="44" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <rect x="-4" y="6" width="28" height="16" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="-4" y1="6" x2="-4" y2="22" stroke="#12121a" stroke-width="3"/>
+    <text x="0" y="35" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#6b6b8a">D</text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 240" width="280" height="240">
+  <!-- q197: Cuadrado mágico 3×3 con un número faltante. Constante mágica = 15.
+       2  7  6
+       9  ?  1
+       4  3  8
+       El valor faltante es 5 -->
+  <rect width="280" height="240" fill="#12121a"/>
+  
+  <text x="140" y="25" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e5e5e5">Cuadrado mágico</text>
+  <text x="140" y="42" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a">(cada fila, columna y diagonal suma lo mismo)</text>
+  
+  <g transform="translate(65,55)">
+    <!-- Grid 3×3, celdas de 50×50 -->
+    <!-- Líneas horizontales -->
+    <line x1="0" y1="0" x2="150" y2="0" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="0" y1="50" x2="150" y2="50" stroke="#4ECDC4" stroke-width="1.5"/>
+    <line x1="0" y1="100" x2="150" y2="100" stroke="#4ECDC4" stroke-width="1.5"/>
+    <line x1="0" y1="150" x2="150" y2="150" stroke="#4ECDC4" stroke-width="2"/>
+    
+    <!-- Líneas verticales -->
+    <line x1="0" y1="0" x2="0" y2="150" stroke="#4ECDC4" stroke-width="2"/>
+    <line x1="50" y1="0" x2="50" y2="150" stroke="#4ECDC4" stroke-width="1.5"/>
+    <line x1="100" y1="0" x2="100" y2="150" stroke="#4ECDC4" stroke-width="1.5"/>
+    <line x1="150" y1="0" x2="150" y2="150" stroke="#4ECDC4" stroke-width="2"/>
+    
+    <!-- Números -->
+    <!-- Fila 1: 2, 7, 6 -->
+    <text x="25" y="32" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">2</text>
+    <text x="75" y="32" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">7</text>
+    <text x="125" y="32" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">6</text>
+    
+    <!-- Fila 2: 9, ?, 1 -->
+    <text x="25" y="82" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">9</text>
+    <!-- Celda faltante -->
+    <rect x="51" y="51" width="48" height="48" fill="#FF6B6B" opacity="0.15"/>
+    <text x="75" y="82" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#FF6B6B" font-weight="bold">?</text>
+    <text x="125" y="82" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">1</text>
+    
+    <!-- Fila 3: 4, 3, 8 -->
+    <text x="25" y="132" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">4</text>
+    <text x="75" y="132" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">3</text>
+    <text x="125" y="132" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#e5e5e5" font-weight="bold">8</text>
+  </g>
+  
+  <text x="140" y="228" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Qué número va en la casilla roja?
+  </text>
+</svg>

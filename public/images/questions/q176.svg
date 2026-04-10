@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 240" width="280" height="240">
+  <!-- q176: Figura decorada con simetría. ¿Cuántos ejes de simetría tiene? = 4 (es un cuadrado con patrón simétrico) -->
+  <rect width="280" height="240" fill="#12121a"/>
+  
+  <g transform="translate(140,110)">
+    <!-- Cuadrado principal -->
+    <rect x="-70" y="-70" width="140" height="140" fill="none" stroke="#4ECDC4" stroke-width="2.5"/>
+    
+    <!-- Patrón interior simétrico en 4 ejes -->
+    <!-- Cuadrado interior rotado 45° (diamante) -->
+    <polygon points="0,-50 50,0 0,50 -50,0" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    
+    <!-- 4 círculos en las esquinas -->
+    <circle cx="-50" cy="-50" r="12" fill="none" stroke="#FFD93D" stroke-width="1.5"/>
+    <circle cx="50" cy="-50" r="12" fill="none" stroke="#FFD93D" stroke-width="1.5"/>
+    <circle cx="-50" cy="50" r="12" fill="none" stroke="#FFD93D" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="12" fill="none" stroke="#FFD93D" stroke-width="1.5"/>
+    
+    <!-- 4 pequeños cuadrados en los lados -->
+    <rect x="-8" y="-68" width="16" height="16" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <rect x="-8" y="52" width="16" height="16" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <rect x="-68" y="-8" width="16" height="16" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <rect x="52" y="-8" width="16" height="16" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    
+    <!-- Centro -->
+    <circle cx="0" cy="0" r="8" fill="#4ECDC4" opacity="0.3" stroke="#4ECDC4" stroke-width="1.5"/>
+    
+    <!-- Indicar ejes con líneas punteadas sutiles -->
+    <line x1="-85" y1="0" x2="85" y2="0" stroke="#6b6b8a" stroke-dasharray="4,4" stroke-width="0.8" opacity="0.4"/>
+    <line x1="0" y1="-85" x2="0" y2="85" stroke="#6b6b8a" stroke-dasharray="4,4" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-80" y1="-80" x2="80" y2="80" stroke="#6b6b8a" stroke-dasharray="4,4" stroke-width="0.8" opacity="0.4"/>
+    <line x1="-80" y1="80" x2="80" y2="-80" stroke="#6b6b8a" stroke-dasharray="4,4" stroke-width="0.8" opacity="0.4"/>
+  </g>
+  
+  <text x="140" y="230" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos ejes de simetría tiene esta figura?
+  </text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" width="340" height="280">
+  <!-- q196: Copo de Koch. Muestra iteraciones 0, 1, 2 y pregunta cuántos segmentos tiene iter 2.
+       Iter 0: 3 segmentos (triángulo)
+       Iter 1: 12 segmentos
+       Iter 2: 48 segmentos -->
+  <rect width="340" height="280" fill="#12121a"/>
+  
+  <!-- Iteración 0: triángulo equilátero -->
+  <text x="57" y="20" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a">Iter. 0</text>
+  <g transform="translate(57,70)">
+    <polygon points="0,-35 30,18 -30,18" fill="none" stroke="#4ECDC4" stroke-width="1.5"/>
+    <text x="0" y="38" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e5e5e5">3 segmentos</text>
+  </g>
+  
+  <!-- Iteración 1: cada lado se reemplaza por 4 segmentos -->
+  <text x="170" y="20" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a">Iter. 1</text>
+  <g transform="translate(170,70)">
+    <!-- Lado superior: de (-40,-35) a (40,-35) pasando por picos -->
+    <!-- Lado superior con pico -->
+    <polyline points="-40,20 -40,-20 -27,-20 -33,-33 -20,-20 -7,-20 -7,-33 7,-33 7,-20 20,-20 33,-33 27,-20 40,-20 40,20 27,20 33,33 20,20 7,20 7,33 -7,33 -7,20 -20,20 -33,33 -27,20 -40,20" fill="none" stroke="#FFD93D" stroke-width="1.2"/>
+    <text x="0" y="50" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e5e5e5">12 segmentos</text>
+  </g>
+  
+  <!-- Iteración 2: forma más compleja -->
+  <text x="283" y="20" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a">Iter. 2</text>
+  <g transform="translate(283,70)">
+    <!-- Simplified representation of Koch iteration 2 (suggestive) -->
+    <!-- Top side of Koch snowflake iter 2, roughly -->
+    <path d="M-45,25 L-45,-15 L-39,-15 L-39,-21 L-42,-21 L-42,-28 L-36,-28 L-36,-21 L-33,-21 L-33,-15 
+             L-27,-15 L-27,-21 L-30,-28 L-24,-21 L-24,-15
+             L-15,-15 L-15,-21 L-12,-21 L-12,-28 L-6,-28 L-6,-21 L-3,-21 L-3,-15
+             L3,-15 L3,-21 L6,-28 L9,-21 L9,-15
+             L15,-15 L15,-21 L12,-21 L12,-28 L18,-28 L18,-21 L21,-21 L21,-15
+             L27,-15 L27,-21 L30,-28 L33,-21 L33,-15 L39,-15 L39,-21 L42,-28 L42,-21 L39,-15
+             L45,-15 L45,25
+             L39,25 L39,19 L36,12 L33,19 L33,25
+             L27,25 L27,19 L24,19 L24,12 L18,12 L18,19 L15,19 L15,25
+             L9,25 L9,19 L6,12 L3,19 L3,25
+             L-3,25 L-3,19 L-6,19 L-6,12 L-12,12 L-12,19 L-15,19 L-15,25
+             L-24,25 L-24,19 L-21,12 L-27,19 L-27,25
+             L-33,25 L-33,19 L-36,19 L-36,12 L-42,12 L-42,19 L-39,19 L-39,25 Z" 
+          fill="none" stroke="#FF6B6B" stroke-width="0.8"/>
+    <text x="0" y="45" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFD93D" font-weight="bold">? segmentos</text>
+  </g>
+  
+  <!-- Patrón visual de cómo se transforma cada segmento -->
+  <g transform="translate(170,185)">
+    <text x="0" y="-15" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b6b8a">Regla: cada segmento se divide en 4</text>
+    <!-- Segmento original -->
+    <line x1="-80" y1="0" x2="-20" y2="0" stroke="#4ECDC4" stroke-width="2"/>
+    <!-- Flecha -->
+    <text x="0" y="5" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e5e5e5">→</text>
+    <!-- Segmento transformado: _/\_ -->
+    <polyline points="20,0 40,0 50,-17 60,0 80,0" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    
+    <!-- Conteo -->
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e5e5e5">4 segmentos</text>
+  </g>
+  
+  <text x="170" y="250" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos segmentos tiene la iteración 2 del copo de Koch?
+  </text>
+</svg>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref, watch } from 'vue';
 import type { Question, GamePhase, Player, Difficulty } from '@/types/game';
 
 const props = defineProps<{
@@ -78,6 +78,39 @@ const submitAnswer = (index: number) => {
   if (props.phase !== 'QUESTION') return;
   emit('answer', props.question.id, index);
 };
+
+// ── Text-type answer support ──────────────────────────────────────────────
+const textAnswer = ref('');
+const submittedText = ref('');
+const isTextQuestion = computed(() => props.question.answerType === 'text');
+
+watch(
+  () => props.question.id,
+  () => {
+    textAnswer.value = '';
+    submittedText.value = '';
+  }
+);
+
+const normalizeText = (s: string) =>
+  s
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ');
+
+const submitTextAnswer = () => {
+  if (props.phase !== 'QUESTION') return;
+  const input = textAnswer.value.trim();
+  if (!input) return;
+
+  const normalized = normalizeText(input);
+  const answerIndex = props.question.options.findIndex((opt) => normalizeText(opt) === normalized);
+
+  submittedText.value = input;
+  emit('answer', props.question.id, answerIndex !== -1 ? answerIndex : -1);
+};
 </script>
 
 <template>
@@ -129,8 +162,71 @@ const submitAnswer = (index: number) => {
     <!-- Question text -->
     <p class="text-white font-bold text-xl leading-snug mb-5">{{ question.question }}</p>
 
-    <!-- Answer options -->
-    <div class="grid grid-cols-1 gap-2.5 mb-4">
+    <!-- Text-type answer input -->
+    <div v-if="isTextQuestion" class="mb-4">
+      <template v-if="phase === 'QUESTION'">
+        <div class="flex gap-2">
+          <input
+            v-model="textAnswer"
+            type="text"
+            placeholder="Escribe tu respuesta..."
+            class="flex-1 rounded-xl px-4 py-3.5 bg-surface border border-border text-text font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-gold placeholder:text-muted/50"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            @keydown.enter="submitTextAnswer"
+          />
+          <button
+            :disabled="!textAnswer.trim()"
+            class="rounded-xl px-5 py-3.5 font-black text-sm tracking-wider transition-all duration-150 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed font-display"
+            :class="hasAnswered ? 'bg-gold-dim border border-gold text-white' : 'bg-gold text-bg'"
+            @click="submitTextAnswer"
+          >
+            {{ hasAnswered ? 'CAMBIAR' : 'ENVIAR' }}
+          </button>
+        </div>
+        <p v-if="hasAnswered" class="text-center text-xs text-muted mt-2 opacity-70">
+          Respuesta enviada:
+          <span class="text-gold font-semibold">{{ submittedText }}</span>
+          — puedes cambiarla
+        </p>
+      </template>
+
+      <div v-else-if="isRevealed" class="grid grid-cols-1 gap-2.5">
+        <div
+          v-if="hasAnswered"
+          class="w-full rounded-xl px-4 py-3.5 font-semibold text-sm flex items-center gap-3 min-h-13"
+          :class="
+            player?.isCorrect ? 'bg-green-900 border border-green-500 text-green-200' : 'bg-red-950 border border-red-500 text-red-300'
+          "
+        >
+          <span
+            class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0"
+            :class="player?.isCorrect ? 'bg-green-500 text-white' : 'bg-red-500 text-white'"
+          >
+            {{ player?.isCorrect ? '✓' : '✗' }}
+          </span>
+          <span class="leading-snug">Tu respuesta: {{ submittedText }}</span>
+        </div>
+        <div
+          v-else
+          class="w-full rounded-xl px-4 py-3.5 font-semibold text-sm flex items-center gap-3 min-h-13 bg-red-950 border border-red-500 text-red-300"
+        >
+          <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 bg-red-500 text-white">✗</span>
+          <span class="leading-snug">No respondiste</span>
+        </div>
+        <div
+          v-if="!player?.isCorrect"
+          class="w-full rounded-xl px-4 py-3.5 font-semibold text-sm flex items-center gap-3 min-h-13 bg-green-900 border border-green-500 text-green-200"
+        >
+          <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 bg-green-500 text-white">✓</span>
+          <span class="leading-snug">Respuesta correcta: {{ question.options[question.correctIndex] }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multiple-choice answer options -->
+    <div v-else class="grid grid-cols-1 gap-2.5 mb-4">
       <button
         v-for="(option, i) in question.options"
         :key="i"
@@ -150,8 +246,10 @@ const submitAnswer = (index: number) => {
       </button>
     </div>
 
-    <!-- Change-answer hint (question phase, after first selection) -->
-    <p v-if="phase === 'QUESTION' && hasAnswered" class="text-center text-xs text-muted mb-2 opacity-70">Puedes cambiar tu respuesta</p>
+    <!-- Change-answer hint (multiple choice only) -->
+    <p v-if="phase === 'QUESTION' && hasAnswered && !isTextQuestion" class="text-center text-xs text-muted mb-2 opacity-70">
+      Puedes cambiar tu respuesta
+    </p>
 
     <!-- Explanation (revealed) -->
     <div v-if="isRevealed && question.explanation" class="rounded-xl px-4 py-3.5 text-sm bg-surface2 border border-border text-muted mb-4">

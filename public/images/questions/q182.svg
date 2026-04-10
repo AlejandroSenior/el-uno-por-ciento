@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" width="340" height="280">
+  <!-- q182: Objeto 3D isométrico en forma de L. ¿Cuál es la vista frontal correcta? = B -->
+  <rect width="340" height="280" fill="#12121a"/>
+  
+  <!-- Objeto 3D: forma de L isométrica (3 cubos en fila + 1 cubo encima del primero) -->
+  <text x="170" y="18" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e5e5e5">Objeto 3D</text>
+  
+  <g transform="translate(170,70)">
+    <!-- Base: 3 cubos en fila -->
+    <!-- Cubo 1 (izq) -->
+    <polygon points="-60,12 -40,0 -20,12 -40,24" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="-60,12 -60,36 -40,48 -40,24" fill="#4A90D9" opacity="0.25" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="-40,24 -40,48 -20,36 -20,12" fill="#4A90D9" opacity="0.15" stroke="#4A90D9" stroke-width="1"/>
+    
+    <!-- Cubo 2 (centro) -->
+    <polygon points="-20,0 0,-12 20,0 0,12" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="-20,0 -20,24 0,36 0,12" fill="#4A90D9" opacity="0.25" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="0,12 0,36 20,24 20,0" fill="#4A90D9" opacity="0.15" stroke="#4A90D9" stroke-width="1"/>
+    
+    <!-- Cubo 3 (der) -->
+    <polygon points="20,-12 40,-24 60,-12 40,0" fill="#4A90D9" opacity="0.4" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="20,-12 20,12 40,24 40,0" fill="#4A90D9" opacity="0.25" stroke="#4A90D9" stroke-width="1"/>
+    <polygon points="40,0 40,24 60,12 60,-12" fill="#4A90D9" opacity="0.15" stroke="#4A90D9" stroke-width="1"/>
+    
+    <!-- Cubo encima del 1 (izq, layer 1) -->
+    <polygon points="-60,-12 -40,-24 -20,-12 -40,0" fill="#4ECDC4" opacity="0.4" stroke="#4ECDC4" stroke-width="1"/>
+    <polygon points="-60,-12 -60,12 -40,24 -40,0" fill="#4ECDC4" opacity="0.25" stroke="#4ECDC4" stroke-width="1"/>
+    <polygon points="-40,0 -40,24 -20,12 -20,-12" fill="#4ECDC4" opacity="0.15" stroke="#4ECDC4" stroke-width="1"/>
+    
+    <!-- Flecha indicando "Frente" -->
+    <line x1="0" y1="55" x2="0" y2="70" stroke="#FF6B6B" stroke-width="1.5"/>
+    <polygon points="-5,65 0,75 5,65" fill="#FF6B6B"/>
+    <text x="0" y="85" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FF6B6B">Frente</text>
+  </g>
+  
+  <!-- 4 opciones de vistas frontales -->
+  <text x="85" y="180" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e5e5e5">Vistas frontales:</text>
+  
+  <!-- Opción A: 3×1 rectángulo (incorrecta, no muestra la L) -->
+  <g transform="translate(25,195)">
+    <text x="30" y="0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFD93D" font-weight="bold">A</text>
+    <rect x="0" y="5" width="60" height="20" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Opción B: L-shape (correcta: 2 de alto en izq + 1 de alto en centro y derecha) -->
+  <g transform="translate(110,195)">
+    <text x="30" y="0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFD93D" font-weight="bold">B</text>
+    <rect x="0" y="5" width="20" height="40" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="20" y="25" width="40" height="20" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Opción C: T-shape (incorrecta) -->
+  <g transform="translate(195,195)">
+    <text x="30" y="0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFD93D" font-weight="bold">C</text>
+    <rect x="10" y="5" width="20" height="40" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="0" y="5" width="60" height="20" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Opción D: Escalón invertido (incorrecta) -->
+  <g transform="translate(275,195)">
+    <text x="20" y="0" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#FFD93D" font-weight="bold">D</text>
+    <rect x="20" y="5" width="20" height="40" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+    <rect x="0" y="25" width="20" height="20" fill="none" stroke="#e5e5e5" stroke-width="1.5"/>
+  </g>
+  
+  <text x="170" y="268" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuál es la vista frontal correcta del objeto?
+  </text>
+</svg>

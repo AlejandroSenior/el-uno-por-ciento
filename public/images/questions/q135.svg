@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <!-- q135: Contar estrellas de 5 puntas (9 total) entre lunas y soles -->
+  <rect width="320" height="200" fill="#12121a"/>
+  
+  <!-- Estrellas (9 total) - color dorado -->
+  <polygon points="30,30 33,40 44,40 35,47 38,57 30,50 22,57 25,47 16,40 27,40" fill="#FFD93D" stroke="none"/>
+  <polygon points="100,25 103,35 114,35 105,42 108,52 100,45 92,52 95,42 86,35 97,35" fill="#FFD93D" stroke="none"/>
+  <polygon points="200,20 203,30 214,30 205,37 208,47 200,40 192,47 195,37 186,30 197,30" fill="#FFD93D" stroke="none"/>
+  <polygon points="280,40 283,50 294,50 285,57 288,67 280,60 272,67 275,57 266,50 277,50" fill="#FFD93D" stroke="none"/>
+  <polygon points="55,100 58,110 69,110 60,117 63,127 55,120 47,127 50,117 41,110 52,110" fill="#FFD93D" stroke="none"/>
+  <polygon points="160,90 163,100 174,100 165,107 168,117 160,110 152,117 155,107 146,100 157,100" fill="#FFD93D" stroke="none"/>
+  <polygon points="240,105 243,115 254,115 245,122 248,132 240,125 232,132 235,122 226,115 237,115" fill="#FFD93D" stroke="none"/>
+  <polygon points="120,150 123,160 134,160 125,167 128,177 120,170 112,177 115,167 106,160 117,160" fill="#FFD93D" stroke="none"/>
+  <polygon points="300,140 303,150 314,150 305,157 308,167 300,160 292,167 295,157 286,150 297,150" fill="#FFD93D" stroke="none"/>
+  
+  <!-- Lunas (5 total) - color plateado -->
+  <g transform="translate(70,55)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#b0b0cc" stroke-width="2"/>
+    <circle cx="5" cy="-3" r="9" fill="#12121a" stroke="none"/>
+  </g>
+  <g transform="translate(155,50)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#b0b0cc" stroke-width="2"/>
+    <circle cx="5" cy="-3" r="9" fill="#12121a" stroke="none"/>
+  </g>
+  <g transform="translate(260,80)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#b0b0cc" stroke-width="2"/>
+    <circle cx="5" cy="-3" r="9" fill="#12121a" stroke="none"/>
+  </g>
+  <g transform="translate(30,145)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#b0b0cc" stroke-width="2"/>
+    <circle cx="5" cy="-3" r="9" fill="#12121a" stroke="none"/>
+  </g>
+  <g transform="translate(190,155)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#b0b0cc" stroke-width="2"/>
+    <circle cx="5" cy="-3" r="9" fill="#12121a" stroke="none"/>
+  </g>
+  
+  <text x="160" y="195" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántas estrellas de 5 puntas hay?
+  </text>
+</svg>

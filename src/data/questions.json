@@ -4,7 +4,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "¿Cuántos meses del año tienen 28 días?",
-    "options": ["Solo febrero", "Cuatro", "Seis", "Todos"],
+    "options": [
+      "Solo febrero",
+      "Cuatro",
+      "Seis",
+      "Todos"
+    ],
     "correctIndex": 3,
     "explanation": "Todos los meses tienen al menos 28 días. Febrero tiene 28 (o 29 en año bisiesto), pero el resto tienen más, no menos."
   },
@@ -13,7 +18,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "Un médico te da 3 pastillas y te dice que tomes una cada 30 minutos. ¿Cuánto tiempo tardas en tomar la última?",
-    "options": ["1 hora y media", "1 hora", "45 minutos", "2 horas"],
+    "options": [
+      "1 hora y media",
+      "1 hora",
+      "45 minutos",
+      "2 horas"
+    ],
     "correctIndex": 1,
     "explanation": "Tomas la 1.ª al minuto 0, la 2.ª a los 30 minutos y la 3.ª a los 60 minutos. Han pasado exactamente 1 hora."
   },
@@ -22,7 +32,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "¿Qué es más pesado: un kilo de plumas o un kilo de hierro?",
-    "options": ["El kilo de hierro", "El kilo de plumas", "Pesan lo mismo", "Depende de la altitud"],
+    "options": [
+      "El kilo de hierro",
+      "El kilo de plumas",
+      "Pesan lo mismo",
+      "Depende de la altitud"
+    ],
     "correctIndex": 2,
     "explanation": "Ambos pesan exactamente lo mismo: 1 kilo. El hierro es más denso, pero la pregunta es sobre el peso, no el volumen."
   },
@@ -31,7 +46,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "Un gallo está en lo alto de un tejado con inclinación. Pone un huevo. ¿Hacia qué lado cae el huevo?",
-    "options": ["Hacia la izquierda", "Hacia la derecha", "Cae rodando por la pendiente", "Los gallos no ponen huevos"],
+    "options": [
+      "Hacia la izquierda",
+      "Hacia la derecha",
+      "Cae rodando por la pendiente",
+      "Los gallos no ponen huevos"
+    ],
     "correctIndex": 3,
     "explanation": "Los gallos son machos y no ponen huevos. Solo las gallinas ponen huevos."
   },
@@ -40,7 +60,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "¿Cuántos animales de cada especie llevó Moisés en el arca?",
-    "options": ["Dos de cada especie", "Siete de los animales puros", "Uno de cada especie", "Moisés no construyó ningún arca"],
+    "options": [
+      "Dos de cada especie",
+      "Siete de los animales puros",
+      "Uno de cada especie",
+      "Moisés no construyó ningún arca"
+    ],
     "correctIndex": 3,
     "explanation": "Fue Noé quien construyó el arca, no Moisés. Moisés es el personaje bíblico que separó el Mar Rojo."
   },
@@ -49,7 +74,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "Si tienes una sola cerilla y entras en una habitación oscura con una vela, una chimenea y una lámpara de gas, ¿qué enciendes primero?",
-    "options": ["La vela", "La chimenea", "La lámpara de gas", "La cerilla"],
+    "options": [
+      "La vela",
+      "La chimenea",
+      "La lámpara de gas",
+      "La cerilla"
+    ],
     "correctIndex": 3,
     "explanation": "Primero tienes que encender la cerilla. Sin encenderla no puedes encender nada más."
   },
@@ -58,7 +88,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "¿Puedes enterrar a los supervivientes de un accidente de avión en suelo extranjero?",
-    "options": ["Sí, con permiso consular", "No, está prohibido por ley internacional", "Sí, si no hay familiares", "No, porque los supervivientes están vivos"],
+    "options": [
+      "Sí, con permiso consular",
+      "No, está prohibido por ley internacional",
+      "Sí, si no hay familiares",
+      "No, porque los supervivientes están vivos"
+    ],
     "correctIndex": 3,
     "explanation": "Los supervivientes están vivos, por lo que no se pueden enterrar. Solo se entierra a los fallecidos."
   },
@@ -67,7 +102,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "En España, ¿está permitido que un hombre se case con la hermana de su viuda?",
-    "options": ["Sí, tras un periodo de luto", "No, está prohibido por ley", "Sí, si ella da su consentimiento", "Es imposible: si tiene viuda, él está muerto"],
+    "options": [
+      "Sí, tras un periodo de luto",
+      "No, está prohibido por ley",
+      "Sí, si ella da su consentimiento",
+      "Es imposible: si tiene viuda, él está muerto"
+    ],
     "correctIndex": 3,
     "explanation": "Si el hombre tiene viuda, es porque él ha fallecido. Un hombre muerto no puede casarse con nadie."
   },
@@ -76,7 +116,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "¿Cuántas veces puedes restar 10 al número 100?",
-    "options": ["10 veces", "Infinitas veces", "Solo una vez", "9 veces"],
+    "options": [
+      "10 veces",
+      "Infinitas veces",
+      "Solo una vez",
+      "9 veces"
+    ],
     "correctIndex": 2,
     "explanation": "Solo puedes restarle 10 al número 100 una vez. Después ya no es 100, sino 90."
   },
@@ -85,7 +130,12 @@
     "difficulty": 90,
     "timeLimit": 20,
     "question": "Si en una carrera adelantas al segundo clasificado, ¿en qué posición quedas tú?",
-    "options": ["En primera posición", "En segunda posición", "En tercera posición", "Depende de cuántos corredores haya"],
+    "options": [
+      "En primera posición",
+      "En segunda posición",
+      "En tercera posición",
+      "Depende de cuántos corredores haya"
+    ],
     "correctIndex": 1,
     "explanation": "Si adelantas al segundo, ocupas su puesto: el segundo. Para ser primero tendrías que adelantar al que va en cabeza."
   },
@@ -94,7 +144,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Hay 7 hermanas en una casa. Ana lee, Beatriz cocina, Clara juega al ajedrez, Diana duerme, Elena hace deporte y Fátima riega las plantas. ¿Qué hace la séptima hermana?",
-    "options": ["Ve la televisión", "Estudia", "Juega al ajedrez con Clara", "Habla por teléfono"],
+    "options": [
+      "Ve la televisión",
+      "Estudia",
+      "Juega al ajedrez con Clara",
+      "Habla por teléfono"
+    ],
     "correctIndex": 2,
     "explanation": "Al ajedrez se juega de dos en dos. Clara no puede jugar sola, así que la séptima hermana está jugando al ajedrez con ella."
   },
@@ -103,7 +158,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Un hombre construye una casa con las cuatro paredes orientadas al sur. Un oso se acerca a la ventana. ¿De qué color es el oso?",
-    "options": ["Marrón", "Negro", "Gris", "Blanco"],
+    "options": [
+      "Marrón",
+      "Negro",
+      "Gris",
+      "Blanco"
+    ],
     "correctIndex": 3,
     "explanation": "Solo en el Polo Norte es posible que las cuatro paredes miren al sur. En el Polo Norte solo hay osos polares, que son blancos."
   },
@@ -112,7 +172,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "¿Qué ocurre siempre una vez en un minuto, dos veces en un momento, pero nunca en mil años?",
-    "options": ["Un eclipse", "El silencio absoluto", "La letra M", "Un latido del corazón"],
+    "options": [
+      "Un eclipse",
+      "El silencio absoluto",
+      "La letra M",
+      "Un latido del corazón"
+    ],
     "correctIndex": 2,
     "explanation": "La letra M aparece una vez en 'minuto', dos veces en 'momento' y ninguna en 'mil años' (si lo escribes como número: 1000 años)."
   },
@@ -121,7 +186,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Si hay 3 manzanas y te quedas con 2, ¿cuántas manzanas tienes tú?",
-    "options": ["Una", "Dos", "Tres", "Ninguna"],
+    "options": [
+      "Una",
+      "Dos",
+      "Tres",
+      "Ninguna"
+    ],
     "correctIndex": 1,
     "explanation": "La pregunta dice que te quedas con 2, así que tienes 2. El cerebro tiende a hacer la resta (3-2=1) pero la respuesta está explícita en el enunciado."
   },
@@ -130,7 +200,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "María tiene cuatro hijas y cada hija tiene un hermano. ¿Cuántos hijos tiene María en total?",
-    "options": ["8", "4", "9", "5"],
+    "options": [
+      "8",
+      "4",
+      "9",
+      "5"
+    ],
     "correctIndex": 3,
     "explanation": "Cada hija tiene UN hermano (el mismo para todas). María tiene 4 hijas y 1 hijo = 5 hijos en total."
   },
@@ -139,7 +214,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Un padre tiene actualmente 30 años más que su hijo. Dentro de 5 años tendrá el doble de edad que su hijo. ¿Cuántos años tiene el hijo ahora?",
-    "options": ["20 años", "15 años", "25 años", "30 años"],
+    "options": [
+      "20 años",
+      "15 años",
+      "25 años",
+      "30 años"
+    ],
     "correctIndex": 2,
     "explanation": "Dentro de 5 años: hijo = X+5, padre = X+35. Padre = 2×hijo → X+35 = 2(X+5) → X=25. El hijo tiene 25 años ahora. Comprobación: en 5 años, 30 y 60. 60=2×30. ✓"
   },
@@ -148,7 +228,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "¿Qué es lo que cuanto más grande es, menos se ve?",
-    "options": ["Un agujero negro", "La oscuridad", "Un secreto", "El horizonte"],
+    "options": [
+      "Un agujero negro",
+      "La oscuridad",
+      "Un secreto",
+      "El horizonte"
+    ],
     "correctIndex": 1,
     "explanation": "La oscuridad: cuanto más grande y densa es, menos puedes ver."
   },
@@ -157,7 +242,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Un hombre muere en el año 63 a.C. y nació en el año 63 a.C. ¿Es posible?",
-    "options": ["No, es una contradicción", "Sí, si nació y murió el mismo año de bebé", "Sí, en el calendario juliano hay un error", "No, los años a.C. van en orden inverso"],
+    "options": [
+      "No, es una contradicción",
+      "Sí, si nació y murió el mismo año de bebé",
+      "Sí, en el calendario juliano hay un error",
+      "No, los años a.C. van en orden inverso"
+    ],
     "correctIndex": 1,
     "explanation": "Nació y murió el mismo año (63 a.C.), por ejemplo, de parto o como recién nacido. No hay contradicción lógica."
   },
@@ -166,7 +256,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "¿Cuál de estas palabras es la intrusa? Mango, Lima, Palma, Granada, Málaga",
-    "options": ["Mango", "Lima", "Palma", "Mango y Lima"],
+    "options": [
+      "Mango",
+      "Lima",
+      "Palma",
+      "Mango y Lima"
+    ],
     "correctIndex": 0,
     "explanation": "Lima, Palma, Granada y Málaga son capitales de provincia española o ciudad importante. Mango es solo una fruta, no es una ciudad española relevante. (Lima es ciudad de Perú y también fruta, pero es la menos 'ciudad española' de las opciones.)"
   },
@@ -175,7 +270,12 @@
     "difficulty": 80,
     "timeLimit": 25,
     "question": "Un tren parte de Madrid hacia Barcelona cada hora. El trayecto dura 3 horas. ¿Con cuántos trenes en sentido contrario se cruzará durante el viaje?",
-    "options": ["2", "3", "5", "6"],
+    "options": [
+      "2",
+      "3",
+      "5",
+      "6"
+    ],
     "correctIndex": 3,
     "explanation": "Al salir encontrará los trenes que salieron 1h, 2h y 3h antes de Barcelona (ya en ruta). Durante el viaje se cruzará con los que salen en las 3 horas de trayecto. Total: 6 trenes."
   },
@@ -184,7 +284,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Si un avión se estrella exactamente en la frontera entre Francia y España, ¿en qué país entierran a los supervivientes?",
-    "options": ["En Francia", "En España", "En el país de su pasaporte", "A los supervivientes no se les entierra"],
+    "options": [
+      "En Francia",
+      "En España",
+      "En el país de su pasaporte",
+      "A los supervivientes no se les entierra"
+    ],
     "correctIndex": 3,
     "explanation": "Los supervivientes están vivos. No se puede enterrar a alguien que sigue con vida."
   },
@@ -193,7 +298,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Tienes un cubo lleno de agua que pesa 10 kg. ¿Qué puedes añadirle para que pese menos?",
-    "options": ["Hielo", "Arena fina", "Aceite", "Un agujero"],
+    "options": [
+      "Hielo",
+      "Arena fina",
+      "Aceite",
+      "Un agujero"
+    ],
     "correctIndex": 3,
     "explanation": "Si haces un agujero en el cubo, el agua se escapa y el conjunto pesa menos. No existe sustancia que puedas añadir al agua para aligerar el conjunto."
   },
@@ -202,7 +312,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "¿Qué número completa la secuencia? 1, 2, 4, 8, 16, ___",
-    "options": ["24", "18", "20", "32"],
+    "options": [
+      "24",
+      "18",
+      "20",
+      "32"
+    ],
     "correctIndex": 3,
     "explanation": "Cada número se multiplica por 2: 1×2=2, 2×2=4, 4×2=8, 8×2=16, 16×2=32."
   },
@@ -211,7 +326,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Un hombre vive en el piso 15. Sube en ascensor solo hasta el 7.º y el resto lo hace andando, excepto cuando llueve, que sube hasta el 15 directamente. ¿Por qué?",
-    "options": ["Le gusta hacer ejercicio", "El ascensor tiene una avería en los pisos superiores", "Es demasiado bajito para alcanzar el botón del 15 sin un paraguas", "Ahorra energía así"],
+    "options": [
+      "Le gusta hacer ejercicio",
+      "El ascensor tiene una avería en los pisos superiores",
+      "Es demasiado bajito para alcanzar el botón del 15 sin un paraguas",
+      "Ahorra energía así"
+    ],
     "correctIndex": 2,
     "explanation": "Es demasiado bajo de estatura para alcanzar el botón del piso 15. Cuando llueve lleva paraguas y lo usa para pulsar el botón."
   },
@@ -220,7 +340,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Si en 5 minutos 5 gallinas ponen 5 huevos, ¿cuántos huevos ponen 100 gallinas en 100 minutos?",
-    "options": ["100", "500", "1000", "2000"],
+    "options": [
+      "100",
+      "500",
+      "1000",
+      "2000"
+    ],
     "correctIndex": 3,
     "explanation": "Cada gallina pone 1 huevo cada 5 min. En 100 min, cada gallina pone 20 huevos. 100 gallinas × 20 = 2000 huevos."
   },
@@ -229,7 +354,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Un granjero tiene 15 vacas. Todas menos 9 se mueren. ¿Cuántas vacas le quedan?",
-    "options": ["6", "15", "11", "9"],
+    "options": [
+      "6",
+      "15",
+      "11",
+      "9"
+    ],
     "correctIndex": 3,
     "explanation": "'Todas menos 9' significa que 9 vacas sobreviven. Las demás se mueren."
   },
@@ -238,7 +368,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "¿Qué número sigue en la secuencia: 2, 3, 5, 7, 11, 13, ___?",
-    "options": ["15", "14", "17", "19"],
+    "options": [
+      "15",
+      "14",
+      "17",
+      "19"
+    ],
     "correctIndex": 2,
     "explanation": "Son números primos en orden: 2, 3, 5, 7, 11, 13. El siguiente número primo es el 17."
   },
@@ -247,7 +382,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Un reloj da 6 campanadas en 5 segundos. ¿Cuánto tarda en dar 12 campanadas?",
-    "options": ["10 segundos", "12 segundos", "11 segundos", "6 segundos"],
+    "options": [
+      "10 segundos",
+      "12 segundos",
+      "11 segundos",
+      "6 segundos"
+    ],
     "correctIndex": 2,
     "explanation": "6 campanadas crean 5 intervalos. Cada intervalo dura 1 segundo. 12 campanadas crean 11 intervalos = 11 segundos."
   },
@@ -256,7 +396,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "Un hombre empuja su coche y se detiene frente a un hotel. En ese momento se da cuenta de que está en bancarrota. ¿Cómo es posible?",
-    "options": ["El coche se ha averiado y no puede pagar el parking", "Está jugando al Monopoly", "El hotel no acepta su tarjeta de crédito", "Tiene muchas deudas con ese hotel"],
+    "options": [
+      "El coche se ha averiado y no puede pagar el parking",
+      "Está jugando al Monopoly",
+      "El hotel no acepta su tarjeta de crédito",
+      "Tiene muchas deudas con ese hotel"
+    ],
     "correctIndex": 1,
     "explanation": "Está jugando al Monopoly. Empuja la ficha con forma de coche hasta una casilla de hotel y, al no poder pagar, queda en bancarrota."
   },
@@ -265,7 +410,12 @@
     "difficulty": 70,
     "timeLimit": 30,
     "question": "¿Cuál de estas palabras no es un palíndromo (se lee igual al derecho y al revés)?",
-    "options": ["Ojo", "Reconocer", "Ana", "Silla"],
+    "options": [
+      "Ojo",
+      "Reconocer",
+      "Ana",
+      "Silla"
+    ],
     "correctIndex": 3,
     "explanation": "Ojo, reconocer y Ana se leen igual al derecho y al revés. 'Silla' al revés es 'allis', por lo que no es un palíndromo."
   },
@@ -274,7 +424,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "Hay una habitación con 4 esquinas. En cada esquina hay un gato. Frente a cada gato hay 3 gatos. ¿Cuántos gatos hay?",
-    "options": ["16", "12", "7", "4"],
+    "options": [
+      "16",
+      "12",
+      "7",
+      "4"
+    ],
     "correctIndex": 3,
     "explanation": "Hay 4 gatos, uno en cada esquina. Cada gato ve a los 3 gatos de las otras esquinas, que están 'frente a él'. No hay gatos adicionales."
   },
@@ -283,7 +438,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "¿Qué es mayor: la mitad de la mitad, o la mitad menos la mitad?",
-    "options": ["La mitad menos la mitad (resultado: 0)", "Son iguales", "La mitad de la mitad (resultado: 1/4)", "Depende del número de partida"],
+    "options": [
+      "La mitad menos la mitad (resultado: 0)",
+      "Son iguales",
+      "La mitad de la mitad (resultado: 1/4)",
+      "Depende del número de partida"
+    ],
     "correctIndex": 2,
     "explanation": "La mitad de la mitad = 1/4. La mitad menos la mitad = 0. Por lo tanto 1/4 > 0."
   },
@@ -292,7 +452,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "¿Cuántas veces puede dividirse un número impar entre 2 para seguir obteniendo un número entero?",
-    "options": ["Una vez", "Depende del número", "Infinitas veces", "Nunca"],
+    "options": [
+      "Una vez",
+      "Depende del número",
+      "Infinitas veces",
+      "Nunca"
+    ],
     "correctIndex": 3,
     "explanation": "Por definición, un número impar no es divisible entre 2. Nunca se puede dividir un impar entre 2 y obtener un entero."
   },
@@ -301,7 +466,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "Un padre tiene actualmente el doble de edad que su hijo. Hace 20 años, tenía cuatro veces más. ¿Cuántos años tiene el hijo ahora?",
-    "options": ["20 años", "40 años", "30 años", "25 años"],
+    "options": [
+      "20 años",
+      "40 años",
+      "30 años",
+      "25 años"
+    ],
     "correctIndex": 2,
     "explanation": "Ahora: padre = 2×hijo. Hace 20 años: (padre-20) = 4×(hijo-20). Sustituyendo: 2h-20 = 4h-80 → 60 = 2h → h = 30. Comprobación: hijo=30, padre=60. Hace 20 años: 40 = 4×10. ✓"
   },
@@ -310,7 +480,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "Si tardas 1 hora en secar 1 sábana al sol, ¿cuánto tardas en secar 30 sábanas tendiéndolas todas a la vez?",
-    "options": ["30 horas", "15 horas", "2 horas", "1 hora"],
+    "options": [
+      "30 horas",
+      "15 horas",
+      "2 horas",
+      "1 hora"
+    ],
     "correctIndex": 3,
     "explanation": "Si las tiendes todas al mismo tiempo, todas se secan en 1 hora. El proceso es paralelo, no secuencial."
   },
@@ -319,7 +494,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "Un caracol está en el fondo de un pozo de 10 metros. Cada día sube 3 metros y cada noche baja 2. ¿En cuántos días sale del pozo?",
-    "options": ["10 días", "9 días", "7 días", "8 días"],
+    "options": [
+      "10 días",
+      "9 días",
+      "7 días",
+      "8 días"
+    ],
     "correctIndex": 3,
     "explanation": "Avance neto: 1m/día. Tras 7 días ha subido 7m. El día 8 sube 3m más → llega a 10m y sale antes de que anochezca. Son 8 días."
   },
@@ -328,7 +508,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "¿Cuál es el número mínimo de calcetines que debes sacar a ciegas de un cajón con 10 negros y 10 blancos para garantizar un par del mismo color?",
-    "options": ["2", "11", "4", "3"],
+    "options": [
+      "2",
+      "11",
+      "4",
+      "3"
+    ],
     "correctIndex": 3,
     "explanation": "Con 2 calcetines podrías tener uno de cada color. Con 3, es imposible no tener al menos 2 del mismo color (principio del palomar: solo hay 2 colores)."
   },
@@ -337,7 +522,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "¿Qué número completa la serie? 1, 4, 9, 16, 25, ___",
-    "options": ["30", "36", "32", "49"],
+    "options": [
+      "30",
+      "36",
+      "32",
+      "49"
+    ],
     "correctIndex": 1,
     "explanation": "Son cuadrados perfectos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36."
   },
@@ -346,7 +536,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "Si en 6 días 6 constructores construyen 6 casas, ¿cuántos días tardarán 10 constructores en construir 10 casas?",
-    "options": ["10 días", "1 día", "60 días", "6 días"],
+    "options": [
+      "10 días",
+      "1 día",
+      "60 días",
+      "6 días"
+    ],
     "correctIndex": 3,
     "explanation": "1 constructor tarda 6 días en construir 1 casa. 10 constructores pueden construir 10 casas en paralelo, también en 6 días."
   },
@@ -355,7 +550,12 @@
     "difficulty": 60,
     "timeLimit": 30,
     "question": "¿Qué es lo que, cuanto más la quitas, más grande se hace?",
-    "options": ["Una deuda", "Una sombra", "El tiempo", "Un hoyo"],
+    "options": [
+      "Una deuda",
+      "Una sombra",
+      "El tiempo",
+      "Un hoyo"
+    ],
     "correctIndex": 3,
     "explanation": "Un hoyo: cuanto más tierra le quitas, más grande se hace el agujero."
   },
@@ -364,7 +564,12 @@
     "difficulty": 50,
     "timeLimit": 50,
     "question": "¿Cuántos triángulos hay en total en esta figura?",
-    "options": ["8", "12", "16", "10"],
+    "options": [
+      "8",
+      "12",
+      "16",
+      "10"
+    ],
     "correctIndex": 2,
     "explanation": "Además de los 9 triángulos pequeños visibles, se forman triángulos de tamaño mediano y grande al combinarlos. El total es 16 triángulos.",
     "image": {
@@ -377,7 +582,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "Tienes una moneda de 1 euro y una de 2 euros. Una de ellas no es de 1 euro. ¿Cuál es la moneda de 1 euro?",
-    "options": ["Ninguna puede ser de 1 euro", "Es imposible determinarlo", "La que 'no es de 1 euro' es la de 2€; la otra sí es de 1€", "Es un imposible lógico"],
+    "options": [
+      "Ninguna puede ser de 1 euro",
+      "Es imposible determinarlo",
+      "La que 'no es de 1 euro' es la de 2€; la otra sí es de 1€",
+      "Es un imposible lógico"
+    ],
     "correctIndex": 2,
     "explanation": "El enunciado dice 'UNA de ellas no es de 1 euro'. Esa una es la de 2 euros. La OTRA sí puede ser de 1 euro. 1€ + 2€ = 3€. ✓"
   },
@@ -386,7 +596,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "Si una persona nació el 29 de febrero de 1980, ¿cuántos cumpleaños exactos (en su fecha) ha celebrado hasta el año 2024 incluido?",
-    "options": ["44", "22", "11", "12"],
+    "options": [
+      "44",
+      "22",
+      "11",
+      "12"
+    ],
     "correctIndex": 3,
     "explanation": "El 29 de febrero solo existe en años bisiestos: 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024. Contando desde el nacimiento (1980 es el año 0), son 11 cumpleaños, más el año de nacimiento = 12 veces que existe esa fecha."
   },
@@ -395,7 +610,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "¿Qué número sigue en esta secuencia: 1, 11, 21, 1211, 111221, ___?",
-    "options": ["222311", "123321", "312211", "111222"],
+    "options": [
+      "222311",
+      "123321",
+      "312211",
+      "111222"
+    ],
     "correctIndex": 2,
     "explanation": "Es la secuencia 'mira y di': cada número describe al anterior en voz alta. 111221 → 'tres 1s, dos 2s, un 1' = 312211."
   },
@@ -404,7 +624,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "Un hombre mira una fotografía y dice: 'Hermanos y hermanas no tengo ninguno, pero el padre de este hombre es el hijo de mi padre'. ¿A quién está mirando?",
-    "options": ["A su padre", "A sí mismo", "A su sobrino", "A su hijo"],
+    "options": [
+      "A su padre",
+      "A sí mismo",
+      "A su sobrino",
+      "A su hijo"
+    ],
     "correctIndex": 3,
     "explanation": "Sin hermanos, 'el hijo de mi padre' = él mismo. 'El padre de este hombre es el hijo de mi padre' → 'el padre de este hombre soy yo'. Está mirando a su hijo."
   },
@@ -413,7 +638,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "¿Cuántas líneas rectas son necesarias para dividir un círculo en exactamente 4 partes iguales?",
-    "options": ["4", "3", "1", "2"],
+    "options": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
     "correctIndex": 3,
     "explanation": "Con 2 líneas perpendiculares que pasen por el centro se obtienen 4 partes iguales (cuartos de círculo)."
   },
@@ -422,7 +652,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "¿Cuántas letras 'F' hay en el siguiente texto?",
-    "options": ["3", "4", "5", "6"],
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
     "correctIndex": 3,
     "explanation": "Hay 6 letras F. La mayoría cuenta solo 3 porque el cerebro tiende a pasar por alto la palabra 'OF' al leer rápido, especialmente en textos en inglés.",
     "image": {
@@ -435,7 +670,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "Hay 3 interruptores en un pasillo, cada uno enciende una bombilla en habitaciones distintas (no visibles desde el pasillo). Solo puedes entrar una vez. ¿Cómo identificas qué interruptor es cuál?",
-    "options": ["Es imposible con una sola entrada", "Enciende los tres y entra rápido", "Enciende uno un rato, apágalo, enciende otro y entra: la bombilla caliente apagada es del primero", "Necesitas a alguien que te ayude desde dentro"],
+    "options": [
+      "Es imposible con una sola entrada",
+      "Enciende los tres y entra rápido",
+      "Enciende uno un rato, apágalo, enciende otro y entra: la bombilla caliente apagada es del primero",
+      "Necesitas a alguien que te ayude desde dentro"
+    ],
     "correctIndex": 2,
     "explanation": "Enciende el 1.º un buen rato, apágalo. Enciende el 2.º y entra. Bombilla encendida = interruptor 2. Bombilla apagada pero caliente = interruptor 1. Apagada y fría = interruptor 3."
   },
@@ -444,7 +684,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "¿Cuál es el único número entero que al sumarlo a sí mismo da el mismo resultado que al multiplicarlo por sí mismo?",
-    "options": ["0", "1", "4", "2"],
+    "options": [
+      "0",
+      "1",
+      "4",
+      "2"
+    ],
     "correctIndex": 3,
     "explanation": "2 + 2 = 4 y 2 × 2 = 4. Es la única solución no trivial (el 0 también cumple: 0+0=0 y 0×0=0, pero 2 es la respuesta no obvia)."
   },
@@ -453,7 +698,12 @@
     "difficulty": 50,
     "timeLimit": 35,
     "question": "Si hoy es lunes, ¿qué día será pasado mañana de la semana que viene?",
-    "options": ["Lunes", "Jueves", "Miércoles", "Viernes"],
+    "options": [
+      "Lunes",
+      "Jueves",
+      "Miércoles",
+      "Viernes"
+    ],
     "correctIndex": 2,
     "explanation": "La semana que viene, hoy (lunes) caerá en 7 días. Pasado mañana de ese lunes = lunes + 2 días = miércoles. Desde hoy: 7+2 = 9 días → miércoles."
   },
@@ -462,7 +712,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "En una carrera, si adelantas al último clasificado, ¿en qué posición quedas?",
-    "options": ["En la penúltima posición", "En la antepenúltima posición", "En la última posición", "Es imposible adelantar al último"],
+    "options": [
+      "En la penúltima posición",
+      "En la antepenúltima posición",
+      "En la última posición",
+      "Es imposible adelantar al último"
+    ],
     "correctIndex": 3,
     "explanation": "No puedes adelantar al último porque para adelantarle deberías ir detrás de él, y si vas detrás eres tú el último."
   },
@@ -471,7 +726,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "Tienes 8 bolas iguales en apariencia, pero una pesa menos. Con una balanza de dos platos y solo 2 pesadas, ¿puedes identificarla siempre?",
-    "options": ["No, necesitas 3 pesadas", "Sí, poniendo 4 en cada plato primero", "Solo si tienes suerte en la primera", "Sí, poniendo 3 bolas en cada plato en la primera pesada"],
+    "options": [
+      "No, necesitas 3 pesadas",
+      "Sí, poniendo 4 en cada plato primero",
+      "Solo si tienes suerte en la primera",
+      "Sí, poniendo 3 bolas en cada plato en la primera pesada"
+    ],
     "correctIndex": 3,
     "explanation": "1.ª pesada: 3 vs 3. Si equilibra, la ligera está en las 2 restantes → 2.ª pesada las compara. Si desequilibra, tienes 3 candidatas del plato más alto → 2.ª pesada: 1 vs 1 de ese grupo."
   },
@@ -480,7 +740,12 @@
     "difficulty": 40,
     "timeLimit": 50,
     "question": "¿Qué figura completa la secuencia?",
-    "options": ["Hexágono", "Círculo", "Triángulo", "Cuadrado"],
+    "options": [
+      "Hexágono",
+      "Círculo",
+      "Triángulo",
+      "Cuadrado"
+    ],
     "correctIndex": 2,
     "explanation": "La secuencia sigue un patrón de número de lados: cuadrado(4), pentágono(5), hexágono(6), triángulo(3). Los lados siguen el patrón 4, 5, 6, 3 (regresando al mínimo).",
     "image": {
@@ -493,7 +758,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "¿Cuántas veces aparece la letra 'A' en el siguiente texto?",
-    "options": ["7", "8", "10", "9"],
+    "options": [
+      "7",
+      "8",
+      "10",
+      "9"
+    ],
     "correctIndex": 3,
     "explanation": "En el texto 'LA VACA PACA SALTA LA TAPIA Y LA CAPA' hay exactamente 9 letras A: L-A, V-A-C-A, P-A-C-A, S-A-L-T-A, L-A, T-A-P-I-A, Y, L-A, C-A-P-A.",
     "image": {
@@ -506,7 +776,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "Hay tres cajas: 'Manzanas', 'Naranjas' y 'Mezcla'. Todas las etiquetas están mal. Sacas una manzana de la caja 'Mezcla'. ¿Qué hay en la caja 'Naranjas'?",
-    "options": ["Manzanas", "Naranjas", "No se puede saber", "Mezcla"],
+    "options": [
+      "Manzanas",
+      "Naranjas",
+      "No se puede saber",
+      "Mezcla"
+    ],
     "correctIndex": 3,
     "explanation": "La caja 'Mezcla' tiene solo manzanas (etiqueta errónea). La caja 'Naranjas' no puede tener naranjas (etiqueta incorrecta) ni manzanas (ya identificadas), así que tiene la mezcla."
   },
@@ -515,7 +790,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "¿Qué es lo que tiene dientes pero no puede morder?",
-    "options": ["Un peine", "Una sierra", "Un tenedor", "Un engranaje"],
+    "options": [
+      "Un peine",
+      "Una sierra",
+      "Un tenedor",
+      "Un engranaje"
+    ],
     "correctIndex": 0,
     "explanation": "Un peine tiene dientes pero no puede morder. También podría ser una sierra o un engranaje, pero el peine es la respuesta clásica del acertijo."
   },
@@ -524,7 +804,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "¿Cuántos números entre 1 y 100 contienen el dígito 7?",
-    "options": ["10", "20", "11", "19"],
+    "options": [
+      "10",
+      "20",
+      "11",
+      "19"
+    ],
     "correctIndex": 3,
     "explanation": "Con 7 en unidades: 7,17,27,37,47,57,67,77,87,97 = 10. Con 7 en decenas: 70,71,72,73,74,75,76,77,78,79 = 10. Pero 77 se cuenta dos veces. Total: 10+10-1 = 19."
   },
@@ -533,7 +818,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "¿Cuánto es la mitad de dos más dos?",
-    "options": ["2", "3", "1", "4"],
+    "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
     "correctIndex": 1,
     "explanation": "'La mitad de dos' = 1. Luego '1 más dos' = 3. La ambigüedad está en si operas (2/2)+2=3 o 2/(2+2)=0,5. La lectura natural es 'la mitad de dos', que es 1, más dos = 3."
   },
@@ -542,7 +832,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "Un detective llega a una escena: un hombre ahorcado en una habitación vacía con el suelo mojado. No hay sillas ni muebles. ¿Cómo llegó hasta arriba?",
-    "options": ["Saltó desde la ventana", "Un cómplice le ayudó y escapó", "Usó una cuerda que luego se quemó", "Se subió a un bloque de hielo que se derritió"],
+    "options": [
+      "Saltó desde la ventana",
+      "Un cómplice le ayudó y escapó",
+      "Usó una cuerda que luego se quemó",
+      "Se subió a un bloque de hielo que se derritió"
+    ],
     "correctIndex": 3,
     "explanation": "Se subió a un gran bloque de hielo que, al derretirse, dejó el suelo mojado y al hombre colgado sin nada debajo."
   },
@@ -551,7 +846,12 @@
     "difficulty": 40,
     "timeLimit": 35,
     "question": "¿Qué número viene a continuación en esta lista? 8, 5, 4, 9, 1, 7, 6, 3, 2, ___",
-    "options": ["10", "11", "12", "0"],
+    "options": [
+      "10",
+      "11",
+      "12",
+      "0"
+    ],
     "correctIndex": 3,
     "explanation": "Los números del 0 al 9 están ordenados alfabéticamente en español: cero, cinco, cuatro, nueve, ocho... No, la secuencia es: ocho(8), cinco(5), cuatro(4), nueve(9), uno(1), siete(7), seis(6), tres(3), dos(2), cero(0)."
   },
@@ -560,7 +860,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "¿Cuántos cuadrados hay en total en un tablero de ajedrez estándar de 8×8?",
-    "options": ["64", "100", "204", "128"],
+    "options": [
+      "64",
+      "100",
+      "204",
+      "128"
+    ],
     "correctIndex": 2,
     "explanation": "Hay cuadrados de distintos tamaños: 64(1×1) + 49(2×2) + 36(3×3) + 25(4×4) + 16(5×5) + 9(6×6) + 4(7×7) + 1(8×8) = 204 cuadrados en total."
   },
@@ -569,7 +874,12 @@
     "difficulty": 30,
     "timeLimit": 55,
     "question": "¿Qué ves en esta ilusión óptica clásica?",
-    "options": ["Solo un jarrón blanco", "Solo dos caras de perfil en negro", "Un jarrón blanco O dos caras, según cómo lo mires", "Una mariposa"],
+    "options": [
+      "Solo un jarrón blanco",
+      "Solo dos caras de perfil en negro",
+      "Un jarrón blanco O dos caras, según cómo lo mires",
+      "Una mariposa"
+    ],
     "correctIndex": 2,
     "explanation": "Es el jarrón de Rubin (1915). Según en qué te concentres, verás un jarrón blanco en el centro o dos caras humanas de perfil mirándose. Ambas percepciones son válidas.",
     "image": {
@@ -582,7 +892,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "Tienes dos cuerdas que tardan 1 hora cada una en quemarse, pero no de forma uniforme. ¿Cómo mides exactamente 45 minutos?",
-    "options": ["Imposible sin reloj", "Enciende las dos por el mismo extremo", "Enciende la primera por ambos extremos y la segunda por uno; al acabar la primera, enciende el otro extremo de la segunda", "Dobla una cuerda por la mitad y quémala"],
+    "options": [
+      "Imposible sin reloj",
+      "Enciende las dos por el mismo extremo",
+      "Enciende la primera por ambos extremos y la segunda por uno; al acabar la primera, enciende el otro extremo de la segunda",
+      "Dobla una cuerda por la mitad y quémala"
+    ],
     "correctIndex": 2,
     "explanation": "La primera cuerda, encendida por ambos extremos, tarda 30 min. Al acabarse, quedan 30 min de la segunda. Enciendes su otro extremo: tarda 15 min más. 30+15 = 45 minutos exactos."
   },
@@ -591,7 +906,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "¿Cuántos números entre 1 y 100 contienen el dígito 7?",
-    "options": ["10", "11", "19", "20"],
+    "options": [
+      "10",
+      "11",
+      "19",
+      "20"
+    ],
     "correctIndex": 2,
     "explanation": "7 en unidades: 7,17,27,37,47,57,67,77,87,97 = 10 números. 7 en decenas: 70-79 = 10 números. Menos el 77 contado dos veces: 10+10-1 = 19."
   },
@@ -600,7 +920,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "¿Cuántos cubitos tienen exactamente 2 caras pintadas al cortar un cubo 3×3×3 pintado por fuera en 27 cubitos de 1×1×1?",
-    "options": ["6", "8", "24", "12"],
+    "options": [
+      "6",
+      "8",
+      "24",
+      "12"
+    ],
     "correctIndex": 3,
     "explanation": "Los cubitos con 2 caras pintadas están en las aristas (no en esquinas ni centros de cara). Un cubo tiene 12 aristas y en cada arista hay 1 cubito con exactamente 2 caras pintadas = 12 cubitos."
   },
@@ -609,7 +934,12 @@
     "difficulty": 30,
     "timeLimit": 55,
     "question": "¿Qué son en realidad las líneas horizontales de esta imagen?",
-    "options": ["Se inclinan hacia arriba en el centro", "Son diagonales alternadas", "Son completamente paralelas y rectas", "Convergen hacia un punto lejano"],
+    "options": [
+      "Se inclinan hacia arriba en el centro",
+      "Son diagonales alternadas",
+      "Son completamente paralelas y rectas",
+      "Convergen hacia un punto lejano"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión de Hering: las líneas son completamente paralelas, pero el fondo de líneas radiales hace que parezcan combarse. Es una de las ilusiones geométricas más estudiadas en psicología visual.",
     "image": {
@@ -622,7 +952,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "En el pueblo del barbero, él afeita a todos los hombres que NO se afeitan solos, y solo a esos. ¿Quién afeita al barbero?",
-    "options": ["Él mismo", "Otro barbero de un pueblo vecino", "Su mujer", "Nadie puede afeitarle (es una paradoja)"],
+    "options": [
+      "Él mismo",
+      "Otro barbero de un pueblo vecino",
+      "Su mujer",
+      "Nadie puede afeitarle (es una paradoja)"
+    ],
     "correctIndex": 3,
     "explanation": "Paradoja de Russell: si se afeita solo, no debería (solo afeita a los que no se afeitan solos). Si no se afeita, debería (afeita a todos los que no lo hacen). No tiene solución lógica posible."
   },
@@ -631,7 +966,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "Tienes 12 monedas, una es falsa y pesa diferente (no sabes si más o menos). Con una balanza y 3 pesadas, ¿puedes identificarla?",
-    "options": ["No, necesitas saber si pesa más o menos antes", "Sí, siempre es posible en 3 pesadas", "Solo si la falsa pesa más", "Solo si la falsa pesa menos"],
+    "options": [
+      "No, necesitas saber si pesa más o menos antes",
+      "Sí, siempre es posible en 3 pesadas",
+      "Solo si la falsa pesa más",
+      "Solo si la falsa pesa menos"
+    ],
     "correctIndex": 1,
     "explanation": "Sí es posible en 3 pesadas con el algoritmo correcto. En la 1.ª pesada, 4 vs 4. Los resultados de las 3 pesadas permiten identificar la moneda y saber si pesa más o menos."
   },
@@ -640,7 +980,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "¿Cuántos ceros tiene el resultado de multiplicar 1×2×3×4×5×6×7×8×9×10?",
-    "options": ["1", "3", "2", "4"],
+    "options": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
     "correctIndex": 2,
     "explanation": "10! = 3.628.800. Tiene 2 ceros al final. Se calculan contando pares de factores 2×5: hay un 10 (=2×5) y un 5×2=10 en el 5×4... solo hay 2 múltiplos de 5 entre 1 y 10: el 5 y el 10 = 2 ceros."
   },
@@ -649,7 +994,12 @@
     "difficulty": 30,
     "timeLimit": 40,
     "question": "¿Qué número va a continuación: 2, 6, 12, 20, 30, 42, ___?",
-    "options": ["52", "54", "56", "60"],
+    "options": [
+      "52",
+      "54",
+      "56",
+      "60"
+    ],
     "correctIndex": 2,
     "explanation": "Las diferencias son 4, 6, 8, 10, 12... aumentan de 2 en 2. La siguiente diferencia es 14: 42+14 = 56."
   },
@@ -658,7 +1008,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Cuántos cuadrados hay en total en esta figura?",
-    "options": ["14", "16", "18", "17"],
+    "options": [
+      "14",
+      "16",
+      "18",
+      "17"
+    ],
     "correctIndex": 3,
     "explanation": "Contando cuadrados de todos los tamaños posibles en la figura mostrada (incluyendo los que se forman al combinar cuadrados pequeños adyacentes) son 17 en total.",
     "image": {
@@ -671,7 +1026,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Qué ves en esta imagen: una joven mirando hacia la derecha o una anciana de perfil?",
-    "options": ["Solo una joven mirando a la derecha", "Solo una anciana de perfil", "Ambas figuras dependiendo de cómo enfoques la vista", "Un pájaro"],
+    "options": [
+      "Solo una joven mirando a la derecha",
+      "Solo una anciana de perfil",
+      "Ambas figuras dependiendo de cómo enfoques la vista",
+      "Un pájaro"
+    ],
     "correctIndex": 2,
     "explanation": "Es la ilusión clásica 'My Wife and My Mother-in-Law' (1888). La barbilla de la joven es la nariz de la anciana. Ambas figuras coexisten en el mismo dibujo.",
     "image": {
@@ -684,7 +1044,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "¿Cuántos números entre 1 y 1000 NO contienen el dígito 3?",
-    "options": ["656", "700", "729", "512"],
+    "options": [
+      "656",
+      "700",
+      "729",
+      "512"
+    ],
     "correctIndex": 2,
     "explanation": "Para los números 000-999 (con ceros a la izquierda), cada dígito tiene 9 opciones (0-9 excepto 3): 9×9×9 = 729. Estos 729 números incluyen el 000 y excluyen todos los que contienen 3."
   },
@@ -693,7 +1058,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "¿Qué número sigue en la sucesión de Fibonacci? 1, 1, 2, 3, 5, 8, 13, 21, ___",
-    "options": ["29", "42", "31", "34"],
+    "options": [
+      "29",
+      "42",
+      "31",
+      "34"
+    ],
     "correctIndex": 3,
     "explanation": "En la sucesión de Fibonacci, cada número es la suma de los dos anteriores. 13+21 = 34."
   },
@@ -702,7 +1072,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "¿Cuántos ceros hay al final del resultado de 100! (factorial de 100)?",
-    "options": ["20", "25", "24", "10"],
+    "options": [
+      "20",
+      "25",
+      "24",
+      "10"
+    ],
     "correctIndex": 2,
     "explanation": "Los ceros finales de n! se cuentan con los factores de 5: ⌊100/5⌋ + ⌊100/25⌋ = 20 + 4 = 24 ceros al final de 100!"
   },
@@ -711,7 +1086,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Cuál de estas dos líneas parece más larga?",
-    "options": ["La de arriba", "La de abajo", "Son exactamente iguales", "Cambia según cuánto tiempo las mires"],
+    "options": [
+      "La de arriba",
+      "La de abajo",
+      "Son exactamente iguales",
+      "Cambia según cuánto tiempo las mires"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión de Müller-Lyer: ambas líneas tienen exactamente la misma longitud. Las flechas en los extremos (hacia fuera en una, hacia dentro en la otra) engañan al cerebro haciéndolas parecer de distinto tamaño.",
     "image": {
@@ -724,7 +1104,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "Cinco piratas se reparten 100 monedas. El más veterano propone el reparto; si más de la mitad vota en contra, le tiran al mar. ¿Cuántas monedas puede quedarse el pirata más veterano?",
-    "options": ["50", "20", "51", "96"],
+    "options": [
+      "50",
+      "20",
+      "51",
+      "96"
+    ],
     "correctIndex": 3,
     "explanation": "Por inducción: con 2 piratas, el veterano toma todo. Con 3, ofrece 1 moneda al más joven. Con 4, ofrece 1 moneda al tercero. Con 5, ofrece 1 moneda al 2.º y 4.º pirata (0 son los que menos tendrían sin él). Se queda con 96."
   },
@@ -733,7 +1118,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "Un prisionero debe elegir entre dos habitaciones: la primera tiene un fuego voraz, la segunda tiene leones que llevan 3 años sin comer. ¿Cuál elige?",
-    "options": ["La primera: hay posibilidad de que el fuego se apague", "Son igual de peligrosas", "Intenta escapar por otra vía", "La segunda: los leones habrán muerto de hambre"],
+    "options": [
+      "La primera: hay posibilidad de que el fuego se apague",
+      "Son igual de peligrosas",
+      "Intenta escapar por otra vía",
+      "La segunda: los leones habrán muerto de hambre"
+    ],
     "correctIndex": 3,
     "explanation": "Si los leones llevan 3 años sin comer, estarán muertos. La segunda habitación es segura."
   },
@@ -742,7 +1132,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "¿Cuántas veces al día las manecillas de un reloj analógico forman un ángulo de exactamente 180° (en línea recta opuesta)?",
-    "options": ["24", "48", "44", "22"],
+    "options": [
+      "24",
+      "48",
+      "44",
+      "22"
+    ],
     "correctIndex": 3,
     "explanation": "Las manecillas se alinean en 180° exactamente 22 veces en 24 horas (11 veces por cada periodo de 12 horas). No es 24 porque el ciclo de coincidencias no ocurre exactamente cada hora."
   },
@@ -751,7 +1146,12 @@
     "difficulty": 20,
     "timeLimit": 40,
     "question": "¿Qué número en español tiene el mismo número de letras que el valor que representa?",
-    "options": ["Tres", "Cuatro", "Cinco", "Ocho"],
+    "options": [
+      "Tres",
+      "Cuatro",
+      "Cinco",
+      "Ocho"
+    ],
     "correctIndex": 2,
     "explanation": "CINCO: c-i-n-c-o = 5 letras, y representa el número 5. Es el único número en español con esta propiedad."
   },
@@ -760,7 +1160,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "Tienes dos jarras: una de 3 litros y una de 5 litros. ¿Cómo mides exactamente 4 litros?",
-    "options": ["Es imposible con esas jarras", "Llena la de 3 dos veces en la de 5: sobra 1L, no 4L", "Llena la de 5, vierte en la de 3; vacía la de 3; vierte el resto en la de 3; llena la de 5 y completa la de 3: quedan 4L", "Llena la de 5 hasta el nivel visual de los 4L"],
+    "options": [
+      "Es imposible con esas jarras",
+      "Llena la de 3 dos veces en la de 5: sobra 1L, no 4L",
+      "Llena la de 5, vierte en la de 3; vacía la de 3; vierte el resto en la de 3; llena la de 5 y completa la de 3: quedan 4L",
+      "Llena la de 5 hasta el nivel visual de los 4L"
+    ],
     "correctIndex": 2,
     "explanation": "1) Llena la de 5L. 2) Vierte en la de 3L → quedan 2L en la de 5. 3) Vacía la de 3L. 4) Vierte los 2L en la de 3L. 5) Llena la de 5L. 6) Completa la de 3L (necesita 1L más) → quedan exactamente 4L en la jarra de 5L."
   },
@@ -769,7 +1174,12 @@
     "difficulty": 10,
     "timeLimit": 60,
     "question": "¿Cuántos triángulos ves en esta figura?",
-    "options": ["5", "7", "8", "9"],
+    "options": [
+      "5",
+      "7",
+      "8",
+      "9"
+    ],
     "correctIndex": 3,
     "explanation": "Contando todos los triángulos posibles (pequeños individuales, medianos formados por combinaciones y el grande exterior), hay 9 triángulos en total.",
     "image": {
@@ -782,7 +1192,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "Un rey tiene 1000 botellas de vino, una está envenenada. Tiene 10 prisioneros y una noche para identificarla (el veneno mata en una noche). ¿Puede siempre identificar la botella envenenada?",
-    "options": ["No, necesitaría 1000 prisioneros", "Solo puede descartar la mitad de las botellas", "Sí, usando un sistema de numeración en binario con los 10 prisioneros", "Necesitaría al menos 100 prisioneros"],
+    "options": [
+      "No, necesitaría 1000 prisioneros",
+      "Solo puede descartar la mitad de las botellas",
+      "Sí, usando un sistema de numeración en binario con los 10 prisioneros",
+      "Necesitaría al menos 100 prisioneros"
+    ],
     "correctIndex": 2,
     "explanation": "Con 10 prisioneros (2¹⁰ = 1024 > 1000): numera las botellas en binario. Cada prisionero representa un bit. Si la botella tiene un '1' en su posición, ese prisionero la prueba. Los que mueren revelan en binario cuál botella estaba envenenada."
   },
@@ -791,7 +1206,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "Hay dos guardias: uno siempre dice la verdad, el otro siempre miente. Dos puertas: una lleva a la libertad, la otra a la muerte. Puedes hacer UNA pregunta a UNO. ¿Qué preguntas?",
-    "options": ["¿Cuál es la puerta de la libertad?", "¿Mientes tú?", "¿Qué puerta señalaría el otro guardia como la de la libertad? (y elige la contraria)", "¿Cuál es la puerta de la muerte?"],
+    "options": [
+      "¿Cuál es la puerta de la libertad?",
+      "¿Mientes tú?",
+      "¿Qué puerta señalaría el otro guardia como la de la libertad? (y elige la contraria)",
+      "¿Cuál es la puerta de la muerte?"
+    ],
     "correctIndex": 2,
     "explanation": "Al veraz: señala la puerta de la muerte (sabe que el mentiroso señalaría la muerte). Al mentiroso: miente y también señala la muerte. Ambos señalan la puerta incorrecta → tú eliges la contraria."
   },
@@ -800,7 +1220,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "Si doblas una hoja de papel 42 veces (cada vez el doble de gruesa), ¿qué grosor aproximado tendría? (Una hoja mide 0,1 mm)",
-    "options": ["Tan alta como una persona", "Tan alta como un edificio de 10 pisos", "Llegaría a la Luna", "Llegaría al Sol"],
+    "options": [
+      "Tan alta como una persona",
+      "Tan alta como un edificio de 10 pisos",
+      "Llegaría a la Luna",
+      "Llegaría al Sol"
+    ],
     "correctIndex": 2,
     "explanation": "2⁴² × 0,1 mm ≈ 439.804 km. La distancia a la Luna es ~384.400 km. Doblar 42 veces crea una pila que superaría la distancia a la Luna. El crecimiento exponencial es sorprendente."
   },
@@ -809,7 +1234,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "¿Cuántos números primos hay entre 1 y 50?",
-    "options": ["13", "14", "16", "15"],
+    "options": [
+      "13",
+      "14",
+      "16",
+      "15"
+    ],
     "correctIndex": 3,
     "explanation": "Los primos entre 1 y 50 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47. Son exactamente 15 números primos."
   },
@@ -818,7 +1248,12 @@
     "difficulty": 10,
     "timeLimit": 60,
     "question": "¿Qué forma tienen realmente las líneas de esta figura (ilusión de Fraser)?",
-    "options": ["Una espiral que se aleja del centro", "Líneas diagonales cruzadas", "Círculos concéntricos perfectos", "Líneas en zigzag sin patrón definido"],
+    "options": [
+      "Una espiral que se aleja del centro",
+      "Líneas diagonales cruzadas",
+      "Círculos concéntricos perfectos",
+      "Líneas en zigzag sin patrón definido"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión de la espiral de Fraser (1908): parece una espiral, pero en realidad son círculos concéntricos perfectos. El patrón de las líneas internas en zigzag crea la ilusión de espiral.",
     "image": {
@@ -831,7 +1266,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "¿Qué número falta en la secuencia? 1, 8, 27, 64, 125, ___",
-    "options": ["180", "196", "216", "243"],
+    "options": [
+      "180",
+      "196",
+      "216",
+      "243"
+    ],
     "correctIndex": 2,
     "explanation": "Son los cubos perfectos: 1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216."
   },
@@ -840,7 +1280,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "En el problema de Monty Hall: eliges 1 puerta de 3. El presentador abre una sin premio. ¿Qué debes hacer para maximizar tus probabilidades?",
-    "options": ["No cambiar: ahora ambas tienen 50%", "Cambiar siempre: la otra puerta tiene 66% de probabilidad de premio", "Da igual estadísticamente", "Cambiar solo si el presentador te lo recomienda"],
+    "options": [
+      "No cambiar: ahora ambas tienen 50%",
+      "Cambiar siempre: la otra puerta tiene 66% de probabilidad de premio",
+      "Da igual estadísticamente",
+      "Cambiar solo si el presentador te lo recomienda"
+    ],
     "correctIndex": 1,
     "explanation": "Al elegir, tienes 1/3 de probabilidad. Las otras dos tienen 2/3 combinadas. Cuando el presentador elimina una perdedora, esa probabilidad de 2/3 se concentra en la otra puerta. Cambiar siempre te da 2/3 de probabilidad."
   },
@@ -849,7 +1294,12 @@
     "difficulty": 10,
     "timeLimit": 45,
     "question": "¿Qué hay en el centro exacto de América?",
-    "options": ["El Canal de Panamá", "El océano Pacífico", "La letra 'é'", "Colombia"],
+    "options": [
+      "El Canal de Panamá",
+      "El océano Pacífico",
+      "La letra 'é'",
+      "Colombia"
+    ],
     "correctIndex": 2,
     "explanation": "La pregunta es una trampa lingüística: en la palabra 'América', la letra central es la 'é'. A-m-e-r-i-c-a → 7 letras, la 4.ª (central) es la 'i'. Bueno, en 'América' con tilde: A-m-é-r-i-c-a, la central es la 'r'. Es un acertijo de observación del texto."
   },
@@ -858,7 +1308,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "Hay 3 cajas: una con solo manzanas, otra con solo naranjas y otra con mezcla. Todas las etiquetas están mal. Solo puedes sacar UNA fruta de UNA caja. ¿Puedes etiquetar correctamente las tres?",
-    "options": ["No, es imposible con una sola fruta", "Sí, sacando de la caja etiquetada 'Naranjas'", "Solo si tienes suerte al elegir", "Sí, sacando de la caja etiquetada 'Mezcla'"],
+    "options": [
+      "No, es imposible con una sola fruta",
+      "Sí, sacando de la caja etiquetada 'Naranjas'",
+      "Solo si tienes suerte al elegir",
+      "Sí, sacando de la caja etiquetada 'Mezcla'"
+    ],
     "correctIndex": 3,
     "explanation": "La caja 'Mezcla' tiene solo manzanas o solo naranjas (etiqueta incorrecta). Si sacas una manzana → esa es 'Solo Manzanas'. La caja 'Manzanas' no puede ser manzanas ni mezcla → es 'Solo Naranjas'. La 'Naranjas' es la mezcla."
   },
@@ -867,7 +1322,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "¿Cuál es el ángulo exacto que forman las agujas de un reloj analógico a las 3:15?",
-    "options": ["0 grados", "15 grados", "22,5 grados", "7,5 grados"],
+    "options": [
+      "0 grados",
+      "15 grados",
+      "22,5 grados",
+      "7,5 grados"
+    ],
     "correctIndex": 3,
     "explanation": "A las 3:15 el minutero está exactamente en el 3 (90°). El horario a las 3:00 está a 90°, pero en 15 minutos avanza 15/60 × 30° = 7,5°, quedando a 97,5°. Diferencia: 97,5° - 90° = 7,5°."
   },
@@ -876,7 +1336,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "Un hombre muere en una cabaña. Junto a él hay 53 bicicletas. ¿Qué ha pasado?",
-    "options": ["Era coleccionista de bicicletas", "Hubo una avalancha de ciclistas", "Estaba jugando a las cartas y le pillaron haciendo trampa", "Era el encargado de un alquiler de bicicletas"],
+    "options": [
+      "Era coleccionista de bicicletas",
+      "Hubo una avalancha de ciclistas",
+      "Estaba jugando a las cartas y le pillaron haciendo trampa",
+      "Era el encargado de un alquiler de bicicletas"
+    ],
     "correctIndex": 2,
     "explanation": "Las 'bicicletas' son naipes (en argot, una baraja de 54 cartas se llama 'bicicleta' por la marca más famosa). Al faltarle una carta, le descubrieron haciendo trampa."
   },
@@ -885,7 +1350,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "¿Cuántos movimientos mínimos son necesarios para resolver las Torres de Hanoi con 4 discos?",
-    "options": ["12", "16", "14", "15"],
+    "options": [
+      "12",
+      "16",
+      "14",
+      "15"
+    ],
     "correctIndex": 3,
     "explanation": "La fórmula es 2ⁿ - 1. Con 4 discos: 2⁴ - 1 = 16 - 1 = 15 movimientos mínimos."
   },
@@ -894,7 +1364,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "El 1% de la población tiene una enfermedad. Una prueba médica acierta el 99% de las veces. Si tu resultado es POSITIVO, ¿qué probabilidad real hay de que estés enfermo?",
-    "options": ["99%", "Aproximadamente 50%", "Aproximadamente 90%", "Aproximadamente 1%"],
+    "options": [
+      "99%",
+      "Aproximadamente 50%",
+      "Aproximadamente 90%",
+      "Aproximadamente 1%"
+    ],
     "correctIndex": 1,
     "explanation": "Teorema de Bayes con 10.000 personas: 100 enfermas. La prueba detecta 99 enfermos correctamente. También da 99 falsos positivos entre los 9.900 sanos. Total positivos: 198. Solo 99 son reales: 99/198 ≈ 50%. ¡Contraintuitivo!"
   },
@@ -903,7 +1378,12 @@
     "difficulty": 1,
     "timeLimit": 75,
     "question": "¿Qué ves en esta imagen?",
-    "options": ["Solo una calavera", "Solo una mujer frente al espejo", "Ambas imágenes superpuestas", "Ninguna de las anteriores"],
+    "options": [
+      "Solo una calavera",
+      "Solo una mujer frente al espejo",
+      "Ambas imágenes superpuestas",
+      "Ninguna de las anteriores"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión 'Vanidad' de Charles Allan Gilbert (1892). La misma imagen puede verse como una mujer joven sentada ante un tocador o como una gran calavera. Ambas percepciones coexisten.",
     "image": {
@@ -916,7 +1396,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "¿Cuál es el número de dos cifras igual al doble del producto de sus propios dígitos?",
-    "options": ["24", "48", "36", "18"],
+    "options": [
+      "24",
+      "48",
+      "36",
+      "18"
+    ],
     "correctIndex": 2,
     "explanation": "Sea el número 10a+b. Condición: 10a+b = 2×a×b. Probando a=3, b=6: 36 = 2×3×6 = 36. ✓ Es el único número de dos cifras con esta propiedad."
   },
@@ -925,7 +1410,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "Tienes 3 cajas con etiquetas equivocadas: 'Rojo', 'Azul' y 'Rojo y Azul'. Solo puedes ver UNA bola de UNA caja. ¿Puedes etiquetar las tres correctamente?",
-    "options": ["No, necesitas ver al menos 2 bolas", "Sí, sacando de la caja 'Rojo y Azul'", "Solo si sacas una bola roja", "Solo si sacas de la caja 'Rojo'"],
+    "options": [
+      "No, necesitas ver al menos 2 bolas",
+      "Sí, sacando de la caja 'Rojo y Azul'",
+      "Solo si sacas una bola roja",
+      "Solo si sacas de la caja 'Rojo'"
+    ],
     "correctIndex": 1,
     "explanation": "La caja 'Rojo y Azul' tiene solo un color (su etiqueta es errónea). Si sacas una bola roja → esa caja es 'Rojo'. La caja 'Rojo' no puede ser rojo ni rojo-azul → es 'Azul'. La 'Azul' es 'Rojo y Azul'. Igual que el acertijo de las manzanas."
   },
@@ -934,7 +1424,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "Hay un número de tres cifras. Si lo lees al revés, obtienes un número 594 mayor. La suma de sus dígitos es 15 y las centenas son el doble de las unidades. ¿Cuál es el número?",
-    "options": ["348", "862", "960", "备249"],
+    "options": [
+      "348",
+      "862",
+      "960",
+      "备249"
+    ],
     "correctIndex": 1,
     "explanation": "Sea el número abc. abc - cba = 594 → (a-c)×99 = 594 → a-c=6. Suma dígitos: a+b+c=15. Centenas doble de unidades: a=2c. Con a-c=6 y a=2c → c=6, a=12 (imposible). Revisando: a=8, c=2 (a-c=6, a=4c no). Probando: a=8,b=6,c=2: 8+6+2=16≠15. a=8,b=5,c=2: suma=15, 8=2×4≠2×2. Número 852: 852-258=594 ✓, 8+5+2=15 ✓, 8=2×4 no. La respuesta es 862."
   },
@@ -943,7 +1438,12 @@
     "difficulty": 1,
     "timeLimit": 60,
     "question": "La pregunta del 1%: Tienes 100 puertas cerradas. Abres todas. Luego cambias el estado de las puertas múltiplos de 2. Luego de las múltiplos de 3, y así hasta el 100. ¿Cuántas puertas quedan abiertas al final?",
-    "options": ["10", "50", "25", "1"],
+    "options": [
+      "10",
+      "50",
+      "25",
+      "1"
+    ],
     "correctIndex": 0,
     "explanation": "Solo quedan abiertas las puertas con número de divisores impar, que son los cuadrados perfectos: 1,4,9,16,25,36,49,64,81,100. Son exactamente 10 puertas. Los cuadrados perfectos son los únicos con divisores impares porque uno de sus divisores se empareja consigo mismo."
   },
@@ -952,7 +1452,12 @@
     "difficulty": 90,
     "timeLimit": 30,
     "question": "Observa la imagen. ¿Cuántos círculos hay en total?",
-    "options": ["5", "6", "7", "8"],
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
     "correctIndex": 2,
     "explanation": "Hay exactamente 7 círculos (de color turquesa) mezclados con 5 triángulos rojos.",
     "image": {
@@ -965,7 +1470,12 @@
     "difficulty": 90,
     "timeLimit": 30,
     "question": "Hay una flecha que apunta en dirección diferente a las demás. ¿En qué dirección apunta?",
-    "options": ["Arriba", "Abajo", "Izquierda", "Derecha"],
+    "options": [
+      "Arriba",
+      "Abajo",
+      "Izquierda",
+      "Derecha"
+    ],
     "correctIndex": 2,
     "explanation": "8 flechas apuntan a la derecha, pero hay una flecha destacada (dorada) que apunta a la izquierda.",
     "image": {
@@ -978,7 +1488,12 @@
     "difficulty": 80,
     "timeLimit": 35,
     "question": "¿Cuál de las siguientes figuras tiene simetría vertical?",
-    "options": ["Figura A", "Figura B", "Figura C", "Figura D"],
+    "options": [
+      "Figura A",
+      "Figura B",
+      "Figura C",
+      "Figura D"
+    ],
     "correctIndex": 1,
     "explanation": "La figura B (corazón) tiene simetría vertical perfecta. Las otras figuras no son simétricas respecto a un eje vertical.",
     "image": {
@@ -991,7 +1506,12 @@
     "difficulty": 80,
     "timeLimit": 35,
     "question": "¿Qué fracción del círculo está coloreada?",
-    "options": ["1/4", "1/3", "3/8", "1/2"],
+    "options": [
+      "1/4",
+      "1/3",
+      "3/8",
+      "1/2"
+    ],
     "correctIndex": 2,
     "explanation": "El sector coloreado abarca 135° de los 360° totales del círculo. 135/360 = 3/8.",
     "image": {
@@ -1004,7 +1524,12 @@
     "difficulty": 70,
     "timeLimit": 40,
     "question": "Este dado muestra las caras 1, 2 y 3. ¿Qué número hay en la cara opuesta al 3?",
-    "options": ["4", "5", "6", "2"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "2"
+    ],
     "correctIndex": 0,
     "explanation": "En un dado estándar, las caras opuestas siempre suman 7. Por tanto, la cara opuesta al 3 es el 4 (3+4=7).",
     "image": {
@@ -1017,7 +1542,12 @@
     "difficulty": 70,
     "timeLimit": 40,
     "question": "¿Cuál es la diferencia entre el valor más alto y el más bajo en este gráfico?",
-    "options": ["30", "35", "40", "45"],
+    "options": [
+      "30",
+      "35",
+      "40",
+      "45"
+    ],
     "correctIndex": 3,
     "explanation": "El valor más alto es la barra D (60) y el más bajo es la barra A (15). La diferencia es 60 - 15 = 45.",
     "image": {
@@ -1030,7 +1560,12 @@
     "difficulty": 60,
     "timeLimit": 40,
     "question": "La flecha rota 90° en sentido horario en cada paso. ¿En qué dirección apuntará en el paso 4?",
-    "options": ["Arriba", "Derecha", "Abajo", "Izquierda"],
+    "options": [
+      "Arriba",
+      "Derecha",
+      "Abajo",
+      "Izquierda"
+    ],
     "correctIndex": 3,
     "explanation": "Paso 1: arriba. Paso 2: derecha (+90°). Paso 3: abajo (+90°). Paso 4: izquierda (+90°).",
     "image": {
@@ -1043,7 +1578,12 @@
     "difficulty": 60,
     "timeLimit": 40,
     "question": "¿Cuántos puntos de intersección hay entre estas líneas?",
-    "options": ["4", "5", "6", "7"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
     "correctIndex": 2,
     "explanation": "Hay 4 líneas que se cruzan. El punto central donde todas se encuentran cuenta como 1, más 5 intersecciones adicionales entre pares de líneas = 6 puntos totales.",
     "image": {
@@ -1056,7 +1596,12 @@
     "difficulty": 50,
     "timeLimit": 50,
     "question": "¿Cuántas regiones distintas se forman con estos tres círculos superpuestos?",
-    "options": ["5", "6", "7", "8"],
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
     "correctIndex": 2,
     "explanation": "Diagrama de Venn de 3 conjuntos: 3 regiones exclusivas + 3 intersecciones de pares + 1 intersección triple = 7 regiones (sin contar el exterior).",
     "image": {
@@ -1069,7 +1614,12 @@
     "difficulty": 40,
     "timeLimit": 50,
     "question": "Esta matriz sigue un patrón. ¿Cuántos círculos van en la celda marcada con '?'?",
-    "options": ["3", "4", "5", "6"],
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
     "correctIndex": 2,
     "explanation": "El patrón es: cada fila aumenta en 1 círculo por celda. Fila 3: 3, 4, ? → debe ser 5 círculos.",
     "image": {
@@ -1082,7 +1632,12 @@
     "difficulty": 40,
     "timeLimit": 50,
     "question": "¿Cuántas veces aparece la letra E (mayúscula o minúscula) en el texto de la imagen?",
-    "options": ["18", "21", "24", "27"],
+    "options": [
+      "18",
+      "21",
+      "24",
+      "27"
+    ],
     "correctIndex": 2,
     "explanation": "Contando todas las E/e en el texto: 24 en total. El texto está renderizado como imagen para evitar que uses Ctrl+F.",
     "image": {
@@ -1095,7 +1650,12 @@
     "difficulty": 30,
     "timeLimit": 55,
     "question": "¿Por qué esta figura (Triángulo de Penrose) no puede existir en el mundo real en 3D?",
-    "options": ["Sus ángulos suman más de 180°", "Las conexiones crean una geometría imposible", "Es demasiado grande", "Solo funciona en 2D"],
+    "options": [
+      "Sus ángulos suman más de 180°",
+      "Las conexiones crean una geometría imposible",
+      "Es demasiado grande",
+      "Solo funciona en 2D"
+    ],
     "correctIndex": 1,
     "explanation": "El Triángulo de Penrose es una figura imposible: las tres barras parecen conectarse, pero si intentas construirlo en 3D, las conexiones no cierran geométricamente. Es una ilusión óptica bidimensional.",
     "image": {
@@ -1108,7 +1668,12 @@
     "difficulty": 30,
     "timeLimit": 55,
     "question": "¿Cuántos rectángulos hay en total en esta figura (de todos los tamaños posibles)?",
-    "options": ["18", "24", "30", "36"],
+    "options": [
+      "18",
+      "24",
+      "30",
+      "36"
+    ],
     "correctIndex": 2,
     "explanation": "Contando rectángulos de todos los tamaños: pequeños individuales, combinaciones de 2, 3, 4... hasta el rectángulo completo = 30 rectángulos totales.",
     "image": {
@@ -1121,7 +1686,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Cuántos caminos diferentes hay de A a B si solo puedes moverte hacia la derecha (→) o hacia abajo (↓)?",
-    "options": ["6", "9", "12", "20"],
+    "options": [
+      "6",
+      "9",
+      "12",
+      "20"
+    ],
     "correctIndex": 3,
     "explanation": "En una cuadrícula 3×3, necesitas 3 movimientos a la derecha y 3 hacia abajo. Combinaciones: C(6,3) = 20 caminos diferentes.",
     "image": {
@@ -1134,7 +1704,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Qué círculo central (A o B) es más grande?",
-    "options": ["El círculo A", "El círculo B", "Son del mismo tamaño", "Depende del ángulo"],
+    "options": [
+      "El círculo A",
+      "El círculo B",
+      "Son del mismo tamaño",
+      "Depende del ángulo"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión de Ebbinghaus: ambos círculos centrales tienen exactamente el mismo tamaño, pero el rodeado de círculos grandes parece más pequeño y viceversa.",
     "image": {
@@ -1147,7 +1722,12 @@
     "difficulty": 10,
     "timeLimit": 60,
     "question": "¿Cuántos hexágonos de todos los tamaños hay en esta figura?",
-    "options": ["7", "10", "13", "16"],
+    "options": [
+      "7",
+      "10",
+      "13",
+      "16"
+    ],
     "correctIndex": 2,
     "explanation": "Hexágonos pequeños: 6 en los segmentos + 1 central = 7. Hexágonos medianos: 3. Hexágonos formados por combinaciones: 2. Hexágono exterior: 1. Total: 13 hexágonos.",
     "image": {
@@ -1160,7 +1740,12 @@
     "difficulty": 1,
     "timeLimit": 75,
     "question": "¿Cuántos triángulos hay en total en esta Estrella de David?",
-    "options": ["12", "18", "24", "20"],
+    "options": [
+      "12",
+      "18",
+      "24",
+      "20"
+    ],
     "correctIndex": 3,
     "explanation": "Estrella de David con subdivisiones: triángulos pequeños individuales + triángulos medianos + triángulos grandes + los 2 principales = 20 triángulos totales. Requiere conteo sistemático.",
     "image": {
@@ -1173,7 +1758,12 @@
     "difficulty": 1,
     "timeLimit": 75,
     "question": "Este es un Cubo de Necker. ¿Qué esquina está más cerca de ti?",
-    "options": ["La esquina A (abajo-izquierda)", "La esquina B (arriba-derecha)", "Ambas están a la misma distancia", "Depende de cómo lo mires"],
+    "options": [
+      "La esquina A (abajo-izquierda)",
+      "La esquina B (arriba-derecha)",
+      "Ambas están a la misma distancia",
+      "Depende de cómo lo mires"
+    ],
     "correctIndex": 3,
     "explanation": "El Cubo de Necker es una figura ambigua: tu cerebro puede interpretarlo de dos formas diferentes. Puedes ver la esquina A o la B como 'frontal', ambas interpretaciones son válidas.",
     "image": {
@@ -1186,7 +1776,12 @@
     "difficulty": 90,
     "timeLimit": 30,
     "question": "¿Cuántas figuras rojas hay en la imagen?",
-    "options": ["3", "4", "5", "6"],
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
     "correctIndex": 2,
     "explanation": "Hay exactamente 5 figuras de color rojo: 2 círculos y 3 cuadrados/triángulos mezclados con figuras azules y verdes.",
     "image": {
@@ -1199,7 +1794,12 @@
     "difficulty": 80,
     "timeLimit": 35,
     "question": "¿Qué pieza completa la figura incompleta?",
-    "options": ["Pieza A (cuadrado)", "Pieza B (rectángulo vertical)", "Pieza C (triángulo)", "Pieza D (forma L)"],
+    "options": [
+      "Pieza A (cuadrado)",
+      "Pieza B (rectángulo vertical)",
+      "Pieza C (triángulo)",
+      "Pieza D (forma L)"
+    ],
     "correctIndex": 0,
     "explanation": "La figura incompleta es un cuadrado con un hueco cuadrado en la esquina superior derecha. Solo la pieza A (cuadrado) encaja perfectamente.",
     "image": {
@@ -1212,7 +1812,12 @@
     "difficulty": 70,
     "timeLimit": 40,
     "question": "¿Qué punto está más cerca del centro en este mapa?",
-    "options": ["Punto N (Norte)", "Punto S (Sur)", "Punto E (Este)", "Punto P"],
+    "options": [
+      "Punto N (Norte)",
+      "Punto S (Sur)",
+      "Punto E (Este)",
+      "Punto P"
+    ],
     "correctIndex": 3,
     "explanation": "Los puntos cardinales N, S, E, O están todos a 70 unidades del centro. El punto P está en posición diagonal (~40, -40), a una distancia de √(40²+40²) ≈ 56.6 unidades, por lo que es el más cercano.",
     "image": {
@@ -1225,7 +1830,12 @@
     "difficulty": 60,
     "timeLimit": 40,
     "question": "La balanza está inclinada. ¿Qué lado pesa más?",
-    "options": ["El lado izquierdo (2 cubos)", "El lado derecho (1 esfera)", "Pesan lo mismo", "No se puede determinar"],
+    "options": [
+      "El lado izquierdo (2 cubos)",
+      "El lado derecho (1 esfera)",
+      "Pesan lo mismo",
+      "No se puede determinar"
+    ],
     "correctIndex": 1,
     "explanation": "La balanza está visiblemente inclinada hacia la derecha (el platillo derecho está más bajo), lo que indica que la esfera pesa más que los dos cubos.",
     "image": {
@@ -1238,7 +1848,12 @@
     "difficulty": 50,
     "timeLimit": 50,
     "question": "Esta secuencia de dominós sigue un patrón. ¿Qué dominó sigue?",
-    "options": ["[4|5]", "[4|4]", "[5|5]", "[3|5]"],
+    "options": [
+      "[4|5]",
+      "[4|4]",
+      "[5|5]",
+      "[3|5]"
+    ],
     "correctIndex": 0,
     "explanation": "Patrón: [1|2] → [2|3] → [3|4] → [4|5]. Cada dominó aumenta ambos números en 1 respecto al anterior.",
     "image": {
@@ -1251,7 +1866,12 @@
     "difficulty": 40,
     "timeLimit": 50,
     "question": "¿Qué ángulo forman las manecillas del reloj a las 3:40?",
-    "options": ["90°", "110°", "130°", "150°"],
+    "options": [
+      "90°",
+      "110°",
+      "130°",
+      "150°"
+    ],
     "correctIndex": 2,
     "explanation": "A las 3:40, la manecilla horaria está en 3 + 40/60 = 3.667 horas = 110° desde las 12. La manecilla minutera está en 240° (40 min). Ángulo entre ellas: 240° - 110° = 130°.",
     "image": {
@@ -1264,7 +1884,12 @@
     "difficulty": 30,
     "timeLimit": 55,
     "question": "¿Cuántas piezas del tangram forman esta figura? (Un tangram tiene 7 piezas en total)",
-    "options": ["4", "5", "6", "7"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
     "correctIndex": 2,
     "explanation": "La figura usa 6 de las 7 piezas del tangram: 2 triángulos grandes, 1 triángulo mediano, 2 triángulos pequeños y 1 paralelogramo.",
     "image": {
@@ -1277,7 +1902,12 @@
     "difficulty": 20,
     "timeLimit": 55,
     "question": "¿Las líneas horizontales son paralelas entre sí?",
-    "options": ["No, están inclinadas hacia la derecha", "No, están inclinadas hacia la izquierda", "Sí, son perfectamente paralelas", "Algunas sí, otras no"],
+    "options": [
+      "No, están inclinadas hacia la derecha",
+      "No, están inclinadas hacia la izquierda",
+      "Sí, son perfectamente paralelas",
+      "Algunas sí, otras no"
+    ],
     "correctIndex": 2,
     "explanation": "Ilusión de Zöllner: las líneas horizontales son perfectamente paralelas, pero los segmentos diagonales alternados crean la ilusión de que están inclinadas.",
     "image": {
@@ -1290,7 +1920,12 @@
     "difficulty": 10,
     "timeLimit": 60,
     "question": "¿Cuántos cubos hay en total en esta estructura, contando los ocultos?",
-    "options": ["6", "8", "10", "12"],
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
     "correctIndex": 1,
     "explanation": "Vista isométrica: capa inferior tiene 4 cubos (base 2×2), capa superior tiene 2 visibles + 2 potencialmente ocultos. Analizando la estructura: 6 cubos visibles + 2 que deben estar detrás para soportar = 8 cubos totales.",
     "image": {
@@ -1303,12 +1938,1212 @@
     "difficulty": 1,
     "timeLimit": 75,
     "question": "Este laberinto tiene 4 caminos numerados. ¿Cuál de ellos lleva de A a B?",
-    "options": ["Camino 1", "Camino 2", "Camino 3", "Camino 4"],
+    "options": [
+      "Camino 1",
+      "Camino 2",
+      "Camino 3",
+      "Camino 4"
+    ],
     "correctIndex": 1,
     "explanation": "Trazando cada camino: el camino 1 se bloquea en la primera intersección, el camino 3 termina en un callejón sin salida, el camino 4 también se bloquea. Solo el camino 2 conecta A con B sin obstáculos.",
     "image": {
       "src": "/images/questions/q128.svg",
       "alt": "Laberinto complejo con punto A de entrada, punto B de salida, y 4 caminos numerados"
     }
+  },
+  {
+    "id": "q129",
+    "difficulty": 80,
+    "timeLimit": 25,
+    "question": "Dos padres y dos hijos se sientan a cenar. Solo hay 3 sillas y cada uno tiene la suya. ¿Cuántas personas hay en total?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Son 3 personas: abuelo, padre e hijo. El padre es simultáneamente padre (del hijo) e hijo (del abuelo), por lo que 'dos padres y dos hijos' son solo 3 personas.",
+    "answerType": "text"
+  },
+  {
+    "id": "q130",
+    "difficulty": 60,
+    "timeLimit": 30,
+    "question": "Un ladrillo pesa 1 kilo más medio ladrillo. ¿Cuántos kilos pesa el ladrillo entero?",
+    "options": [
+      "2",
+      "1.5",
+      "3",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Si llamamos x al peso del ladrillo: x = 1 + x/2. Despejando: x/2 = 1, así que x = 2 kg. El ladrillo pesa 2 kilos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q131",
+    "difficulty": 40,
+    "timeLimit": 35,
+    "question": "¿Cuántos cortes rectos necesitas para dividir un pastel redondo en exactamente 8 trozos iguales?",
+    "options": [
+      "4",
+      "3",
+      "8",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "4 cortes rectos que pasen por el centro, cada uno rotado 45° respecto al anterior, dividen el pastel en 8 trozos iguales.",
+    "answerType": "text"
+  },
+  {
+    "id": "q132",
+    "difficulty": 20,
+    "timeLimit": 40,
+    "question": "La suma de tres números consecutivos es 333. ¿Cuál es el número mayor de los tres?",
+    "options": [
+      "112",
+      "111",
+      "110",
+      "113"
+    ],
+    "correctIndex": 0,
+    "explanation": "Si los números son n-1, n, n+1: su suma es 3n = 333, así que n = 111. Los tres números son 110, 111, 112. El mayor es 112.",
+    "answerType": "text"
+  },
+  {
+    "id": "q133",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "Observa la imagen. ¿Cuántos círculos azules hay?",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hay exactamente 6 círculos azules en la imagen, mezclados con otras formas de distintos colores.",
+    "image": {
+      "src": "/images/questions/q133.svg",
+      "alt": "Conjunto de formas geométricas de varios colores distribuidas en el espacio"
+    }
+  },
+  {
+    "id": "q134",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "Una de estas formas tiene un lado más que las demás. ¿Cuál es?",
+    "options": [
+      "Forma A",
+      "Forma B",
+      "Forma C",
+      "Forma D"
+    ],
+    "correctIndex": 2,
+    "explanation": "Las formas A, B y D son pentágonos (5 lados), mientras que la forma C es un hexágono (6 lados).",
+    "image": {
+      "src": "/images/questions/q134.svg",
+      "alt": "Cuatro polígonos regulares etiquetados A, B, C y D"
+    }
+  },
+  {
+    "id": "q135",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "¿Cuántas estrellas hay en la imagen?",
+    "options": [
+      "9",
+      "8",
+      "10",
+      "7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Contando cuidadosamente todas las estrellas de la imagen, hay exactamente 9.",
+    "image": {
+      "src": "/images/questions/q135.svg",
+      "alt": "Varias estrellas de diferentes tamaños y colores dispersas en la imagen"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q136",
+    "difficulty": 90,
+    "timeLimit": 20,
+    "question": "¿Cuántas veces aparece el dígito 1 si escribes todos los números del 1 al 20?",
+    "options": [
+      "12",
+      "10",
+      "11",
+      "13"
+    ],
+    "correctIndex": 0,
+    "explanation": "El 1 aparece en: 1, 10, 11 (dos veces), 12, 13, 14, 15, 16, 17, 18, 19. En total son 12 apariciones del dígito 1.",
+    "answerType": "text"
+  },
+  {
+    "id": "q137",
+    "difficulty": 90,
+    "timeLimit": 20,
+    "question": "Tiene ciudades pero no casas, bosques pero no árboles, y agua pero no peces. ¿Qué es?",
+    "options": [
+      "Mapa",
+      "Globo",
+      "Pintura",
+      "Sueño"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un mapa tiene ciudades (marcadas), bosques (zonas verdes) y agua (zonas azules), pero ninguno de ellos es real.",
+    "answerType": "text"
+  },
+  {
+    "id": "q138",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "¿Qué grupo tiene exactamente 7 puntos?",
+    "options": [
+      "Grupo A",
+      "Grupo B",
+      "Grupo C",
+      "Grupo D"
+    ],
+    "correctIndex": 1,
+    "explanation": "Contando cuidadosamente los puntos de cada grupo, el Grupo B es el único que tiene exactamente 7 puntos.",
+    "image": {
+      "src": "/images/questions/q138.svg",
+      "alt": "Cuatro grupos de puntos etiquetados A, B, C y D con diferentes cantidades"
+    }
+  },
+  {
+    "id": "q139",
+    "difficulty": 90,
+    "timeLimit": 20,
+    "question": "Hay 5 lápices sobre la mesa. Quitas 2 de la mesa. ¿Cuántos lápices tienes tú?",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tú quitaste 2 lápices de la mesa, así que tú tienes esos 2 lápices. En la mesa quedan 3, pero la pregunta es cuántos tienes tú.",
+    "answerType": "text"
+  },
+  {
+    "id": "q140",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "Observa la secuencia de polígonos. ¿Cuál es la siguiente forma?",
+    "options": [
+      "Triángulo",
+      "Hexágono",
+      "Heptágono",
+      "Círculo"
+    ],
+    "correctIndex": 1,
+    "explanation": "La secuencia es triángulo (3), cuadrado (4), pentágono (5)… El siguiente polígono tiene 6 lados: un hexágono.",
+    "image": {
+      "src": "/images/questions/q140.svg",
+      "alt": "Secuencia de polígonos con número creciente de lados y un signo de interrogación al final"
+    }
+  },
+  {
+    "id": "q141",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "¿Cuál de las dos líneas horizontales es más larga?",
+    "options": [
+      "La línea A",
+      "La línea B",
+      "Son iguales",
+      "No se puede determinar"
+    ],
+    "correctIndex": 2,
+    "explanation": "Es una ilusión óptica (de Müller-Lyer). Ambas líneas tienen exactamente la misma longitud, pero las flechas en los extremos crean la ilusión de diferencia.",
+    "image": {
+      "src": "/images/questions/q141.svg",
+      "alt": "Dos líneas horizontales con flechas en los extremos apuntando en direcciones opuestas"
+    }
+  },
+  {
+    "id": "q142",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "¿Cuántos triángulos contienen un número par?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hay exactamente 5 triángulos con un número par en su interior. Los números pares son divisibles entre 2.",
+    "image": {
+      "src": "/images/questions/q142.svg",
+      "alt": "Varios triángulos con números en su interior"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q143",
+    "difficulty": 80,
+    "timeLimit": 25,
+    "question": "Pedro es más alto que María. María es más alta que Luis. ¿Quién es el más bajo de los tres?",
+    "options": [
+      "Luis",
+      "María",
+      "Pedro",
+      "No se puede saber"
+    ],
+    "correctIndex": 0,
+    "explanation": "Si Pedro > María > Luis en altura, entonces Luis es el más bajo de los tres.",
+    "answerType": "text"
+  },
+  {
+    "id": "q144",
+    "difficulty": 80,
+    "timeLimit": 25,
+    "question": "Si 5 bomberos rescatan 5 objetos en 5 minutos, ¿cuántos objetos rescatan 5 bomberos en 20 minutos?",
+    "options": [
+      "20",
+      "25",
+      "5",
+      "100"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cada bombero rescata 1 objeto cada 5 minutos. En 20 minutos, cada uno rescata 4 objetos. Con 5 bomberos: 5 × 4 = 20 objetos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q145",
+    "difficulty": 80,
+    "timeLimit": 25,
+    "question": "Si el día después de pasado mañana es jueves, ¿qué día es hoy?",
+    "options": [
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Domingo"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pasado mañana es dentro de 2 días. El día después de pasado mañana es dentro de 3 días. Si dentro de 3 días es jueves, hoy es lunes.",
+    "answerType": "text"
+  },
+  {
+    "id": "q146",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Qué figura completa el patrón de la matriz 3×3?",
+    "options": [
+      "Círculo azul",
+      "Cuadrado azul",
+      "Triángulo rojo",
+      "Cuadrado rojo"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cada fila y columna tiene una de cada forma (círculo, triángulo, cuadrado) y un color de cada. La pieza que falta es un cuadrado azul.",
+    "image": {
+      "src": "/images/questions/q146.svg",
+      "alt": "Matriz 3×3 con formas geométricas de colores y una casilla vacía con signo de interrogación"
+    }
+  },
+  {
+    "id": "q147",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Cuál es el reflejo horizontal correcto de la figura original?",
+    "options": [
+      "Reflejo A",
+      "Reflejo B",
+      "Reflejo C",
+      "Reflejo D"
+    ],
+    "correctIndex": 2,
+    "explanation": "El reflejo horizontal invierte la figura de izquierda a derecha, como si se mirara en un espejo vertical. Solo la opción C es correcta.",
+    "image": {
+      "src": "/images/questions/q147.svg",
+      "alt": "Una figura geométrica asimétrica y cuatro posibles reflejos etiquetados A, B, C, D"
+    }
+  },
+  {
+    "id": "q148",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Cuántos puntos de intersección crean estas 5 líneas rectas?",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "15"
+    ],
+    "correctIndex": 0,
+    "explanation": "Con 5 líneas en posición general (ninguna paralela, no 3 concurrentes), el máximo de intersecciones es C(5,2) = 10.",
+    "image": {
+      "src": "/images/questions/q148.svg",
+      "alt": "Cinco líneas rectas que se cruzan entre sí formando múltiples puntos de intersección"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q149",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Cuál opción muestra la figura rotada 90° en sentido horario?",
+    "options": [
+      "Opción A",
+      "Opción B",
+      "Opción C",
+      "Opción D"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rotar 90° en sentido horario equivale a girar la figura un cuarto de vuelta hacia la derecha. Solo la opción B muestra esta rotación correctamente.",
+    "image": {
+      "src": "/images/questions/q149.svg",
+      "alt": "Una forma en L y cuatro posibles rotaciones etiquetadas A, B, C, D"
+    }
+  },
+  {
+    "id": "q150",
+    "difficulty": 70,
+    "timeLimit": 30,
+    "question": "En un reloj digital de 24h, la hora 12:21 es capicúa (se lee igual al revés: 1221). ¿Cuántos minutos faltan para la siguiente hora capicúa?",
+    "options": [
+      "70",
+      "60",
+      "80",
+      "110"
+    ],
+    "correctIndex": 0,
+    "explanation": "La siguiente hora capicúa después de 12:21 es 13:31 (1331). De 12:21 a 13:31 hay exactamente 70 minutos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q151",
+    "difficulty": 70,
+    "timeLimit": 30,
+    "question": "En una fila, Ana está en la posición 8 desde el frente y en la posición 12 desde el fondo. ¿Cuántas personas hay en la fila?",
+    "options": [
+      "19",
+      "20",
+      "18",
+      "21"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total = posición desde el frente + posición desde el fondo − 1 = 8 + 12 − 1 = 19 personas.",
+    "answerType": "text"
+  },
+  {
+    "id": "q152",
+    "difficulty": 70,
+    "timeLimit": 30,
+    "question": "Usando los 4 vértices de un cuadrado como posibles vértices, ¿cuántos triángulos diferentes puedes formar?",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "De 4 vértices, elegimos 3 para formar un triángulo: C(4,3) = 4 triángulos posibles.",
+    "answerType": "text"
+  },
+  {
+    "id": "q153",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "Si 2 círculos pesan lo mismo que 1 cuadrado, y 1 cuadrado pesa lo mismo que 3 triángulos, ¿cuántos triángulos equilibran 4 círculos?",
+    "options": [
+      "6 triángulos",
+      "8 triángulos",
+      "4 triángulos",
+      "12 triángulos"
+    ],
+    "correctIndex": 0,
+    "explanation": "4 círculos = 2 cuadrados. 2 cuadrados = 6 triángulos. Por tanto, 4 círculos = 6 triángulos.",
+    "image": {
+      "src": "/images/questions/q153.svg",
+      "alt": "Dos balanzas mostrando equivalencias entre círculos, cuadrados y triángulos"
+    }
+  },
+  {
+    "id": "q154",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "Observa el gráfico circular. ¿Cuánto suman las dos secciones más pequeñas?",
+    "options": [
+      "15%",
+      "20%",
+      "10%",
+      "25%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Las dos secciones más pequeñas del gráfico suman 15% del total.",
+    "image": {
+      "src": "/images/questions/q154.svg",
+      "alt": "Gráfico circular dividido en varias secciones de diferente tamaño con porcentajes"
+    }
+  },
+  {
+    "id": "q155",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "En esta cuadrícula, cada fila suma 30. ¿Qué número falta?",
+    "options": [
+      "15",
+      "12",
+      "18",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sumando los números conocidos de la fila y restando de 30, el número que falta es 15.",
+    "image": {
+      "src": "/images/questions/q155.svg",
+      "alt": "Cuadrícula numérica con una casilla vacía marcada con interrogación"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q156",
+    "difficulty": 60,
+    "timeLimit": 30,
+    "question": "Si 5 gatos atrapan 5 ratones en 5 minutos, ¿cuántos gatos se necesitan para atrapar 100 ratones en 100 minutos?",
+    "options": [
+      "5",
+      "100",
+      "20",
+      "500"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cada gato atrapa 1 ratón cada 5 minutos. En 100 minutos, cada gato atrapa 20 ratones. Con 5 gatos: 5 × 20 = 100 ratones.",
+    "answerType": "text"
+  },
+  {
+    "id": "q157",
+    "difficulty": 60,
+    "timeLimit": 30,
+    "question": "4 personas se encuentran y cada una le da la mano a todas las demás exactamente una vez. ¿Cuántos apretones de manos hay en total?",
+    "options": [
+      "6",
+      "8",
+      "4",
+      "12"
+    ],
+    "correctIndex": 0,
+    "explanation": "Combinaciones de 2 entre 4 personas: C(4,2) = 4×3/2 = 6 apretones de manos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q158",
+    "difficulty": 60,
+    "timeLimit": 30,
+    "question": "¿Cuánto es 30 dividido entre la mitad, más 10?",
+    "options": [
+      "70",
+      "25",
+      "40",
+      "60"
+    ],
+    "correctIndex": 0,
+    "explanation": "'Dividido entre la mitad' significa dividir entre ½ (que es multiplicar por 2): 30 ÷ ½ = 60. Luego 60 + 10 = 70. El error común es hacer 30/2 + 10 = 25.",
+    "answerType": "text"
+  },
+  {
+    "id": "q159",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "Si doblas este desarrollo plano en forma de cruz, ¿qué cubo se forma?",
+    "options": [
+      "Cubo A",
+      "Cubo B",
+      "Cubo C",
+      "Cubo D"
+    ],
+    "correctIndex": 0,
+    "explanation": "Al doblar la cruz, las caras opuestas quedan determinadas por su posición. Solo el Cubo A coincide con las posiciones correctas de cada cara.",
+    "image": {
+      "src": "/images/questions/q159.svg",
+      "alt": "Desarrollo plano de un cubo en forma de cruz con caras coloreadas y cuatro opciones de cubos"
+    }
+  },
+  {
+    "id": "q160",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "Cada paso, la figura rota y cambia de color. ¿Cuál es la siguiente en la secuencia?",
+    "options": [
+      "Opción A",
+      "Opción B",
+      "Opción C",
+      "Opción D"
+    ],
+    "correctIndex": 2,
+    "explanation": "La figura rota 90° en sentido horario y alterna entre los colores del patrón. Aplicando ambas reglas, la siguiente figura es la Opción C.",
+    "image": {
+      "src": "/images/questions/q160.svg",
+      "alt": "Secuencia de figuras geométricas que rotan y cambian de color con cuatro opciones para la siguiente"
+    }
+  },
+  {
+    "id": "q161",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "¿Cuántos cuadrados están coloreados en la cuadrícula?",
+    "options": [
+      "13",
+      "12",
+      "14",
+      "11"
+    ],
+    "correctIndex": 0,
+    "explanation": "Contando cuidadosamente fila por fila: 3 + 3 + 2 + 3 + 2 = 13 cuadrados coloreados.",
+    "image": {
+      "src": "/images/questions/q161.svg",
+      "alt": "Cuadrícula con algunos cuadrados coloreados en turquesa y el resto vacíos"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q162",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "Tres de estas piezas encajan en el hueco. ¿Cuál NO encaja?",
+    "options": [
+      "Pieza A",
+      "Pieza B",
+      "Pieza C",
+      "Pieza D"
+    ],
+    "correctIndex": 3,
+    "explanation": "Las piezas A, B y C pueden rotarse o reflejarse para encajar en el hueco. La pieza D tiene una forma diferente que no coincide con el hueco.",
+    "image": {
+      "src": "/images/questions/q162.svg",
+      "alt": "Un hueco en forma irregular y cuatro piezas candidatas etiquetadas A, B, C, D"
+    }
+  },
+  {
+    "id": "q163",
+    "difficulty": 50,
+    "timeLimit": 35,
+    "question": "Tengo 6 huevos. Rompo 2, cocino 2 y me como 2. ¿Cuántos huevos me quedan?",
+    "options": [
+      "4",
+      "0",
+      "2",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rompí los mismos 2 huevos que cociné y que luego comí. Solo usé 2 huevos de los 6, así que quedan 4.",
+    "answerType": "text"
+  },
+  {
+    "id": "q164",
+    "difficulty": 50,
+    "timeLimit": 35,
+    "question": "¿Qué número multiplicado por sí mismo da exactamente 12.321?",
+    "options": [
+      "111",
+      "121",
+      "1111",
+      "99"
+    ],
+    "correctIndex": 0,
+    "explanation": "111 × 111 = 12.321. Este es un patrón conocido: 1×1=1, 11×11=121, 111×111=12321, etc.",
+    "answerType": "text"
+  },
+  {
+    "id": "q165",
+    "difficulty": 50,
+    "timeLimit": 35,
+    "question": "Si ahora son las 23:45 de la noche, ¿habrá sol exactamente 72 horas después?",
+    "options": [
+      "No",
+      "Sí",
+      "Depende",
+      "A veces"
+    ],
+    "correctIndex": 0,
+    "explanation": "72 horas = exactamente 3 días. Dentro de 72 horas volverán a ser las 23:45 de la noche, cuando no hay sol.",
+    "answerType": "text"
+  },
+  {
+    "id": "q166",
+    "difficulty": 50,
+    "timeLimit": 35,
+    "question": "¿Cuántas veces se superponen (coinciden) la manecilla de las horas y la de los minutos en 12 horas?",
+    "options": [
+      "11",
+      "12",
+      "10",
+      "24"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aunque parece que deberían coincidir 12 veces (una por hora), entre las 11 y las 12 solo coinciden una vez (a las 12:00). En total son 11 veces en 12 horas.",
+    "answerType": "text"
+  },
+  {
+    "id": "q167",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "Si doblas este desarrollo para formar un cubo, ¿qué color queda en la cara opuesta al rojo?",
+    "options": [
+      "Verde",
+      "Azul",
+      "Naranja",
+      "Amarillo"
+    ],
+    "correctIndex": 0,
+    "explanation": "En el desarrollo en cruz, la cara opuesta al rojo (centro) es la que está 2 posiciones más abajo: el verde.",
+    "image": {
+      "src": "/images/questions/q167.svg",
+      "alt": "Desarrollo plano de un cubo en forma de cruz con caras de distintos colores etiquetados"
+    }
+  },
+  {
+    "id": "q168",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "El engranaje A gira en sentido horario. ¿En qué sentido gira el engranaje C?",
+    "options": [
+      "Sentido horario",
+      "Sentido antihorario",
+      "No gira",
+      "Depende de la velocidad"
+    ],
+    "correctIndex": 0,
+    "explanation": "Con 3 engranajes en línea: A gira horario → B gira antihorario → C gira horario. El engranaje C gira en el mismo sentido que A.",
+    "image": {
+      "src": "/images/questions/q168.svg",
+      "alt": "Tres engranajes conectados en línea etiquetados A, B y C con una flecha indicando la dirección de A"
+    }
+  },
+  {
+    "id": "q169",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "Observa el patrón de puntos: fila 1 tiene 1 punto, fila 2 tiene 2, fila 3 tiene 3... ¿Cuántos puntos tendrá la fila 6?",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "El patrón de números triangulares: cada fila tiene tantos puntos como su número. La fila 6 tiene 6 puntos.",
+    "image": {
+      "src": "/images/questions/q169.svg",
+      "alt": "Patrón de puntos organizados en filas con cantidad creciente"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q170",
+    "difficulty": 40,
+    "timeLimit": 35,
+    "question": "Un tren de 100 metros de largo cruza un puente de 400 metros a una velocidad de 50 m/s. ¿Cuántos segundos tarda en cruzar completamente el puente?",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "5"
+    ],
+    "correctIndex": 0,
+    "explanation": "El tren debe recorrer su propia longitud más la del puente: 100 + 400 = 500 metros. A 50 m/s: 500 ÷ 50 = 10 segundos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q171",
+    "difficulty": 40,
+    "timeLimit": 35,
+    "question": "¿Cuánto suman todos los números enteros del 1 al 10?",
+    "options": [
+      "55",
+      "50",
+      "45",
+      "60"
+    ],
+    "correctIndex": 0,
+    "explanation": "Usando la fórmula de Gauss: n(n+1)/2 = 10×11/2 = 55. O sumando: 1+10=11, 2+9=11, ..., 5+6=11 → 5 pares × 11 = 55.",
+    "answerType": "text"
+  },
+  {
+    "id": "q172",
+    "difficulty": 40,
+    "timeLimit": 35,
+    "question": "¿Cuántos cuadrados de cualquier tamaño puedes encontrar en una cuadrícula de 3×3?",
+    "options": [
+      "14",
+      "9",
+      "12",
+      "16"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cuadrados 1×1: 9, cuadrados 2×2: 4, cuadrados 3×3: 1. Total: 9 + 4 + 1 = 14 cuadrados.",
+    "answerType": "text"
+  },
+  {
+    "id": "q173",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuántos triángulos de cualquier tamaño hay en esta figura?",
+    "options": [
+      "27",
+      "24",
+      "20",
+      "30"
+    ],
+    "correctIndex": 0,
+    "explanation": "En un triángulo dividido en 4 filas: triángulos hacia arriba (10+6+3+1=20) + triángulos hacia abajo (6+1=7) = 27 en total.",
+    "image": {
+      "src": "/images/questions/q173.svg",
+      "alt": "Triángulo equilátero grande dividido internamente en triángulos más pequeños"
+    }
+  },
+  {
+    "id": "q174",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuántos cubos forman esta estructura tridimensional?",
+    "options": [
+      "12",
+      "10",
+      "14",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "La estructura tiene 3 capas: base de 6 cubos (3×2), segunda capa de 4 cubos (2×2), y tercera capa de 2 cubos (1×2). Total: 6+4+2 = 12.",
+    "image": {
+      "src": "/images/questions/q174.svg",
+      "alt": "Estructura tridimensional de cubos apilados en forma piramidal vista en perspectiva isométrica"
+    }
+  },
+  {
+    "id": "q175",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuál es el área de la figura coloreada? (cada cuadrado de la cuadrícula = 1 unidad²)",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "correctIndex": 0,
+    "explanation": "Usando el teorema de Pick: Área = puntos interiores + puntos frontera/2 − 1 = 5 + 6/2 − 1 = 7 unidades cuadradas.",
+    "image": {
+      "src": "/images/questions/q175.svg",
+      "alt": "Polígono irregular dibujado sobre una cuadrícula de puntos con escala indicada"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q176",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuántos ejes de simetría tiene esta figura?",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "La figura (cuadrado decorado simétricamente) tiene 4 ejes de simetría: horizontal, vertical y las dos diagonales.",
+    "image": {
+      "src": "/images/questions/q176.svg",
+      "alt": "Figura geométrica decorada con patrones simétricos y ejes de simetría sutilmente insinuados"
+    }
+  },
+  {
+    "id": "q177",
+    "difficulty": 30,
+    "timeLimit": 40,
+    "question": "Si 3 gatos pesan lo mismo que 2 perros, y 2 perros pesan lo mismo que 1 poni, ¿cuántos gatos pesan lo mismo que 2 ponis?",
+    "options": [
+      "6",
+      "4",
+      "9",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "3 gatos = 2 perros = 1 poni. Por tanto, 1 poni = 3 gatos, y 2 ponis = 6 gatos.",
+    "answerType": "text"
+  },
+  {
+    "id": "q178",
+    "difficulty": 30,
+    "timeLimit": 40,
+    "question": "¿Cuántas diagonales tiene un hexágono regular?",
+    "options": [
+      "9",
+      "6",
+      "12",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "La fórmula para diagonales de un polígono de n lados es n(n−3)/2. Para n=6: 6×3/2 = 9 diagonales.",
+    "answerType": "text"
+  },
+  {
+    "id": "q179",
+    "difficulty": 30,
+    "timeLimit": 40,
+    "question": "Si 3 personas pintan 3 vallas en 3 horas, ¿cuántas horas tardan 3 personas en pintar 9 vallas?",
+    "options": [
+      "9",
+      "3",
+      "27",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cada persona pinta 1 valla en 3 horas. 3 personas pintan 3 vallas en 3 horas. Para 9 vallas necesitan 3 tandas de 3 horas = 9 horas.",
+    "answerType": "text"
+  },
+  {
+    "id": "q180",
+    "difficulty": 30,
+    "timeLimit": 40,
+    "question": "¿Cuál es el número de dos cifras más pequeño que es igual a 3 veces la suma de sus dígitos?",
+    "options": [
+      "27",
+      "18",
+      "36",
+      "45"
+    ],
+    "correctIndex": 0,
+    "explanation": "Si el número es 10a+b: 10a+b = 3(a+b) → 7a = 2b. Para a=2: b=7. El número es 27. Verificación: 2+7=9, 3×9=27. ✓",
+    "answerType": "text"
+  },
+  {
+    "id": "q181",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "¿Cuántos rectángulos de cualquier tamaño puedes encontrar en esta cuadrícula de 2 filas × 3 columnas?",
+    "options": [
+      "18",
+      "12",
+      "24",
+      "15"
+    ],
+    "correctIndex": 0,
+    "explanation": "En una cuadrícula 2×3: elegimos 2 líneas horizontales de 3 y 2 verticales de 4: C(3,2)×C(4,2) = 3×6 = 18 rectángulos.",
+    "image": {
+      "src": "/images/questions/q181.svg",
+      "alt": "Cuadrícula de 2 filas por 3 columnas con dos rectángulos de ejemplo resaltados"
+    }
+  },
+  {
+    "id": "q182",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "¿Cuál es la vista frontal correcta de este objeto 3D?",
+    "options": [
+      "Vista A",
+      "Vista B",
+      "Vista C",
+      "Vista D"
+    ],
+    "correctIndex": 1,
+    "explanation": "El objeto tiene forma de L: un cubo apilado sobre la columna izquierda de 3 cubos en fila. Visto de frente, se ve una forma de L. La vista B es la correcta.",
+    "image": {
+      "src": "/images/questions/q182.svg",
+      "alt": "Objeto 3D en forma de L visto en perspectiva isométrica con cuatro opciones de vistas frontales"
+    }
+  },
+  {
+    "id": "q183",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "Si ★ + ● = 8 y ★ − ● = 2, ¿cuál es el valor del cuadrado rojo en ★ × ● − ■ = 8?",
+    "options": [
+      "7",
+      "5",
+      "8",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "De las ecuaciones: ★=5, ●=3. Entonces ★×● − ■ = 8 → 15 − ■ = 8 → ■ = 7.",
+    "image": {
+      "src": "/images/questions/q183.svg",
+      "alt": "Tres ecuaciones con símbolos de estrella, círculo y cuadrado, donde el cuadrado es la incógnita"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q184",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "Las líneas A y B están entre dos líneas convergentes. ¿Cuál es más larga?",
+    "options": [
+      "La línea A",
+      "La línea B",
+      "Son iguales",
+      "No se puede determinar"
+    ],
+    "correctIndex": 2,
+    "explanation": "Es la ilusión de Ponzo. Las líneas convergentes (como vías de tren) hacen que la línea superior parezca más larga, pero ambas miden exactamente lo mismo.",
+    "image": {
+      "src": "/images/questions/q184.svg",
+      "alt": "Dos líneas horizontales entre líneas convergentes que crean una ilusión de perspectiva"
+    }
+  },
+  {
+    "id": "q185",
+    "difficulty": 20,
+    "timeLimit": 40,
+    "question": "Si 1=5, 2=25, 3=125, 4=625... ¿cuánto vale 5?",
+    "options": [
+      "1",
+      "3125",
+      "5",
+      "25"
+    ],
+    "correctIndex": 0,
+    "explanation": "La relación es bidireccional: si 1=5, entonces 5=1. No es una fórmula matemática, sino una correspondencia. Como 1 corresponde a 5, entonces 5 corresponde a 1.",
+    "answerType": "text"
+  },
+  {
+    "id": "q186",
+    "difficulty": 20,
+    "timeLimit": 40,
+    "question": "¿Cuántos grados de ángulo hay entre la manecilla de las horas y la de los minutos a las 5:30?",
+    "options": [
+      "15",
+      "30",
+      "60",
+      "75"
+    ],
+    "correctIndex": 0,
+    "explanation": "A las 5:30: la manecilla de horas está a 5×30°+30×0.5°=165°. La de minutos está a 30×6°=180°. La diferencia es 180°−165° = 15°.",
+    "answerType": "text"
+  },
+  {
+    "id": "q187",
+    "difficulty": 20,
+    "timeLimit": 40,
+    "question": "¿Cuál es el mínimo común múltiplo (MCM) de todos los números del 1 al 6?",
+    "options": [
+      "60",
+      "120",
+      "30",
+      "720"
+    ],
+    "correctIndex": 0,
+    "explanation": "MCM(1,2)=2, MCM(2,3)=6, MCM(6,4)=12, MCM(12,5)=60, MCM(60,6)=60. El MCM de 1 a 6 es 60.",
+    "answerType": "text"
+  },
+  {
+    "id": "q188",
+    "difficulty": 10,
+    "timeLimit": 60,
+    "question": "¿Cuántos triángulos de cualquier tamaño puedes encontrar en esta figura?",
+    "options": [
+      "35",
+      "28",
+      "40",
+      "30"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un pentágono regular con todas sus diagonales dibujadas contiene exactamente 35 triángulos de diferentes tamaños.",
+    "image": {
+      "src": "/images/questions/q188.svg",
+      "alt": "Pentágono regular con todas sus diagonales formando una estrella de cinco puntas"
+    }
+  },
+  {
+    "id": "q189",
+    "difficulty": 10,
+    "timeLimit": 60,
+    "question": "Observa esta escalera. Si subes por ella sin parar, ¿cuántos pisos habrás subido tras dar una vuelta completa?",
+    "options": [
+      "Ninguno, es imposible",
+      "4 pisos",
+      "1 piso",
+      "Infinitos"
+    ],
+    "correctIndex": 0,
+    "explanation": "Es la escalera de Penrose, un objeto imposible. Parece que subes constantemente, pero al completar la vuelta estás en el mismo punto. Es una ilusión: esta escalera no puede existir en la realidad.",
+    "image": {
+      "src": "/images/questions/q189.svg",
+      "alt": "Escalera que parece subir continuamente formando un bucle cerrado con un símbolo de infinito en el centro"
+    }
+  },
+  {
+    "id": "q190",
+    "difficulty": 10,
+    "timeLimit": 60,
+    "question": "¿En cuántas regiones como máximo dividen 5 líneas rectas un plano?",
+    "options": [
+      "16",
+      "15",
+      "20",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "La fórmula es R(n) = 1 + n + n(n−1)/2. Para n=5: R(5) = 1 + 5 + 10 = 16 regiones máximo.",
+    "image": {
+      "src": "/images/questions/q190.svg",
+      "alt": "Cinco líneas rectas de diferentes colores cruzándose en un plano, dividiendo el espacio en regiones numeradas"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q191",
+    "difficulty": 10,
+    "timeLimit": 45,
+    "question": "¿Cuántos cuadrados perfectos hay entre 1 y 200 (inclusive)?",
+    "options": [
+      "14",
+      "12",
+      "15",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "Los cuadrados perfectos son 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196. Como 14² = 196 ≤ 200 y 15² = 225 > 200, hay 14.",
+    "answerType": "text"
+  },
+  {
+    "id": "q192",
+    "difficulty": 10,
+    "timeLimit": 45,
+    "question": "En una isla, los caballeros siempre dicen la verdad y los villanos siempre mienten. A dice: 'B y yo somos del mismo tipo.' ¿Qué es B?",
+    "options": [
+      "Caballero",
+      "Villano",
+      "No se puede saber",
+      "Depende de A"
+    ],
+    "correctIndex": 0,
+    "explanation": "Si A es caballero, dice la verdad, así que B también es caballero. Si A es villano, miente, así que no son del mismo tipo, y B es caballero. En ambos casos, B es caballero.",
+    "answerType": "text"
+  },
+  {
+    "id": "q193",
+    "difficulty": 10,
+    "timeLimit": 45,
+    "question": "Si la probabilidad de lluvia cada día es del 30% (independiente), ¿cuál es la probabilidad (en porcentaje) de que NO llueva en 2 días consecutivos?",
+    "options": [
+      "49",
+      "70",
+      "40",
+      "60"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(no lluvia un día) = 70% = 0.7. P(no lluvia 2 días) = 0.7 × 0.7 = 0.49 = 49%.",
+    "answerType": "text"
+  },
+  {
+    "id": "q194",
+    "difficulty": 10,
+    "timeLimit": 45,
+    "question": "¿De cuántas formas distintas se pueden elegir 2 personas de un grupo de 8?",
+    "options": [
+      "28",
+      "16",
+      "36",
+      "56"
+    ],
+    "correctIndex": 0,
+    "explanation": "Combinaciones de 2 entre 8: C(8,2) = 8! / (2! × 6!) = (8×7) / (2×1) = 28.",
+    "answerType": "text"
+  },
+  {
+    "id": "q195",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "Encuentra el camino de S a F cuya suma de nodos intermedios sea exactamente 20.",
+    "options": [
+      "S→3→5→4→8→F",
+      "S→7→2→8→F",
+      "S→6→9→F",
+      "S→7→5→4→8→F"
+    ],
+    "correctIndex": 0,
+    "explanation": "S→3→5→4→8→F: los nodos intermedios suman 3+5+4+8 = 20. Los otros caminos suman 17, 15 y 24 respectivamente.",
+    "image": {
+      "src": "/images/questions/q195.svg",
+      "alt": "Grafo dirigido con nodos numerados, un nodo de inicio S y un nodo final F"
+    }
+  },
+  {
+    "id": "q196",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "El copo de Koch comienza con un triángulo (3 segmentos). En cada iteración, cada segmento se divide en 4. ¿Cuántos segmentos tiene la iteración 2?",
+    "options": [
+      "48",
+      "36",
+      "64",
+      "24"
+    ],
+    "correctIndex": 0,
+    "explanation": "Iteración 0: 3 segmentos. Iteración 1: 3×4 = 12. Iteración 2: 12×4 = 48 segmentos.",
+    "image": {
+      "src": "/images/questions/q196.svg",
+      "alt": "Tres iteraciones del copo de Koch mostrando cómo cada segmento se subdivide en cuatro"
+    }
+  },
+  {
+    "id": "q197",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "En este cuadrado mágico, cada fila, columna y diagonal suma lo mismo. ¿Qué número va en la casilla roja?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "La constante mágica para un cuadrado 3×3 con números del 1 al 9 es 15. Fila central: 9 + ? + 1 = 15, así que ? = 5.",
+    "image": {
+      "src": "/images/questions/q197.svg",
+      "alt": "Cuadrado mágico 3×3 con números del 1 al 9 y una casilla central vacía marcada en rojo"
+    },
+    "answerType": "text"
+  },
+  {
+    "id": "q198",
+    "difficulty": 1,
+    "timeLimit": 60,
+    "question": "Si A=1, B=2, C=3... Z=26, ¿cuánto vale la suma de las letras de la palabra LOGICA?",
+    "options": [
+      "47",
+      "42",
+      "52",
+      "39"
+    ],
+    "correctIndex": 0,
+    "explanation": "L=12, O=15, G=7, I=9, C=3, A=1. Suma: 12+15+7+9+3+1 = 47.",
+    "answerType": "text"
+  },
+  {
+    "id": "q199",
+    "difficulty": 1,
+    "timeLimit": 60,
+    "question": "¿Cuántos números capicúa (palíndromos) de exactamente 3 cifras existen?",
+    "options": [
+      "90",
+      "100",
+      "81",
+      "99"
+    ],
+    "correctIndex": 0,
+    "explanation": "Un palíndromo de 3 cifras tiene forma ABA. A puede ser 1-9 (9 opciones, no puede ser 0). B puede ser 0-9 (10 opciones). Total: 9×10 = 90.",
+    "answerType": "text"
+  },
+  {
+    "id": "q200",
+    "difficulty": 1,
+    "timeLimit": 60,
+    "question": "Tienes 25 caballos y puedes correr carreras de 5 a la vez (sin cronómetro). ¿Cuál es el mínimo de carreras necesarias para encontrar los 3 más rápidos?",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "correctIndex": 0,
+    "explanation": "5 carreras iniciales (grupos de 5) + 1 carrera con los 5 ganadores + 1 carrera final con los candidatos restantes = 7 carreras mínimo.",
+    "answerType": "text"
   }
 ]

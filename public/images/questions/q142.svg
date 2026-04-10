@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <!-- q142: Triángulos con números dentro. 5 triángulos con número par -->
+  <rect width="320" height="220" fill="#12121a"/>
+  
+  <!-- Triángulo con 4 (par) -->
+  <polygon points="45,20 25,55 65,55" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="45" y="48" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">4</text>
+  
+  <!-- Cuadrado con 7 -->
+  <rect x="85" y="22" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="102" y="46" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">7</text>
+  
+  <!-- Triángulo con 8 (par) -->
+  <polygon points="160,20 140,55 180,55" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="160" y="48" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">8</text>
+  
+  <!-- Triángulo con 3 -->
+  <polygon points="225,20 205,55 245,55" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="225" y="48" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">3</text>
+  
+  <!-- Cuadrado con 2 -->
+  <rect x="270" y="22" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="287" y="46" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">2</text>
+  
+  <!-- Triángulo con 6 (par) -->
+  <polygon points="45,80 25,115 65,115" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="45" y="108" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">6</text>
+  
+  <!-- Cuadrado con 9 -->
+  <rect x="85" y="82" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="102" y="106" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">9</text>
+  
+  <!-- Triángulo con 5 -->
+  <polygon points="160,80 140,115 180,115" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="160" y="108" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">5</text>
+  
+  <!-- Triángulo con 2 (par) -->
+  <polygon points="225,80 205,115 245,115" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="225" y="108" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">2</text>
+  
+  <!-- Cuadrado con 1 -->
+  <rect x="270" y="82" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="287" y="106" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">1</text>
+  
+  <!-- Triángulo con 10 (par) -->
+  <polygon points="45,140 25,175 65,175" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="45" y="166" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#FFD93D">10</text>
+  
+  <!-- Cuadrado con 4 -->
+  <rect x="85" y="142" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="102" y="166" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">4</text>
+  
+  <!-- Triángulo con 7 -->
+  <polygon points="160,140 140,175 180,175" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="160" y="168" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">7</text>
+  
+  <!-- Cuadrado con 6 -->
+  <rect x="205" y="142" width="35" height="35" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="222" y="166" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">6</text>
+  
+  <!-- Triángulo con 1 -->
+  <polygon points="280,140 260,175 300,175" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  <text x="280" y="168" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FFD93D">1</text>
+  
+  <text x="160" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos triángulos tienen un número par dentro?
+  </text>
+</svg>
