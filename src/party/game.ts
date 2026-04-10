@@ -43,6 +43,8 @@ export default class GameServer implements Party.Server {
   private state: GameState;
   private timerInterval: ReturnType<typeof setInterval> | null = null;
   private revealTimerInterval: ReturnType<typeof setInterval> | null = null;
+  /** Players who disconnected mid-game, keyed by name, so they can rejoin. */
+  private disconnectedPlayers: Map<string, Player> = new Map();
 
   constructor(readonly room: Party.Room) {
     this.state = initialState();
@@ -58,6 +60,12 @@ export default class GameServer implements Party.Server {
     const player = this.state.players[conn.id];
     if (!player) return;
 
+    // During an active game, keep the player's data so they can reconnect.
+    // They are removed from the live players map but preserved in disconnectedPlayers.
+    if (this.state.phase !== 'LOBBY') {
+      this.disconnectedPlayers.set(player.name, { ...player });
+    }
+
     delete this.state.players[conn.id];
 
     // Re-assign host if needed
@@ -72,6 +80,7 @@ export default class GameServer implements Party.Server {
       this.clearTimer();
       this.clearRevealTimer();
       this.state = initialState();
+      this.disconnectedPlayers.clear();
       this.broadcast();
       return;
     }
@@ -126,7 +135,30 @@ export default class GameServer implements Party.Server {
   // ── Message handlers ───────────────────────────────────────────────────────
 
   private handleJoin = (conn: Party.Connection, name: string) => {
+    const trimmedName = name.trim().slice(0, 20) || 'Anónimo';
+
+    // Reconnection during an active game: restore the player's previous state.
+    // onClose moves disconnected players to disconnectedPlayers so their slot can
+    // be reclaimed here when they reconnect (e.g. after tabbing away on mobile).
     if (this.state.phase !== 'LOBBY') {
+      const saved = this.disconnectedPlayers.get(trimmedName);
+      if (saved) {
+        // Restore the player under the new connection id
+        saved.id = conn.id;
+        this.state.players[conn.id] = saved;
+        this.disconnectedPlayers.delete(trimmedName);
+
+        // Re-assign host if there is none (everyone else left while this player was gone)
+        if (!this.state.hostId) {
+          this.state.hostId = conn.id;
+        }
+
+        this.sendTo(conn, { type: 'STATE_UPDATE', state: this.state });
+        this.broadcast();
+        return;
+      }
+
+      // Truly new player trying to join a running game
       this.sendTo(conn, { type: 'ERROR', message: 'La partida ya ha comenzado.' });
       return;
     }
@@ -142,7 +174,7 @@ export default class GameServer implements Party.Server {
 
     const player: Player = {
       id: conn.id,
-      name: name.trim().slice(0, 20) || 'Anónimo',
+      name: trimmedName,
       color,
       isEliminated: false,
       hasAnswered: false,
@@ -238,6 +270,7 @@ export default class GameServer implements Party.Server {
 
     this.clearTimer();
     this.clearRevealTimer();
+    this.disconnectedPlayers.clear();
     this.state = initialState();
     this.state.players = currentPlayers;
     this.state.hostId = hostId;

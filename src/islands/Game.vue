@@ -79,7 +79,12 @@ onMounted(() => {
   socket = new PartySocket({ host, room: code });
 
   socket.addEventListener('open', () => {
+    // Fires on initial connection AND on every automatic reconnect (e.g. after
+    // the browser tab is backgrounded on mobile). Always refresh playerId,
+    // clear any previous connection error, and re-send JOIN so the server can
+    // restore the player's slot.
     playerId.value = socket!.id;
+    connectionError.value = '';
     send({ type: 'JOIN', name });
   });
 
