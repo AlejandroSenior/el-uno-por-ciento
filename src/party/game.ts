@@ -10,7 +10,7 @@ const questions = rawQuestions as Question[];
 const MAX_PLAYERS = 6;
 const MIN_PLAYERS_TO_START = 2;
 const COUNTDOWN_FROM = 3;
-const REVEAL_DURATION = 4_000;
+const REVEAL_COUNTDOWN_FROM = 30;
 const ELIMINATION_DURATION = 3_000;
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -31,7 +31,9 @@ const initialState = (): GameState => ({
   usedQuestionIds: [],
   hostId: '',
   countdown: null,
-  winner: null
+  winner: null,
+  revealCountdown: null,
+  playersReady: []
 });
 
 // ─── GameServer ───────────────────────────────────────────────────────────────
@@ -39,6 +41,7 @@ const initialState = (): GameState => ({
 export default class GameServer implements Party.Server {
   private state: GameState;
   private timerInterval: ReturnType<typeof setInterval> | null = null;
+  private revealTimerInterval: ReturnType<typeof setInterval> | null = null;
 
   constructor(readonly room: Party.Room) {
     this.state = initialState();
@@ -47,7 +50,6 @@ export default class GameServer implements Party.Server {
   // ── Lifecycle ──────────────────────────────────────────────────────────────
 
   onConnect = (conn: Party.Connection) => {
-    // Send current state immediately so the joining client can render
     this.sendTo(conn, { type: 'STATE_UPDATE', state: this.state });
   };
 
@@ -64,10 +66,23 @@ export default class GameServer implements Party.Server {
     }
 
     // If everyone left during a game, reset
-    const activePlayers = this.activePlayers();
-    if (activePlayers.length === 0 && this.state.phase !== 'LOBBY') {
+    const remaining = this.activePlayers();
+    if (remaining.length === 0 && this.state.phase !== 'LOBBY') {
       this.clearTimer();
+      this.clearRevealTimer();
       this.state = initialState();
+      this.broadcast();
+      return;
+    }
+
+    // A disconnect during REVEAL might be the last needed player — re-check
+    if (this.state.phase === 'REVEAL') {
+      const active = this.activePlayers();
+      if (active.length > 0 && active.every((p) => this.state.playersReady.includes(p.id))) {
+        this.clearRevealTimer();
+        this.runElimination();
+        return;
+      }
     }
 
     this.broadcast();
@@ -88,6 +103,8 @@ export default class GameServer implements Party.Server {
         return this.handleStartGame(sender);
       case 'ANSWER':
         return this.handleAnswer(sender, msg.questionId, msg.answerIndex);
+      case 'NEXT_ROUND':
+        return this.handleNextRound(sender);
     }
   };
 
@@ -105,7 +122,6 @@ export default class GameServer implements Party.Server {
       return;
     }
 
-    // Assign color: pick first not yet taken
     const usedColors = Object.values(this.state.players).map((p) => p.color);
     const color = PLAYER_COLORS.find((c) => !usedColors.includes(c)) ?? PLAYER_COLORS[0];
 
@@ -149,18 +165,30 @@ export default class GameServer implements Party.Server {
     if (!player || player.isEliminated) return;
     if (this.state.phase !== 'QUESTION') return;
     if (this.state.currentQuestion?.id !== questionId) return;
-    if (player.hasAnswered) return;
 
+    // Allow changing answer while the question timer is still running
     const correct = answerIndex === this.state.currentQuestion!.correctIndex;
     player.hasAnswered = true;
     player.lastAnswerIndex = answerIndex;
     player.isCorrect = correct;
 
-    // If all active players have answered, fast-forward
+    this.broadcast();
+  };
+
+  private handleNextRound = (conn: Party.Connection) => {
+    if (this.state.phase !== 'REVEAL') return;
+
+    // Idempotent: record this player as ready
+    if (!this.state.playersReady.includes(conn.id)) {
+      this.state.playersReady.push(conn.id);
+    }
+
+    // If all active (non-eliminated) players are ready, advance immediately
     const active = this.activePlayers();
-    const allAnswered = active.every((p) => p.hasAnswered);
-    if (allAnswered) {
-      this.endQuestion();
+    const allReady = active.every((p) => this.state.playersReady.includes(p.id));
+    if (allReady) {
+      this.clearRevealTimer();
+      this.runElimination();
     } else {
       this.broadcast();
     }
@@ -175,7 +203,6 @@ export default class GameServer implements Party.Server {
     this.state.usedQuestionIds = [];
     this.state.winner = null;
 
-    // Reset all players
     for (const p of Object.values(this.state.players)) {
       p.isEliminated = false;
       p.hasAnswered = false;
@@ -203,7 +230,6 @@ export default class GameServer implements Party.Server {
   private startQuestion = () => {
     const q = pickQuestion(this.state.currentDifficulty, this.state.usedQuestionIds);
     if (!q) {
-      // No questions left for this level — advance anyway
       this.advanceRound();
       return;
     }
@@ -213,8 +239,9 @@ export default class GameServer implements Party.Server {
     this.state.phase = 'QUESTION';
     this.state.countdown = null;
     this.state.timeRemaining = q.timeLimit;
+    this.state.revealCountdown = null;
+    this.state.playersReady = [];
 
-    // Reset per-question player state
     for (const p of Object.values(this.state.players)) {
       p.hasAnswered = false;
       p.lastAnswerIndex = null;
@@ -241,16 +268,32 @@ export default class GameServer implements Party.Server {
     this.clearTimer();
     this.state.phase = 'REVEAL';
     this.broadcast();
+    this.startRevealCountdown();
+  };
 
-    setTimeout(() => {
-      this.runElimination();
-    }, REVEAL_DURATION);
+  private startRevealCountdown = () => {
+    this.clearRevealTimer();
+    this.state.revealCountdown = REVEAL_COUNTDOWN_FROM;
+    this.broadcast();
+
+    this.revealTimerInterval = setInterval(() => {
+      this.state.revealCountdown = (this.state.revealCountdown ?? 1) - 1;
+
+      if ((this.state.revealCountdown ?? 0) <= 0) {
+        this.clearRevealTimer();
+        if (this.state.phase === 'REVEAL') {
+          this.runElimination();
+        }
+      } else {
+        this.broadcast();
+      }
+    }, 1_000);
   };
 
   private runElimination = () => {
     this.state.phase = 'ELIMINATION';
+    this.state.revealCountdown = null;
 
-    // Mark incorrect (or non-answering) active players as eliminated
     for (const p of this.activePlayers()) {
       if (!p.isCorrect) {
         p.isEliminated = true;
@@ -265,10 +308,9 @@ export default class GameServer implements Party.Server {
   };
 
   private afterElimination = () => {
-    const survivors = this.activePlayers(); // re-check after elimination
+    const survivors = this.activePlayers();
 
     if (survivors.length === 0) {
-      // Everyone eliminated simultaneously — declare no winner, game over
       this.state.phase = 'GAME_OVER';
       this.state.winner = null;
       this.broadcast();
@@ -282,24 +324,19 @@ export default class GameServer implements Party.Server {
       return;
     }
 
-    // Was this the last round (difficulty = 1)?
     if (this.state.currentDifficulty === 1) {
-      // Everyone who survived the 1% question wins — last survivor already guaranteed above,
-      // but if multiple survive, they all won — pick the first for simplicity
       this.state.phase = 'GAME_OVER';
       this.state.winner = survivors[0].id;
       this.broadcast();
       return;
     }
 
-    // Advance to next round
     this.advanceRound();
   };
 
   private advanceRound = () => {
-    const roundIndex = this.state.currentRound; // next index (currentRound is 1-based)
+    const roundIndex = this.state.currentRound;
     if (roundIndex >= DIFFICULTIES.length) {
-      // Shouldn't happen but safeguard
       this.state.phase = 'GAME_OVER';
       this.broadcast();
       return;
@@ -332,6 +369,13 @@ export default class GameServer implements Party.Server {
     if (this.timerInterval !== null) {
       clearInterval(this.timerInterval);
       this.timerInterval = null;
+    }
+  };
+
+  private clearRevealTimer = () => {
+    if (this.revealTimerInterval !== null) {
+      clearInterval(this.revealTimerInterval);
+      this.revealTimerInterval = null;
     }
   };
 }

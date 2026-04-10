@@ -24,6 +24,16 @@ const myPlayer = computed(() => {
   return state.value.players[playerId.value] ?? null;
 });
 
+const totalActivePlayers = computed(() => Object.values(state.value?.players ?? {}).filter((p) => !p.isEliminated).length);
+
+const revealReadyCount = computed(() => {
+  if (!state.value) return 0;
+  const activeIds = new Set(Object.values(state.value.players).filter((p) => !p.isEliminated).map((p) => p.id));
+  return state.value.playersReady.filter((id) => activeIds.has(id)).length;
+});
+
+const isMeReady = computed(() => state.value?.playersReady.includes(playerId.value) ?? false);
+
 // ── Lifecycle ──────────────────────────────────────────────────────────────
 
 onMounted(() => {
@@ -90,6 +100,10 @@ const sendStartGame = () => {
 const sendAnswer = (questionId: string, answerIndex: number) => {
   send({ type: 'ANSWER', questionId, answerIndex });
 };
+
+const sendReady = () => {
+  send({ type: 'NEXT_ROUND' });
+};
 </script>
 
 <template>
@@ -128,7 +142,12 @@ const sendAnswer = (questionId: string, answerIndex: number) => {
           :player="myPlayer"
           :round="state.currentRound"
           :difficulty="state.currentDifficulty"
+          :revealCountdown="state.revealCountdown"
+          :isReady="isMeReady"
+          :readyCount="revealReadyCount"
+          :totalActivePlayers="totalActivePlayers"
           @answer="sendAnswer"
+          @ready="sendReady"
         />
         <PlayerList :players="state.players" :hostId="state.hostId" :playerId="playerId" />
       </div>

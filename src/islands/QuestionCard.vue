@@ -9,17 +9,21 @@ const props = defineProps<{
   player: Player | null;
   round: number;
   difficulty: Difficulty;
+  revealCountdown: number | null;
+  isReady: boolean;
+  readyCount: number;
+  totalActivePlayers: number;
 }>();
 
 const emit = defineEmits<{
   (e: 'answer', questionId: string, answerIndex: number): void;
+  (e: 'ready'): void;
 }>();
 
 const labels = ['A', 'B', 'C', 'D'];
 
 const hasAnswered = computed(() => props.player?.hasAnswered ?? false);
 const myAnswerIndex = computed(() => props.player?.lastAnswerIndex ?? null);
-const isCorrect = computed(() => props.player?.isCorrect ?? null);
 const isEliminated = computed(() => props.player?.isEliminated ?? false);
 const isRevealed = computed(() => props.phase === 'REVEAL' || props.phase === 'ELIMINATION');
 
@@ -45,12 +49,16 @@ const difficultyColor = computed(() => {
 
 const difficultyBg = computed(() => difficultyColor.value + '22');
 
+const revealPercent = computed(() => {
+  if (props.revealCountdown == null) return 0;
+  return (props.revealCountdown / 30) * 100;
+});
+
 const buttonClass = (i: number): string => {
   if (!isRevealed.value) {
     if (myAnswerIndex.value === i) return 'bg-gold-dim border border-gold text-white';
     return 'bg-surface border border-border text-text';
   }
-  // Reveal phase
   if (i === props.question.correctIndex) return 'bg-green-900 border border-green-500 text-green-200';
   if (i === myAnswerIndex.value) return 'bg-red-950 border border-red-500 text-red-300';
   return 'bg-surface border border-border text-text opacity-40';
@@ -67,7 +75,7 @@ const labelClass = (i: number): string => {
 };
 
 const submitAnswer = (index: number) => {
-  if (hasAnswered.value || props.phase !== 'QUESTION') return;
+  if (props.phase !== 'QUESTION') return;
   emit('answer', props.question.id, index);
 };
 </script>
@@ -87,40 +95,38 @@ const submitAnswer = (index: number) => {
       </span>
     </div>
 
-    <!-- Timer bar -->
-    <div class="w-full h-1.5 rounded-full mb-5 overflow-hidden bg-surface2">
+    <!-- Timer bar (question phase) -->
+    <div v-if="phase === 'QUESTION'" class="w-full h-1.5 rounded-full mb-5 overflow-hidden bg-surface2">
       <div
-        class="h-full rounded-full transition-none"
+        class="h-full rounded-full"
         :style="{
           width: timerPercent + '%',
           background: timerColor,
-          transition: phase === 'QUESTION' ? 'width 1s linear, background 0.5s' : 'none'
+          transition: 'width 1s linear, background 0.5s'
         }"
       ></div>
     </div>
 
     <!-- Time remaining -->
-    <p class="text-right text-xs font-bold mb-4" :style="{ color: timerColor }">{{ timeRemaining }}s</p>
+    <p v-if="phase === 'QUESTION'" class="text-right text-xs font-bold mb-4" :style="{ color: timerColor }">{{ timeRemaining }}s</p>
 
     <!-- Image (if present) -->
     <div
       v-if="question.image"
-      class="rounded-xl overflow-hidden mb-5 flex items-center justify-center bg-surface border border-border min-h-40 max-h-65"
+      class="rounded-xl overflow-hidden mb-5 flex items-center justify-center bg-surface border border-border min-h-40 max-h-[260px]"
     >
-      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-65 object-contain" loading="eager" />
+      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-[260px] object-contain" loading="eager" />
     </div>
 
     <!-- Question text -->
-    <p class="text-white font-bold text-xl leading-snug mb-6">
-      {{ question.question }}
-    </p>
+    <p class="text-white font-bold text-xl leading-snug mb-6">{{ question.question }}</p>
 
     <!-- Answer options -->
     <div class="grid grid-cols-1 gap-3 mb-4">
       <button
         v-for="(option, i) in question.options"
         :key="i"
-        :disabled="hasAnswered || phase !== 'QUESTION'"
+        :disabled="phase !== 'QUESTION'"
         class="w-full text-left rounded-xl px-5 py-4 font-semibold text-sm transition-all duration-200 flex items-center gap-4 disabled:cursor-default"
         :class="buttonClass(i)"
         @click="submitAnswer(i)"
@@ -129,16 +135,47 @@ const submitAnswer = (index: number) => {
           {{ labels[i] }}
         </span>
         <span>{{ option }}</span>
-        <!-- Reveal icon -->
         <span v-if="isRevealed && i === question.correctIndex" class="ml-auto text-green-400">✓</span>
         <span v-else-if="isRevealed && i === myAnswerIndex && i !== question.correctIndex" class="ml-auto text-red-400">✗</span>
       </button>
     </div>
 
+    <!-- Change-answer hint (question phase, after first selection) -->
+    <p v-if="phase === 'QUESTION' && hasAnswered" class="text-center text-xs text-muted mb-2">
+      Puedes cambiar tu respuesta
+    </p>
+
     <!-- Explanation (revealed) -->
-    <div v-if="isRevealed && question.explanation" class="rounded-xl px-5 py-4 text-sm bg-surface2 border border-border text-muted">
+    <div v-if="isRevealed && question.explanation" class="rounded-xl px-5 py-4 text-sm bg-surface2 border border-border text-muted mb-4">
       <span class="text-yellow-400 font-bold mr-2">Explicación:</span>
       {{ question.explanation }}
+    </div>
+
+    <!-- Siguiente controls (REVEAL phase only) -->
+    <div v-if="phase === 'REVEAL'" class="flex flex-col gap-3 mt-auto pt-4">
+      <!-- Reveal countdown bar -->
+      <div class="w-full h-1.5 rounded-full overflow-hidden bg-surface2">
+        <div
+          class="h-full rounded-full bg-gold"
+          :style="{ width: revealPercent + '%', transition: 'width 1s linear' }"
+        ></div>
+      </div>
+
+      <!-- Countdown + ready count -->
+      <div class="flex items-center justify-between text-xs text-muted">
+        <span>{{ revealCountdown }}s para continuar</span>
+        <span>{{ readyCount }}/{{ totalActivePlayers }} listos</span>
+      </div>
+
+      <!-- Siguiente button -->
+      <button
+        :disabled="isReady"
+        class="w-full rounded-xl py-3 font-black text-lg tracking-widest transition-all duration-150 font-display disabled:cursor-not-allowed"
+        :class="isReady ? 'bg-surface2 text-muted opacity-60' : 'bg-gold text-bg'"
+        @click="$emit('ready')"
+      >
+        {{ isReady ? 'ESPERANDO...' : 'SIGUIENTE ›' }}
+      </button>
     </div>
 
     <!-- Eliminated overlay -->
