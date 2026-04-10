@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" width="300" height="260">
+  <!-- q125: Tangram - silueta formada -->
+  <rect width="300" height="260" fill="#12121a"/>
+  
+  <!-- Silueta de un gato hecha con piezas de tangram -->
+  <g transform="translate(150,120)">
+    <!-- Cabeza (triángulo grande) -->
+    <polygon points="0,-60 -40,-20 40,-20" fill="#4ECDC4" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Cuerpo (cuadrado) -->
+    <polygon points="-30,-10 30,-10 30,30 -30,30" fill="#FFD93D" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Cola (triángulo mediano) -->
+    <polygon points="-30,0 -60,15 -45,30" fill="#FF6B6B" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Pata delantera (triángulo pequeño) -->
+    <polygon points="10,30 25,45 10,60" fill="#6BCB77" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Pata trasera (triángulo pequeño) -->
+    <polygon points="-20,30 -5,45 -20,60" fill="#4D96FF" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Paralelogramo (parte del lomo) -->
+    <polygon points="-30,-10 -10,-30 20,-10 0,10" fill="#FF6FC8" stroke="#333" stroke-width="1.5" opacity="0.9"/>
+  </g>
+  
+  <text x="150" y="220" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántas piezas del tangram forman esta figura?
+  </text>
+  <text x="150" y="235" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6b6b8a" opacity="0.7">
+    (Un tangram tiene 7 piezas en total)
+  </text>
+</svg>

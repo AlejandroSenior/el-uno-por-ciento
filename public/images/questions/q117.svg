@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <!-- q117: Estrella de David con subdivisiones - contar triángulos -->
+  <rect width="300" height="300" fill="#12121a"/>
+  
+  <g transform="translate(150,150)">
+    <!-- Estrella de David = 2 triángulos equiláteros superpuestos -->
+    
+    <!-- Triángulo apuntando arriba -->
+    <polygon points="0,-90 77.94,45 -77.94,45" fill="none" stroke="#4ECDC4" stroke-width="2.5"/>
+    
+    <!-- Triángulo apuntando abajo -->
+    <polygon points="0,90 77.94,-45 -77.94,-45" fill="none" stroke="#FFD93D" stroke-width="2.5"/>
+    
+    <!-- Líneas internas que crean subdivisiones adicionales -->
+    <!-- Hexágono central -->
+    <polygon points="0,-30 25.98,-15 25.98,15 0,30 -25.98,15 -25.98,-15" 
+             fill="none" stroke="#e5e5e5" stroke-width="2"/>
+    
+    <!-- Líneas que conectan vértices con el hexágono central -->
+    <line x1="0" y1="-90" x2="0" y2="-30" stroke="#6b6b8a" stroke-width="1.5"/>
+    <line x1="77.94" y1="45" x2="25.98" y2="15" stroke="#6b6b8a" stroke-width="1.5"/>
+    <line x1="-77.94" y1="45" x2="-25.98" y2="15" stroke="#6b6b8a" stroke-width="1.5"/>
+    <line x1="0" y1="90" x2="0" y2="30" stroke="#6b6b8a" stroke-width="1.5"/>
+    <line x1="77.94" y1="-45" x2="25.98" y2="-15" stroke="#6b6b8a" stroke-width="1.5"/>
+    <line x1="-77.94" y1="-45" x2="-25.98" y2="-15" stroke="#6b6b8a" stroke-width="1.5"/>
+    
+    <!-- Triángulos intermedios para aumentar complejidad -->
+    <line x1="0" y1="-30" x2="51.96" y2="30" stroke="#6b6b8a" stroke-width="1"/>
+    <line x1="0" y1="-30" x2="-51.96" y2="30" stroke="#6b6b8a" stroke-width="1"/>
+    <line x1="-25.98" y1="-15" x2="25.98" y2="-15" stroke="#6b6b8a" stroke-width="1"/>
+    <line x1="-25.98" y1="15" x2="25.98" y2="15" stroke="#6b6b8a" stroke-width="1"/>
+  </g>
+  
+  <text x="150" y="280" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos triángulos hay en total?
+  </text>
+</svg>

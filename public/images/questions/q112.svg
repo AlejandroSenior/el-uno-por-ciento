@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="300" height="280">
+  <!-- q112: Triángulo de Penrose (figura imposible) -->
+  <rect width="300" height="280" fill="#12121a"/>
+  
+  <g transform="translate(150,140)">
+    <!-- Triángulo imposible de Penrose -->
+    <!-- Tres barras que se conectan de forma geométricamente imposible -->
+    
+    <!-- Barra superior -->
+    <path d="M -60,-40 L 0,-80 L 60,-40 L 50,-30 L 0,-60 L -50,-30 Z" fill="#e5e5e5" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Barra derecha -->
+    <path d="M 60,-40 L 50,-30 L 20,50 L 30,60 L 70,-20 L 60,-40 Z" fill="#d0d0d0" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Barra izquierda -->
+    <path d="M -60,-40 L -70,-20 L -30,60 L -20,50 L -50,-30 L -60,-40 Z" fill="#c0c0c0" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Conexión inferior (la parte imposible) -->
+    <path d="M -30,60 L -20,50 L 20,50 L 30,60 Z" fill="#b8b8b8" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Sombreado para dar profundidad -->
+    <path d="M 0,-60 L 50,-30 L 20,50 L -20,50 L -50,-30 Z" fill="none" stroke="#6b6b8a" stroke-width="0.5" opacity="0.4"/>
+  </g>
+  
+  <text x="150" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Por qué esta figura no puede existir en 3D?
+  </text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 280" width="260" height="280">
+  <!-- q114: Caminos en cuadrícula 3x3 sin retroceder -->
+  <rect width="260" height="280" fill="#12121a"/>
+  
+  <!-- Grid 3x3 -->
+  <g stroke="#6b6b8a" stroke-width="2" fill="none">
+    <!-- Líneas horizontales -->
+    <line x1="50" y1="60" x2="210" y2="60"/>
+    <line x1="50" y1="120" x2="210" y2="120"/>
+    <line x1="50" y1="180" x2="210" y2="180"/>
+    <line x1="50" y1="240" x2="210" y2="240"/>
+    
+    <!-- Líneas verticales -->
+    <line x1="50" y1="60" x2="50" y2="240"/>
+    <line x1="103.33" y1="60" x2="103.33" y2="240"/>
+    <line x1="156.67" y1="60" x2="156.67" y2="240"/>
+    <line x1="210" y1="60" x2="210" y2="240"/>
+  </g>
+  
+  <!-- Punto A (arriba-izquierda) -->
+  <circle cx="50" cy="60" r="8" fill="#4ECDC4" stroke="#fff" stroke-width="2"/>
+  <text x="50" y="45" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4ECDC4" font-weight="bold">A</text>
+  
+  <!-- Punto B (abajo-derecha) -->
+  <circle cx="210" cy="240" r="8" fill="#FF6B6B" stroke="#fff" stroke-width="2"/>
+  <text x="210" y="260" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FF6B6B" font-weight="bold">B</text>
+  
+  <!-- Flechas indicando dirección permitida (solo derecha y abajo) -->
+  <text x="225" y="150" font-family="sans-serif" font-size="11" fill="#6b6b8a">→ ↓</text>
+  <text x="215" y="165" font-family="sans-serif" font-size="9" fill="#6b6b8a">solo</text>
+  
+  <text x="130" y="25" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos caminos diferentes de A a B?
+  </text>
+</svg>

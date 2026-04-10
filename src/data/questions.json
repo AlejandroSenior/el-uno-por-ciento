@@ -946,5 +946,369 @@
     "options": ["10", "50", "25", "1"],
     "correctIndex": 0,
     "explanation": "Solo quedan abiertas las puertas con número de divisores impar, que son los cuadrados perfectos: 1,4,9,16,25,36,49,64,81,100. Son exactamente 10 puertas. Los cuadrados perfectos son los únicos con divisores impares porque uno de sus divisores se empareja consigo mismo."
+  },
+  {
+    "id": "q101",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "Observa la imagen. ¿Cuántos círculos hay en total?",
+    "options": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "explanation": "Hay exactamente 7 círculos (de color turquesa) mezclados con 5 triángulos rojos.",
+    "image": {
+      "src": "/images/questions/q101.svg",
+      "alt": "Conjunto de círculos y triángulos de diferentes colores distribuidos en el espacio"
+    }
+  },
+  {
+    "id": "q102",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "Hay una flecha que apunta en dirección diferente a las demás. ¿En qué dirección apunta?",
+    "options": ["Arriba", "Abajo", "Izquierda", "Derecha"],
+    "correctIndex": 2,
+    "explanation": "8 flechas apuntan a la derecha, pero hay una flecha destacada (dorada) que apunta a la izquierda.",
+    "image": {
+      "src": "/images/questions/q102.svg",
+      "alt": "Conjunto de flechas apuntando en diferentes direcciones con una destacada"
+    }
+  },
+  {
+    "id": "q103",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "¿Cuál de las siguientes figuras tiene simetría vertical?",
+    "options": ["Figura A", "Figura B", "Figura C", "Figura D"],
+    "correctIndex": 1,
+    "explanation": "La figura B (corazón) tiene simetría vertical perfecta. Las otras figuras no son simétricas respecto a un eje vertical.",
+    "image": {
+      "src": "/images/questions/q103.svg",
+      "alt": "Cuatro figuras geométricas distintas etiquetadas A, B, C y D"
+    }
+  },
+  {
+    "id": "q104",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "¿Qué fracción del círculo está coloreada?",
+    "options": ["1/4", "1/3", "3/8", "1/2"],
+    "correctIndex": 2,
+    "explanation": "El sector coloreado abarca 135° de los 360° totales del círculo. 135/360 = 3/8.",
+    "image": {
+      "src": "/images/questions/q104.svg",
+      "alt": "Círculo dividido en secciones con una parte coloreada en turquesa"
+    }
+  },
+  {
+    "id": "q105",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "Este dado muestra las caras 1, 2 y 3. ¿Qué número hay en la cara opuesta al 3?",
+    "options": ["4", "5", "6", "2"],
+    "correctIndex": 0,
+    "explanation": "En un dado estándar, las caras opuestas siempre suman 7. Por tanto, la cara opuesta al 3 es el 4 (3+4=7).",
+    "image": {
+      "src": "/images/questions/q105.svg",
+      "alt": "Dado en perspectiva isométrica mostrando tres caras visibles"
+    }
+  },
+  {
+    "id": "q106",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Cuál es la diferencia entre el valor más alto y el más bajo en este gráfico?",
+    "options": ["30", "35", "40", "45"],
+    "correctIndex": 3,
+    "explanation": "El valor más alto es la barra D (60) y el más bajo es la barra A (15). La diferencia es 60 - 15 = 45.",
+    "image": {
+      "src": "/images/questions/q106.svg",
+      "alt": "Gráfico de barras con cinco barras de diferentes alturas etiquetadas A, B, C, D y E"
+    }
+  },
+  {
+    "id": "q107",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "La flecha rota 90° en sentido horario en cada paso. ¿En qué dirección apuntará en el paso 4?",
+    "options": ["Arriba", "Derecha", "Abajo", "Izquierda"],
+    "correctIndex": 3,
+    "explanation": "Paso 1: arriba. Paso 2: derecha (+90°). Paso 3: abajo (+90°). Paso 4: izquierda (+90°).",
+    "image": {
+      "src": "/images/questions/q107.svg",
+      "alt": "Secuencia de una flecha que rota 90 grados en cada paso"
+    }
+  },
+  {
+    "id": "q108",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "¿Cuántos puntos de intersección hay entre estas líneas?",
+    "options": ["4", "5", "6", "7"],
+    "correctIndex": 2,
+    "explanation": "Hay 4 líneas que se cruzan. El punto central donde todas se encuentran cuenta como 1, más 5 intersecciones adicionales entre pares de líneas = 6 puntos totales.",
+    "image": {
+      "src": "/images/questions/q108.svg",
+      "alt": "Cuatro líneas rectas de diferentes colores que se cruzan entre sí"
+    }
+  },
+  {
+    "id": "q109",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "¿Cuántas regiones distintas se forman con estos tres círculos superpuestos?",
+    "options": ["5", "6", "7", "8"],
+    "correctIndex": 2,
+    "explanation": "Diagrama de Venn de 3 conjuntos: 3 regiones exclusivas + 3 intersecciones de pares + 1 intersección triple = 7 regiones (sin contar el exterior).",
+    "image": {
+      "src": "/images/questions/q109.svg",
+      "alt": "Tres círculos de diferentes colores superpuestos formando un diagrama de Venn"
+    }
+  },
+  {
+    "id": "q110",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "Esta matriz sigue un patrón. ¿Cuántos círculos van en la celda marcada con '?'?",
+    "options": ["3", "4", "5", "6"],
+    "correctIndex": 2,
+    "explanation": "El patrón es: cada fila aumenta en 1 círculo por celda. Fila 3: 3, 4, ? → debe ser 5 círculos.",
+    "image": {
+      "src": "/images/questions/q110.svg",
+      "alt": "Matriz 3x3 con círculos siguiendo un patrón numérico, última celda marcada con interrogación"
+    }
+  },
+  {
+    "id": "q111",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "¿Cuántas veces aparece la letra E (mayúscula o minúscula) en el texto de la imagen?",
+    "options": ["18", "21", "24", "27"],
+    "correctIndex": 2,
+    "explanation": "Contando todas las E/e en el texto: 24 en total. El texto está renderizado como imagen para evitar que uses Ctrl+F.",
+    "image": {
+      "src": "/images/questions/q111.svg",
+      "alt": "Texto en español con múltiples apariciones de la letra E"
+    }
+  },
+  {
+    "id": "q112",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Por qué esta figura (Triángulo de Penrose) no puede existir en el mundo real en 3D?",
+    "options": ["Sus ángulos suman más de 180°", "Las conexiones crean una geometría imposible", "Es demasiado grande", "Solo funciona en 2D"],
+    "correctIndex": 1,
+    "explanation": "El Triángulo de Penrose es una figura imposible: las tres barras parecen conectarse, pero si intentas construirlo en 3D, las conexiones no cierran geométricamente. Es una ilusión óptica bidimensional.",
+    "image": {
+      "src": "/images/questions/q112.svg",
+      "alt": "Triángulo de Penrose, una figura imposible que parece tridimensional"
+    }
+  },
+  {
+    "id": "q113",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuántos rectángulos hay en total en esta figura (de todos los tamaños posibles)?",
+    "options": ["18", "24", "30", "36"],
+    "correctIndex": 2,
+    "explanation": "Contando rectángulos de todos los tamaños: pequeños individuales, combinaciones de 2, 3, 4... hasta el rectángulo completo = 30 rectángulos totales.",
+    "image": {
+      "src": "/images/questions/q113.svg",
+      "alt": "Rectángulo dividido por líneas verticales y horizontales formando una grilla"
+    }
+  },
+  {
+    "id": "q114",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "¿Cuántos caminos diferentes hay de A a B si solo puedes moverte hacia la derecha (→) o hacia abajo (↓)?",
+    "options": ["6", "9", "12", "20"],
+    "correctIndex": 3,
+    "explanation": "En una cuadrícula 3×3, necesitas 3 movimientos a la derecha y 3 hacia abajo. Combinaciones: C(6,3) = 20 caminos diferentes.",
+    "image": {
+      "src": "/images/questions/q114.svg",
+      "alt": "Cuadrícula 3x3 con punto A en esquina superior izquierda y punto B en esquina inferior derecha"
+    }
+  },
+  {
+    "id": "q115",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "¿Qué círculo central (A o B) es más grande?",
+    "options": ["El círculo A", "El círculo B", "Son del mismo tamaño", "Depende del ángulo"],
+    "correctIndex": 2,
+    "explanation": "Ilusión de Ebbinghaus: ambos círculos centrales tienen exactamente el mismo tamaño, pero el rodeado de círculos grandes parece más pequeño y viceversa.",
+    "image": {
+      "src": "/images/questions/q115.svg",
+      "alt": "Dos círculos centrales idénticos, uno rodeado de círculos grandes y otro de círculos pequeños"
+    }
+  },
+  {
+    "id": "q116",
+    "difficulty": 10,
+    "timeLimit": 60,
+    "question": "¿Cuántos hexágonos de todos los tamaños hay en esta figura?",
+    "options": ["7", "10", "13", "16"],
+    "correctIndex": 2,
+    "explanation": "Hexágonos pequeños: 6 en los segmentos + 1 central = 7. Hexágonos medianos: 3. Hexágonos formados por combinaciones: 2. Hexágono exterior: 1. Total: 13 hexágonos.",
+    "image": {
+      "src": "/images/questions/q116.svg",
+      "alt": "Estructura hexagonal con múltiples hexágonos anidados y superpuestos"
+    }
+  },
+  {
+    "id": "q117",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "¿Cuántos triángulos hay en total en esta Estrella de David?",
+    "options": ["12", "18", "24", "20"],
+    "correctIndex": 3,
+    "explanation": "Estrella de David con subdivisiones: triángulos pequeños individuales + triángulos medianos + triángulos grandes + los 2 principales = 20 triángulos totales. Requiere conteo sistemático.",
+    "image": {
+      "src": "/images/questions/q117.svg",
+      "alt": "Estrella de David formada por dos triángulos superpuestos con líneas internas"
+    }
+  },
+  {
+    "id": "q118",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "Este es un Cubo de Necker. ¿Qué esquina está más cerca de ti?",
+    "options": ["La esquina A (abajo-izquierda)", "La esquina B (arriba-derecha)", "Ambas están a la misma distancia", "Depende de cómo lo mires"],
+    "correctIndex": 3,
+    "explanation": "El Cubo de Necker es una figura ambigua: tu cerebro puede interpretarlo de dos formas diferentes. Puedes ver la esquina A o la B como 'frontal', ambas interpretaciones son válidas.",
+    "image": {
+      "src": "/images/questions/q118.svg",
+      "alt": "Cubo de Necker con dos esquinas marcadas, perspectiva ambigua"
+    }
+  },
+  {
+    "id": "q119",
+    "difficulty": 90,
+    "timeLimit": 30,
+    "question": "¿Cuántas figuras rojas hay en la imagen?",
+    "options": ["3", "4", "5", "6"],
+    "correctIndex": 2,
+    "explanation": "Hay exactamente 5 figuras de color rojo: 2 círculos y 3 cuadrados/triángulos mezclados con figuras azules y verdes.",
+    "image": {
+      "src": "/images/questions/q119.svg",
+      "alt": "Conjunto de figuras geométricas de diferentes colores distribuidas en el espacio"
+    }
+  },
+  {
+    "id": "q120",
+    "difficulty": 80,
+    "timeLimit": 35,
+    "question": "¿Qué pieza completa la figura incompleta?",
+    "options": ["Pieza A (cuadrado)", "Pieza B (rectángulo vertical)", "Pieza C (triángulo)", "Pieza D (forma L)"],
+    "correctIndex": 0,
+    "explanation": "La figura incompleta es un cuadrado con un hueco cuadrado en la esquina superior derecha. Solo la pieza A (cuadrado) encaja perfectamente.",
+    "image": {
+      "src": "/images/questions/q120.svg",
+      "alt": "Figura con un hueco y cuatro opciones de piezas para completarla"
+    }
+  },
+  {
+    "id": "q121",
+    "difficulty": 70,
+    "timeLimit": 40,
+    "question": "¿Qué punto está más cerca del centro en este mapa?",
+    "options": ["Punto N (Norte)", "Punto S (Sur)", "Punto E (Este)", "Punto P"],
+    "correctIndex": 3,
+    "explanation": "Los puntos cardinales N, S, E, O están todos a 70 unidades del centro. El punto P está en posición diagonal (~40, -40), a una distancia de √(40²+40²) ≈ 56.6 unidades, por lo que es el más cercano.",
+    "image": {
+      "src": "/images/questions/q121.svg",
+      "alt": "Diagrama con un centro y varios puntos marcados en diferentes posiciones"
+    }
+  },
+  {
+    "id": "q122",
+    "difficulty": 60,
+    "timeLimit": 40,
+    "question": "La balanza está inclinada. ¿Qué lado pesa más?",
+    "options": ["El lado izquierdo (2 cubos)", "El lado derecho (1 esfera)", "Pesan lo mismo", "No se puede determinar"],
+    "correctIndex": 1,
+    "explanation": "La balanza está visiblemente inclinada hacia la derecha (el platillo derecho está más bajo), lo que indica que la esfera pesa más que los dos cubos.",
+    "image": {
+      "src": "/images/questions/q122.svg",
+      "alt": "Balanza con dos platillos, uno con cubos y otro con una esfera"
+    }
+  },
+  {
+    "id": "q123",
+    "difficulty": 50,
+    "timeLimit": 50,
+    "question": "Esta secuencia de dominós sigue un patrón. ¿Qué dominó sigue?",
+    "options": ["[4|5]", "[4|4]", "[5|5]", "[3|5]"],
+    "correctIndex": 0,
+    "explanation": "Patrón: [1|2] → [2|3] → [3|4] → [4|5]. Cada dominó aumenta ambos números en 1 respecto al anterior.",
+    "image": {
+      "src": "/images/questions/q123.svg",
+      "alt": "Secuencia de tres fichas de dominó con puntos, seguida de una interrogación"
+    }
+  },
+  {
+    "id": "q124",
+    "difficulty": 40,
+    "timeLimit": 50,
+    "question": "¿Qué ángulo forman las manecillas del reloj a las 3:40?",
+    "options": ["90°", "110°", "130°", "150°"],
+    "correctIndex": 2,
+    "explanation": "A las 3:40, la manecilla horaria está en 3 + 40/60 = 3.667 horas = 110° desde las 12. La manecilla minutera está en 240° (40 min). Ángulo entre ellas: 240° - 110° = 130°.",
+    "image": {
+      "src": "/images/questions/q124.svg",
+      "alt": "Reloj analógico mostrando las 3:40 con manecillas claramente visibles"
+    }
+  },
+  {
+    "id": "q125",
+    "difficulty": 30,
+    "timeLimit": 55,
+    "question": "¿Cuántas piezas del tangram forman esta figura? (Un tangram tiene 7 piezas en total)",
+    "options": ["4", "5", "6", "7"],
+    "correctIndex": 2,
+    "explanation": "La figura usa 6 de las 7 piezas del tangram: 2 triángulos grandes, 1 triángulo mediano, 2 triángulos pequeños y 1 paralelogramo.",
+    "image": {
+      "src": "/images/questions/q125.svg",
+      "alt": "Figura de un animal formada por piezas del tangram de diferentes colores"
+    }
+  },
+  {
+    "id": "q126",
+    "difficulty": 20,
+    "timeLimit": 55,
+    "question": "¿Las líneas horizontales son paralelas entre sí?",
+    "options": ["No, están inclinadas hacia la derecha", "No, están inclinadas hacia la izquierda", "Sí, son perfectamente paralelas", "Algunas sí, otras no"],
+    "correctIndex": 2,
+    "explanation": "Ilusión de Zöllner: las líneas horizontales son perfectamente paralelas, pero los segmentos diagonales alternados crean la ilusión de que están inclinadas.",
+    "image": {
+      "src": "/images/questions/q126.svg",
+      "alt": "Líneas horizontales con segmentos diagonales que crean una ilusión óptica"
+    }
+  },
+  {
+    "id": "q127",
+    "difficulty": 10,
+    "timeLimit": 60,
+    "question": "¿Cuántos cubos hay en total en esta estructura, contando los ocultos?",
+    "options": ["6", "8", "10", "12"],
+    "correctIndex": 1,
+    "explanation": "Vista isométrica: capa inferior tiene 4 cubos (base 2×2), capa superior tiene 2 visibles + 2 potencialmente ocultos. Analizando la estructura: 6 cubos visibles + 2 que deben estar detrás para soportar = 8 cubos totales.",
+    "image": {
+      "src": "/images/questions/q127.svg",
+      "alt": "Estructura de cubos apilados en perspectiva isométrica"
+    }
+  },
+  {
+    "id": "q128",
+    "difficulty": 1,
+    "timeLimit": 75,
+    "question": "Este laberinto tiene 4 caminos numerados. ¿Cuál de ellos lleva de A a B?",
+    "options": ["Camino 1", "Camino 2", "Camino 3", "Camino 4"],
+    "correctIndex": 1,
+    "explanation": "Trazando cada camino: el camino 1 se bloquea en la primera intersección, el camino 3 termina en un callejón sin salida, el camino 4 también se bloquea. Solo el camino 2 conecta A con B sin obstáculos.",
+    "image": {
+      "src": "/images/questions/q128.svg",
+      "alt": "Laberinto complejo con punto A de entrada, punto B de salida, y 4 caminos numerados"
+    }
   }
 ]

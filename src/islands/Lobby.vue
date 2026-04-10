@@ -20,12 +20,9 @@ const hostId = computed(() => props.state.hostId);
 
 const copyCode = async () => {
   const url = window.location.href;
-  try {
-    await navigator.clipboard.writeText(url);
-  } catch {
-    // fallback: copy just the code
-    await navigator.clipboard.writeText(props.roomCode);
-  }
+
+  await navigator.clipboard.writeText(props.roomCode);
+
   copied.value = true;
   setTimeout(() => {
     copied.value = false;

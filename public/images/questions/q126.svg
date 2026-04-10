@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240">
+  <!-- q126: Ilusión de Zöllner - líneas paralelas con diagonales -->
+  <rect width="320" height="240" fill="#12121a"/>
+  
+  <!-- Líneas horizontales paralelas con segmentos diagonales alternados -->
+  <g stroke="#e5e5e5" stroke-width="2.5">
+    <!-- Línea 1 -->
+    <line x1="30" y1="50" x2="290" y2="50"/>
+    <!-- Diagonales en línea 1 (inclinadas hacia arriba-derecha) -->
+    <g stroke="#4ECDC4" stroke-width="1.5">
+      <line x1="50" y1="45" x2="60" y2="55"/>
+      <line x1="75" y1="45" x2="85" y2="55"/>
+      <line x1="100" y1="45" x2="110" y2="55"/>
+      <line x1="125" y1="45" x2="135" y2="55"/>
+      <line x1="150" y1="45" x2="160" y2="55"/>
+      <line x1="175" y1="45" x2="185" y2="55"/>
+      <line x1="200" y1="45" x2="210" y2="55"/>
+      <line x1="225" y1="45" x2="235" y2="55"/>
+      <line x1="250" y1="45" x2="260" y2="55"/>
+    </g>
+    
+    <!-- Línea 2 -->
+    <line x1="30" y1="90" x2="290" y2="90"/>
+    <!-- Diagonales en línea 2 (inclinadas hacia abajo-derecha) -->
+    <g stroke="#FF6B6B" stroke-width="1.5">
+      <line x1="50" y1="95" x2="60" y2="85"/>
+      <line x1="75" y1="95" x2="85" y2="85"/>
+      <line x1="100" y1="95" x2="110" y2="85"/>
+      <line x1="125" y1="95" x2="135" y2="85"/>
+      <line x1="150" y1="95" x2="160" y2="85"/>
+      <line x1="175" y1="95" x2="185" y2="85"/>
+      <line x1="200" y1="95" x2="210" y2="85"/>
+      <line x1="225" y1="95" x2="235" y2="85"/>
+      <line x1="250" y1="95" x2="260" y2="85"/>
+    </g>
+    
+    <!-- Línea 3 -->
+    <line x1="30" y1="130" x2="290" y2="130"/>
+    <!-- Diagonales en línea 3 (arriba-derecha) -->
+    <g stroke="#4ECDC4" stroke-width="1.5">
+      <line x1="50" y1="125" x2="60" y2="135"/>
+      <line x1="75" y1="125" x2="85" y2="135"/>
+      <line x1="100" y1="125" x2="110" y2="135"/>
+      <line x1="125" y1="125" x2="135" y2="135"/>
+      <line x1="150" y1="125" x2="160" y2="135"/>
+      <line x1="175" y1="125" x2="185" y2="135"/>
+      <line x1="200" y1="125" x2="210" y2="135"/>
+      <line x1="225" y1="125" x2="235" y2="135"/>
+      <line x1="250" y1="125" x2="260" y2="135"/>
+    </g>
+    
+    <!-- Línea 4 -->
+    <line x1="30" y1="170" x2="290" y2="170"/>
+    <!-- Diagonales en línea 4 (abajo-derecha) -->
+    <g stroke="#FF6B6B" stroke-width="1.5">
+      <line x1="50" y1="175" x2="60" y2="165"/>
+      <line x1="75" y1="175" x2="85" y2="165"/>
+      <line x1="100" y1="175" x2="110" y2="165"/>
+      <line x1="125" y1="175" x2="135" y2="165"/>
+      <line x1="150" y1="175" x2="160" y2="165"/>
+      <line x1="175" y1="175" x2="185" y2="165"/>
+      <line x1="200" y1="175" x2="210" y2="165"/>
+      <line x1="225" y1="175" x2="235" y2="165"/>
+      <line x1="250" y1="175" x2="260" y2="165"/>
+    </g>
+  </g>
+  
+  <text x="160" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Las líneas horizontales son paralelas entre sí?
+  </text>
+</svg>

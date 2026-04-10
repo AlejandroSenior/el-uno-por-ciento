@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+  <!-- q113: Rectángulos anidados - conteo total -->
+  <rect width="260" height="260" fill="#12121a"/>
+  
+  <!-- Estructura de rectángulos que forman múltiples rectángulos contables -->
+  <!-- Similar al problema de cuadrados pero con rectángulos -->
+  <g stroke="#e5e5e5" stroke-width="2" fill="none">
+    <!-- Rectángulo exterior -->
+    <rect x="30" y="30" width="200" height="160" stroke-width="2.5"/>
+    
+    <!-- División vertical en el centro -->
+    <line x1="130" y1="30" x2="130" y2="190"/>
+    
+    <!-- Divisiones horizontales -->
+    <line x1="30" y1="90" x2="230" y2="90"/>
+    <line x1="30" y1="150" x2="230" y2="150"/>
+    
+    <!-- División adicional en cuadrante superior izquierdo -->
+    <line x1="80" y1="30" x2="80" y2="90"/>
+    
+    <!-- División adicional en cuadrante inferior derecho -->
+    <line x1="180" y1="150" x2="180" y2="190"/>
+  </g>
+  
+  <text x="130" y="220" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Cuántos rectángulos hay en total?
+  </text>
+  <text x="130" y="235" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6b6b8a" opacity="0.7">
+    (de todos los tamaños posibles)
+  </text>
+</svg>

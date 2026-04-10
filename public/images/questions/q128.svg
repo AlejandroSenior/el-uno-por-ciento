@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <!-- q128: Laberinto visual complejo -->
+  <rect width="320" height="320" fill="#12121a"/>
+  
+  <!-- Laberinto con múltiples caminos -->
+  <g stroke="#e5e5e5" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- Bordes exteriores -->
+    <rect x="30" y="30" width="260" height="260" stroke-width="4"/>
+    
+    <!-- Paredes internas del laberinto -->
+    <!-- Fila 1 -->
+    <line x1="90" y1="30" x2="90" y2="90"/>
+    <line x1="150" y1="30" x2="150" y2="150"/>
+    <line x1="210" y1="30" x2="210" y2="90"/>
+    
+    <!-- Fila 2 -->
+    <line x1="30" y1="90" x2="150" y2="90"/>
+    <line x1="210" y1="90" x2="290" y2="90"/>
+    
+    <!-- Fila 3 -->
+    <line x1="90" y1="150" x2="210" y2="150"/>
+    <line x1="30" y1="150" x2="60" y2="150"/>
+    <line x1="240" y1="150" x2="290" y2="150"/>
+    
+    <!-- Fila 4 -->
+    <line x1="90" y1="150" x2="90" y2="210"/>
+    <line x1="210" y1="150" x2="210" y2="230"/>
+    <line x1="150" y1="180" x2="150" y2="290"/>
+    
+    <!-- Fila 5 -->
+    <line x1="30" y1="210" x2="150" y2="210"/>
+    <line x1="180" y1="210" x2="290" y2="210"/>
+    
+    <!-- Fila 6 -->
+    <line x1="90" y1="210" x2="90" y2="290"/>
+    <line x1="210" y1="240" x2="290" y2="240"/>
+    
+    <!-- Bloqueadores adicionales -->
+    <line x1="60" y1="60" x2="60" y2="120"/>
+    <line x1="240" y1="180" x2="240" y2="240"/>
+  </g>
+  
+  <!-- Punto A (entrada arriba-izquierda) -->
+  <circle cx="45" cy="45" r="8" fill="#4ECDC4" stroke="#fff" stroke-width="2"/>
+  <text x="45" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4ECDC4" font-weight="bold">A</text>
+  
+  <!-- Punto B (salida abajo-derecha) -->
+  <circle cx="275" cy="275" r="8" fill="#FF6B6B" stroke="#fff" stroke-width="2"/>
+  <text x="275" y="310" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#FF6B6B" font-weight="bold">B</text>
+  
+  <!-- Caminos numerados en las entradas -->
+  <text x="120" y="50" font-family="sans-serif" font-size="10" fill="#FFD93D">1</text>
+  <text x="180" y="50" font-family="sans-serif" font-size="10" fill="#FFD93D">2</text>
+  <text x="50" y="120" font-family="sans-serif" font-size="10" fill="#FFD93D">3</text>
+  <text x="230" y="120" font-family="sans-serif" font-size="10" fill="#FFD93D">4</text>
+</svg>

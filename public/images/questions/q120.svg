@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="380" height="200">
+  <!-- q120: Pieza faltante en cuadrado -->
+  <rect width="380" height="200" fill="#12121a"/>
+  
+  <!-- Cuadrado con hueco -->
+  <g transform="translate(50,40)">
+    <text x="40" y="-10" font-family="sans-serif" font-size="11" fill="#6b6b8a">Figura incompleta:</text>
+    <path d="M 0,0 L 80,0 L 80,40 L 40,40 L 40,80 L 0,80 Z" fill="none" stroke="#e5e5e5" stroke-width="2.5"/>
+    <!-- Hueco indicado -->
+    <rect x="40" y="0" width="40" height="40" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+  
+  <!-- Opciones -->
+  <text x="200" y="30" font-family="sans-serif" font-size="11" fill="#6b6b8a">Opciones:</text>
+  
+  <!-- Opción A: cuadrado correcto -->
+  <g transform="translate(200,50)">
+    <text x="0" y="-5" font-family="sans-serif" font-size="11" fill="#fbbf24">A</text>
+    <rect x="0" y="0" width="40" height="40" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  </g>
+  
+  <!-- Opción B: rectángulo vertical -->
+  <g transform="translate(260,50)">
+    <text x="0" y="-5" font-family="sans-serif" font-size="11" fill="#fbbf24">B</text>
+    <rect x="0" y="0" width="30" height="50" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  </g>
+  
+  <!-- Opción C: triángulo -->
+  <g transform="translate(200,120)">
+    <text x="0" y="-5" font-family="sans-serif" font-size="11" fill="#fbbf24">C</text>
+    <polygon points="0,40 20,0 40,40" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  </g>
+  
+  <!-- Opción D: L shape -->
+  <g transform="translate(260,120)">
+    <text x="0" y="-5" font-family="sans-serif" font-size="11" fill="#fbbf24">D</text>
+    <path d="M 0,0 L 40,0 L 40,20 L 20,20 L 20,40 L 0,40 Z" fill="none" stroke="#e5e5e5" stroke-width="2"/>
+  </g>
+</svg>

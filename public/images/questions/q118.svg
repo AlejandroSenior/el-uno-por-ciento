@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <!-- q118: Cubo de Necker - perspectiva ambigua -->
+  <rect width="280" height="280" fill="#12121a"/>
+  
+  <!-- Cubo de Necker - puede verse de dos formas distintas -->
+  <g transform="translate(140,140)">
+    <!-- Cuadrado frontal -->
+    <path d="M -50,-50 L 50,-50 L 50,50 L -50,50 Z" fill="none" stroke="#e5e5e5" stroke-width="3"/>
+    
+    <!-- Cuadrado trasero (offset isométrico) -->
+    <path d="M -20,-80 L 80,-80 L 80,20 L -20,20 Z" fill="none" stroke="#4ECDC4" stroke-width="3"/>
+    
+    <!-- Líneas conectoras (aristas de profundidad) -->
+    <line x1="-50" y1="-50" x2="-20" y2="-80" stroke="#FFD93D" stroke-width="2.5"/>
+    <line x1="50" y1="-50" x2="80" y2="-80" stroke="#FFD93D" stroke-width="2.5"/>
+    <line x1="50" y1="50" x2="80" y2="20" stroke="#FFD93D" stroke-width="2.5"/>
+    <line x1="-50" y1="50" x2="-20" y2="20" stroke="#FFD93D" stroke-width="2.5"/>
+    
+    <!-- Marcas para indicar las dos interpretaciones posibles -->
+    <!-- Opción A: esquina frontal abajo-izquierda -->
+    <circle cx="-50" cy="50" r="5" fill="#FF6B6B" opacity="0.7"/>
+    <text x="-65" y="55" font-family="sans-serif" font-size="11" fill="#FF6B6B">A</text>
+    
+    <!-- Opción B: esquina frontal arriba-derecha -->
+    <circle cx="80" cy="-80" r="5" fill="#6BCB77" opacity="0.7"/>
+    <text x="93" y="-75" font-family="sans-serif" font-size="11" fill="#6BCB77">B</text>
+  </g>
+  
+  <text x="140" y="255" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Qué esquina está más cerca de ti?
+  </text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 200" width="380" height="200">
+  <!-- q115: Ilusión de Ebbinghaus -->
+  <rect width="380" height="200" fill="#12121a"/>
+  
+  <!-- Grupo izquierdo: círculo central rodeado de círculos GRANDES -->
+  <g transform="translate(95,100)">
+    <!-- Círculo central (mismo tamaño en ambos) -->
+    <circle cx="0" cy="0" r="18" fill="#fbbf24" stroke="#fff" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333" font-weight="bold">A</text>
+    
+    <!-- Círculos grandes alrededor -->
+    <circle cx="0" cy="-55" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="47.6" cy="-27.5" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="47.6" cy="27.5" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="0" cy="55" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="-47.6" cy="27.5" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+    <circle cx="-47.6" cy="-27.5" r="28" fill="none" stroke="#4ECDC4" stroke-width="2"/>
+  </g>
+  
+  <!-- Grupo derecho: círculo central rodeado de círculos PEQUEÑOS -->
+  <g transform="translate(285,100)">
+    <!-- Círculo central (mismo tamaño que el izquierdo) -->
+    <circle cx="0" cy="0" r="18" fill="#fbbf24" stroke="#fff" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333" font-weight="bold">B</text>
+    
+    <!-- Círculos pequeños alrededor -->
+    <circle cx="0" cy="-40" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="34.6" cy="-20" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="34.6" cy="20" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="0" cy="40" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="-34.6" cy="20" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+    <circle cx="-34.6" cy="-20" r="10" fill="none" stroke="#FF6B6B" stroke-width="2"/>
+  </g>
+  
+  <text x="190" y="185" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6b6b8a">
+    ¿Qué círculo central es más grande, A o B?
+  </text>
+</svg>
