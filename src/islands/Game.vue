@@ -33,14 +33,14 @@ const revealReadyCount = computed(() => {
       .filter((p) => !p.isEliminated)
       .map((p) => p.id)
   );
-  return state.value.playersReady.filter((id) => activeIds.has(id)).length;
+  return (state.value.playersReady ?? []).filter((id) => activeIds.has(id)).length;
 });
 
-const isMeReady = computed(() => state.value?.playersReady.includes(playerId.value) ?? false);
+const isMeReady = computed(() => (state.value?.playersReady ?? []).includes(playerId.value));
 
 const isHost = computed(() => state.value?.hostId === playerId.value);
 
-const isMeQuestionReady = computed(() => state.value?.playersReadyForQuestion.includes(playerId.value) ?? false);
+const isMeQuestionReady = computed(() => (state.value?.playersReadyForQuestion ?? []).includes(playerId.value));
 
 const questionReadyCount = computed(() => {
   if (!state.value) return 0;
@@ -49,7 +49,7 @@ const questionReadyCount = computed(() => {
       .filter((p) => !p.isEliminated)
       .map((p) => p.id)
   );
-  return state.value.playersReadyForQuestion.filter((id) => activeIds.has(id)).length;
+  return (state.value.playersReadyForQuestion ?? []).filter((id) => activeIds.has(id)).length;
 });
 
 // ── Lifecycle ──────────────────────────────────────────────────────────────
