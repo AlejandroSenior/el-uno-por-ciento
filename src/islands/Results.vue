@@ -35,27 +35,28 @@ const rankClass = (index: number): string => {
 </script>
 
 <template>
-  <div class="min-h-dvh flex flex-col items-center justify-center px-4 py-12">
+  <div class="min-h-dvh flex flex-col items-center justify-center px-4 py-10">
     <!-- Winner celebration -->
-    <div class="text-center mb-10">
+    <div class="text-center mb-8">
       <template v-if="winner">
-        <p class="text-5xl mb-3">🏆</p>
-        <p class="text-muted text-xs tracking-widest uppercase mb-2">Ganador</p>
-        <p class="text-4xl font-black mb-1 font-display" :style="{ color: winner.color }">
+        <p class="text-5xl mb-4">🏆</p>
+        <p class="text-muted text-[10px] tracking-[0.4em] uppercase mb-3">Ganador</p>
+        <p class="text-4xl font-black mb-1 font-display" :style="{ color: winner.color, textShadow: `0 0 32px ${winner.color}55` }">
           {{ winner.name }}
         </p>
-        <p v-if="isWinner" class="text-yellow-400 font-black text-xl tracking-wide mt-2 font-display">¡ERES DEL 1%!</p>
+        <p v-if="isWinner" class="text-gold font-black text-xl tracking-widest mt-3 font-display">¡ERES DEL 1%!</p>
+        <p v-else class="text-muted text-sm mt-2">Llegó al 1%</p>
       </template>
       <template v-else>
-        <p class="text-5xl mb-3">🤯</p>
-        <p class="text-3xl font-black text-white font-display">ELIMINADOS TODOS</p>
+        <p class="text-5xl mb-4">🤯</p>
+        <p class="text-3xl font-black text-white font-display tracking-wide">ELIMINADOS TODOS</p>
         <p class="text-muted text-sm mt-2">Nadie sobrevivió esta ronda</p>
       </template>
     </div>
 
     <!-- Ranking -->
-    <div class="w-full max-w-sm rounded-2xl p-6 mb-8 bg-surface border border-border">
-      <p class="text-muted text-xs tracking-widest uppercase mb-4">Clasificación</p>
+    <div class="w-full max-w-sm rounded-2xl p-6 mb-6 bg-surface border border-border">
+      <p class="text-muted text-[10px] tracking-[0.3em] uppercase mb-4">Clasificación</p>
 
       <ol class="flex flex-col gap-3">
         <li v-for="(player, index) in ranking" :key="player.id" class="flex items-center gap-3">
@@ -65,24 +66,32 @@ const rankClass = (index: number): string => {
           </span>
 
           <!-- Color dot -->
-          <span class="w-3 h-3 rounded-full shrink-0" :style="{ background: player.color }"></span>
+          <span class="w-2.5 h-2.5 rounded-full shrink-0" :style="{ background: player.color }"></span>
 
-          <span class="flex-1 font-semibold" :style="{ color: player.isEliminated ? 'var(--color-muted)' : player.color }">
+          <span class="flex-1 font-semibold text-sm" :style="{ color: player.isEliminated ? 'var(--color-muted)' : player.color }">
             {{ player.name }}
           </span>
 
           <!-- Winner badge -->
-          <span v-if="player.id === state.winner" class="text-xs font-bold px-2 py-0.5 rounded-full bg-gold/20 text-gold">1%</span>
+          <span
+            v-if="player.id === state.winner"
+            class="text-[10px] font-black px-2 py-0.5 rounded-full bg-gold/20 text-gold tracking-widest"
+          >
+            1%
+          </span>
 
           <!-- You badge -->
-          <span v-if="player.id === playerId" class="text-xs text-muted">(tú)</span>
+          <span v-if="player.id === playerId" class="text-[10px] text-muted">(tú)</span>
         </li>
       </ol>
     </div>
 
     <!-- Actions -->
     <div class="flex flex-col gap-3 w-full max-w-sm">
-      <a href="/" class="w-full rounded-xl py-4 text-center font-black text-lg tracking-wide font-display bg-gold text-bg">
+      <a
+        href="/"
+        class="w-full rounded-xl py-4 text-center font-black text-lg tracking-widest font-display bg-gold text-bg transition-all duration-150 active:scale-95"
+      >
         JUGAR DE NUEVO
       </a>
     </div>

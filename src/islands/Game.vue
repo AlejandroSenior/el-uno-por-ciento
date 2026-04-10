@@ -28,7 +28,11 @@ const totalActivePlayers = computed(() => Object.values(state.value?.players ?? 
 
 const revealReadyCount = computed(() => {
   if (!state.value) return 0;
-  const activeIds = new Set(Object.values(state.value.players).filter((p) => !p.isEliminated).map((p) => p.id));
+  const activeIds = new Set(
+    Object.values(state.value.players)
+      .filter((p) => !p.isEliminated)
+      .map((p) => p.id)
+  );
   return state.value.playersReady.filter((id) => activeIds.has(id)).length;
 });
 

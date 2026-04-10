@@ -81,22 +81,33 @@ const submitAnswer = (index: number) => {
 </script>
 
 <template>
-  <div class="flex-1 flex flex-col px-4 py-6 max-w-2xl mx-auto w-full">
-    <!-- Round / difficulty badge -->
-    <div class="flex items-center justify-between mb-5">
-      <span class="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-surface2 text-muted border border-border">
-        Ronda {{ round }}/10
+  <div class="flex-1 flex flex-col px-4 py-5 max-w-2xl mx-auto w-full">
+    <!-- Round / difficulty / time row -->
+    <div class="flex items-center justify-between mb-4">
+      <span class="text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-full bg-surface2 text-muted border border-border">
+        RONDA {{ round }}/10
       </span>
+
+      <!-- Time remaining (QUESTION phase) — center -->
       <span
-        class="text-xs font-black tracking-widest px-3 py-1 rounded-full"
+        v-if="phase === 'QUESTION'"
+        class="text-sm font-black font-display tabular-nums transition-colors"
+        :style="{ color: timerColor }"
+      >
+        {{ timeRemaining }}s
+      </span>
+      <span v-else class="w-10"></span>
+
+      <span
+        class="text-[10px] font-black tracking-widest px-3 py-1 rounded-full"
         :style="{ background: difficultyBg, color: difficultyColor, border: `1px solid ${difficultyColor}40` }"
       >
         {{ difficulty }}%
       </span>
     </div>
 
-    <!-- Timer bar (question phase) -->
-    <div v-if="phase === 'QUESTION'" class="w-full h-1.5 rounded-full mb-5 overflow-hidden bg-surface2">
+    <!-- Timer bar (QUESTION phase) -->
+    <div v-if="phase === 'QUESTION'" class="w-full h-2 rounded-full mb-5 overflow-hidden bg-surface2">
       <div
         class="h-full rounded-full"
         :style="{
@@ -107,47 +118,44 @@ const submitAnswer = (index: number) => {
       ></div>
     </div>
 
-    <!-- Time remaining -->
-    <p v-if="phase === 'QUESTION'" class="text-right text-xs font-bold mb-4" :style="{ color: timerColor }">{{ timeRemaining }}s</p>
-
     <!-- Image (if present) -->
     <div
       v-if="question.image"
-      class="rounded-xl overflow-hidden mb-5 flex items-center justify-center bg-surface border border-border min-h-40 max-h-[260px]"
+      class="rounded-xl overflow-hidden mb-4 flex items-center justify-center bg-surface border border-border min-h-36 max-h-60"
     >
-      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-[260px] object-contain" loading="eager" />
+      <img :src="question.image.src" :alt="question.image.alt" class="max-w-full max-h-60 object-contain" loading="eager" />
     </div>
 
     <!-- Question text -->
-    <p class="text-white font-bold text-xl leading-snug mb-6">{{ question.question }}</p>
+    <p class="text-white font-bold text-xl leading-snug mb-5">{{ question.question }}</p>
 
     <!-- Answer options -->
-    <div class="grid grid-cols-1 gap-3 mb-4">
+    <div class="grid grid-cols-1 gap-2.5 mb-4">
       <button
         v-for="(option, i) in question.options"
         :key="i"
         :disabled="phase !== 'QUESTION'"
-        class="w-full text-left rounded-xl px-5 py-4 font-semibold text-sm transition-all duration-200 flex items-center gap-4 disabled:cursor-default"
+        class="w-full text-left rounded-xl px-4 py-3.5 font-semibold text-sm transition-all duration-150 flex items-center gap-3 disabled:cursor-default active:scale-[0.98] min-h-13"
         :class="buttonClass(i)"
         @click="submitAnswer(i)"
       >
         <span class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0" :class="labelClass(i)">
           {{ labels[i] }}
         </span>
-        <span>{{ option }}</span>
-        <span v-if="isRevealed && i === question.correctIndex" class="ml-auto text-green-400">✓</span>
-        <span v-else-if="isRevealed && i === myAnswerIndex && i !== question.correctIndex" class="ml-auto text-red-400">✗</span>
+        <span class="leading-snug">{{ option }}</span>
+        <span v-if="isRevealed && i === question.correctIndex" class="ml-auto text-green-400 text-base shrink-0">✓</span>
+        <span v-else-if="isRevealed && i === myAnswerIndex && i !== question.correctIndex" class="ml-auto text-red-400 text-base shrink-0">
+          ✗
+        </span>
       </button>
     </div>
 
     <!-- Change-answer hint (question phase, after first selection) -->
-    <p v-if="phase === 'QUESTION' && hasAnswered" class="text-center text-xs text-muted mb-2">
-      Puedes cambiar tu respuesta
-    </p>
+    <p v-if="phase === 'QUESTION' && hasAnswered" class="text-center text-xs text-muted mb-2 opacity-70">Puedes cambiar tu respuesta</p>
 
     <!-- Explanation (revealed) -->
-    <div v-if="isRevealed && question.explanation" class="rounded-xl px-5 py-4 text-sm bg-surface2 border border-border text-muted mb-4">
-      <span class="text-yellow-400 font-bold mr-2">Explicación:</span>
+    <div v-if="isRevealed && question.explanation" class="rounded-xl px-4 py-3.5 text-sm bg-surface2 border border-border text-muted mb-4">
+      <span class="text-gold font-bold mr-1.5">Explicación:</span>
       {{ question.explanation }}
     </div>
 
@@ -155,22 +163,19 @@ const submitAnswer = (index: number) => {
     <div v-if="phase === 'REVEAL'" class="flex flex-col gap-3 mt-auto pt-4">
       <!-- Reveal countdown bar -->
       <div class="w-full h-1.5 rounded-full overflow-hidden bg-surface2">
-        <div
-          class="h-full rounded-full bg-gold"
-          :style="{ width: revealPercent + '%', transition: 'width 1s linear' }"
-        ></div>
+        <div class="h-full rounded-full bg-gold" :style="{ width: revealPercent + '%', transition: 'width 1s linear' }"></div>
       </div>
 
       <!-- Countdown + ready count -->
       <div class="flex items-center justify-between text-xs text-muted">
         <span>{{ revealCountdown }}s para continuar</span>
-        <span>{{ readyCount }}/{{ totalActivePlayers }} listos</span>
+        <span class="font-semibold">{{ readyCount }}/{{ totalActivePlayers }} listos</span>
       </div>
 
       <!-- Siguiente button -->
       <button
         :disabled="isReady"
-        class="w-full rounded-xl py-3 font-black text-lg tracking-widest transition-all duration-150 font-display disabled:cursor-not-allowed"
+        class="w-full rounded-xl py-3.5 font-black text-lg tracking-widest transition-all duration-150 active:scale-95 disabled:active:scale-100 font-display disabled:cursor-not-allowed"
         :class="isReady ? 'bg-surface2 text-muted opacity-60' : 'bg-gold text-bg'"
         @click="$emit('ready')"
       >
@@ -181,7 +186,7 @@ const submitAnswer = (index: number) => {
     <!-- Eliminated overlay -->
     <div v-if="isEliminated" class="fixed inset-0 flex flex-col items-center justify-center pointer-events-none z-50 bg-bg/85">
       <p class="text-6xl mb-3">💀</p>
-      <p class="text-white font-black text-2xl font-display">ELIMINADO</p>
+      <p class="text-white font-black text-3xl font-display tracking-widest">ELIMINADO</p>
       <p class="text-muted text-sm mt-2">Espera a que termine la ronda...</p>
     </div>
   </div>

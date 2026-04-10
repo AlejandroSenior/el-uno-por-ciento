@@ -72,3 +72,13 @@
   0%, 100% { background-color: inherit; }
   50%       { background-color: #dc2626; }
 }
+
+/* ─── Scrollbar hide (PlayerList horizontal scroll) ─────────────────────── */
+
+.scrollbar-none {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;               /* Chrome / Safari */
+}
