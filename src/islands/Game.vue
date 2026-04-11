@@ -14,6 +14,7 @@ const state = ref<GameState | null>(null);
 const playerId = ref<string>('');
 const connectionError = ref<string>('');
 const roomCode = ref<string>('');
+const isReconnecting = ref<boolean>(false);
 
 let socket: PartySocket | null = null;
 
@@ -85,7 +86,17 @@ onMounted(() => {
     // restore the player's slot.
     playerId.value = socket!.id;
     connectionError.value = '';
+    isReconnecting.value = false;
     send({ type: 'JOIN', name });
+  });
+
+  socket.addEventListener('close', () => {
+    // Mark as reconnecting so the UI shows a non-fatal indicator instead of
+    // blocking the screen with "Error de conexión". ReconnectingWebSocket will
+    // keep retrying automatically; the open handler clears this flag.
+    if (playerId.value) {
+      isReconnecting.value = true;
+    }
   });
 
   socket.addEventListener('message', (evt: MessageEvent) => {
@@ -102,7 +113,28 @@ onMounted(() => {
   });
 
   socket.addEventListener('error', () => {
-    connectionError.value = 'No se pudo conectar al servidor. Inténtalo de nuevo.';
+    // Only show a fatal error if we have never connected yet.
+    // Mid-session errors are transient (ReconnectingWebSocket retries
+    // automatically) and are already handled by the close handler above.
+    if (!playerId.value) {
+      connectionError.value = 'No se pudo conectar al servidor. Inténtalo de nuevo.';
+    }
+  });
+
+  // Visibilitychange fires when the user returns to the tab after switching
+  // apps on mobile. If the socket is no longer open, force a reconnect so
+  // the player is back in the game as quickly as possible.
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === 'visible' && socket && socket.readyState !== WebSocket.OPEN) {
+      isReconnecting.value = true;
+      socket.reconnect();
+    }
+  };
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+
+  // Store the cleanup function so onUnmounted can remove the listener.
+  onUnmounted(() => {
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
   });
 });
 
@@ -139,55 +171,63 @@ const sendRestartGame = () => {
 
 <template>
   <div class="min-h-dvh bg-bg">
-    <!-- Connection error -->
+    <!-- Connection error (fatal: never connected, or server-sent error) -->
     <div v-if="connectionError" class="min-h-dvh flex flex-col items-center justify-center px-4 text-center gap-4">
       <p class="text-red-400 text-xl font-bold">Error de conexión</p>
       <p class="text-muted">{{ connectionError }}</p>
       <a href="/" class="text-yellow-400 font-bold underline">Volver al inicio</a>
     </div>
 
-    <!-- Connecting -->
+    <!-- Connecting (first load) -->
     <div v-else-if="!state || !playerId" class="min-h-dvh flex items-center justify-center">
       <p class="text-muted animate-pulse">Conectando...</p>
     </div>
 
-    <!-- LOBBY -->
-    <Lobby v-else-if="state.phase === 'LOBBY'" :state="state" :playerId="playerId" :roomCode="roomCode" @start="sendStartGame" />
-
-    <!-- COUNTDOWN overlay -->
-    <div v-else-if="state.phase === 'COUNTDOWN'" class="min-h-dvh flex flex-col items-center justify-center">
-      <p class="text-muted text-sm tracking-widest uppercase mb-4">Preparados...</p>
-      <p :key="state.countdown!" class="countdown-number text-9xl font-black text-yellow-400 font-display">
-        {{ state.countdown }}
-      </p>
-    </div>
-
-    <!-- QUESTION / REVEAL / ELIMINATION -->
-    <template v-else-if="['QUESTION', 'REVEAL', 'ELIMINATION'].includes(state.phase)">
-      <div class="flex flex-col min-h-dvh">
-        <QuestionCard
-          v-if="state.currentQuestion"
-          :question="state.currentQuestion"
-          :phase="state.phase"
-          :timeRemaining="state.timeRemaining"
-          :player="myPlayer"
-          :round="state.currentRound"
-          :difficulty="state.currentDifficulty"
-          :revealCountdown="state.revealCountdown"
-          :isReady="isMeReady"
-          :readyCount="revealReadyCount"
-          :totalActivePlayers="totalActivePlayers"
-          :isQuestionReady="isMeQuestionReady"
-          :questionReadyCount="questionReadyCount"
-          @answer="sendAnswer"
-          @ready="sendReady"
-          @questionReady="sendQuestionReady"
-        />
-        <PlayerList :players="state.players" :hostId="state.hostId" :playerId="playerId" />
+    <!-- Game screens (shown even while reconnecting so state is preserved) -->
+    <template v-else>
+      <!-- Reconnecting banner -->
+      <div v-if="isReconnecting" class="fixed top-0 inset-x-0 z-50 bg-yellow-500/90 text-black text-sm font-bold text-center py-2 px-4">
+        Reconectando...
       </div>
-    </template>
 
-    <!-- GAME_OVER -->
-    <Results v-else-if="state.phase === 'GAME_OVER'" :state="state" :playerId="playerId" :isHost="isHost" @restart="sendRestartGame" />
+      <!-- LOBBY -->
+      <Lobby v-if="state.phase === 'LOBBY'" :state="state" :playerId="playerId" :roomCode="roomCode" @start="sendStartGame" />
+
+      <!-- COUNTDOWN overlay -->
+      <div v-else-if="state.phase === 'COUNTDOWN'" class="min-h-dvh flex flex-col items-center justify-center">
+        <p class="text-muted text-sm tracking-widest uppercase mb-4">Preparados...</p>
+        <p :key="state.countdown!" class="countdown-number text-9xl font-black text-yellow-400 font-display">
+          {{ state.countdown }}
+        </p>
+      </div>
+
+      <!-- QUESTION / REVEAL / ELIMINATION -->
+      <template v-else-if="['QUESTION', 'REVEAL', 'ELIMINATION'].includes(state.phase)">
+        <div class="flex flex-col min-h-dvh">
+          <QuestionCard
+            v-if="state.currentQuestion"
+            :question="state.currentQuestion"
+            :phase="state.phase"
+            :timeRemaining="state.timeRemaining"
+            :player="myPlayer"
+            :round="state.currentRound"
+            :difficulty="state.currentDifficulty"
+            :revealCountdown="state.revealCountdown"
+            :isReady="isMeReady"
+            :readyCount="revealReadyCount"
+            :totalActivePlayers="totalActivePlayers"
+            :isQuestionReady="isMeQuestionReady"
+            :questionReadyCount="questionReadyCount"
+            @answer="sendAnswer"
+            @ready="sendReady"
+            @questionReady="sendQuestionReady"
+          />
+          <PlayerList :players="state.players" :hostId="state.hostId" :playerId="playerId" />
+        </div>
+      </template>
+
+      <!-- GAME_OVER -->
+      <Results v-else-if="state.phase === 'GAME_OVER'" :state="state" :playerId="playerId" :isHost="isHost" @restart="sendRestartGame" />
+    </template>
   </div>
 </template>
