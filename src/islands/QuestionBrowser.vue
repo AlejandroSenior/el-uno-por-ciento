@@ -260,11 +260,6 @@ const getDifficultyLabel = (difficulty: number) => {
           </p>
         </div>
       </div>
-
-      <!-- Keyboard Hint -->
-      <div class="text-center text-xs text-muted mt-4">
-        Usa las flechas ← → para navegar | A, B, C, D para responder
-      </div>
     </main>
   </div>
 </template>
