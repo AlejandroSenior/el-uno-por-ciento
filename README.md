@@ -1,9 +1,9 @@
-# 🎯 El Uno Por Ciento
+# El Uno Por Ciento
 
 <div align="center">
 
 <a href="https://el-uno-por-ciento.pages.dev/" target="_blank" rel="noopener noreferrer">
-  <img width="15%" alt="El 1% Hero" src="https://el-uno-por-ciento.pages.dev/images/el-uno-por-ciento.webp" />
+  <img width="30%" alt="El 1% Hero" src="https://el-uno-por-ciento.pages.dev/images/el-uno-por-ciento.webp" />
 </a>
 
 ### Desafía tu lógica y capacidad de observación con amigos.
